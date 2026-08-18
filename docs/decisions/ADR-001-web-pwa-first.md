@@ -1,6 +1,6 @@
-# ADR-001 — Web/PWA First, Native Mobile Later
+# ADR-001 — Web/PWA First, Native-Ready
 
-**Status:** Accepted
+**Status:** Accepted — validated during architecture audit
 **Date:** 2026-08-18
 **Decision:** Accepted
 
@@ -8,17 +8,17 @@
 
 Explore Luxembourg 360 must provide an excellent experience on smartphones and desktop while maintaining one product, one domain model and one source of truth.
 
-Volume II — Software Architecture identifies React/Next.js for the web platform and a future cross-platform mobile application direction. The product prompt also establishes Progressive Web App (PWA) as the preferred mobile approach unless technical constraints demonstrate that another approach is clearly superior.
+Volume II — Software Architecture identifies React/Next.js for the web platform and a future cross-platform mobile application direction. The product prompt establishes Progressive Web App (PWA) as the preferred mobile approach unless technical constraints demonstrate that another approach is clearly superior.
 
 The first development milestone must validate the core exploration experience without prematurely multiplying application clients and operational complexity.
 
 ## Decision
 
-We will develop **Explore Luxembourg 360 as a responsive Web/PWA platform first**.
+We will develop **Explore Luxembourg 360 as a responsive, installable Web/PWA platform first**.
 
-The architecture will nevertheless be designed so that a **future native/cross-platform mobile client can consume the same backend, domain model, authentication model and media services** without creating a separate mobile data silo.
+The architecture will nevertheless be **native-ready**: a future native/cross-platform Android/iOS client can consume the same backend, domain model, authentication model, synchronization mechanisms and media services without creating a separate mobile data silo or requiring the core platform to be rebuilt.
 
-The initial web platform will therefore be treated as a first-class product client, not as a temporary prototype.
+The initial web platform is a first-class product client, not a temporary prototype.
 
 ## Initial direction
 
@@ -26,7 +26,7 @@ The initial web platform will therefore be treated as a first-class product clie
 - PWA: installable, responsive and capable of providing an offline-capable application shell where useful.
 - Mobile web: intentional touch-first behaviours where appropriate, not merely a desktop layout compressed into a phone viewport.
 - Desktop: richer map, media and exploration workflows using the same platform services.
-- Future mobile: evaluate React Native when product usage, device capabilities or UX requirements justify a dedicated native/cross-platform client.
+- Future mobile: evaluate React Native or another appropriate cross-platform/native approach when product usage, device capabilities or UX requirements justify a dedicated client.
 
 ## Why this fits Explore Luxembourg 360
 
@@ -36,7 +36,7 @@ The first milestone can focus on the actual exploration experience:
 
 **Explore → Map → Place → Story / Media → 360° Experience → Continue Exploring**
 
-without simultaneously building and maintaining two application clients.
+without simultaneously building and maintaining separate application clients.
 
 ### 2. One source of truth
 
@@ -44,7 +44,7 @@ Web/PWA and any future mobile client will consume the same APIs and domain conce
 
 ### 3. Lower early operational complexity
 
-Starting with a web/PWA avoids introducing a second build, release, testing and store-distribution pipeline before there is evidence that a native client is necessary.
+Starting with a web/PWA avoids introducing separate mobile build, release, testing and store-distribution pipelines before there is evidence that a native client is necessary.
 
 ### 4. Strong accessibility and reach
 
@@ -52,7 +52,7 @@ The product can be accessed immediately through a modern browser, while still su
 
 ### 5. Reversible decision
 
-This does not prohibit native mobile. The architecture explicitly protects the future option by keeping presentation channels separate from the domain and API contracts.
+This does not prohibit native mobile. The architecture explicitly protects the future option by keeping presentation channels separate from domain and API contracts.
 
 ## What this decision does NOT mean
 
@@ -62,7 +62,8 @@ It does not mean:
 - that the application is desktop-first;
 - that native mobile is permanently rejected;
 - that device capabilities are ignored;
-- that the PWA must reproduce every possible native capability.
+- that the PWA must reproduce every possible native capability;
+- that a future native application would require rebuilding the backend or data model.
 
 Mobile UX remains a first-class product requirement from the beginning.
 
@@ -99,15 +100,14 @@ Re-evaluate a dedicated mobile client when one or more of the following becomes 
 The implementation must keep these boundaries explicit:
 
 ```text
-Web / PWA
-    │
-    ├── API
-    ├── Authentication
-    ├── Media services
-    └── Domain model
-             ▲
-             │
-Future Mobile Client
+                 Shared Explore 360 Platform
+                           │
+                    API / Domain / Data
+                           │
+             ┌─────────────┴─────────────┐
+             │                           │
+          Web / PWA              Future Mobile Client
+
 ```
 
 Neither client should become the owner of the domain model or the authoritative source of synchronized user data.
