@@ -1,6 +1,6 @@
 # PDR-005 — Screen Inventory + MVP User Flows
 
-**Status:** Accepted
+**Status:** Accepted — reconciled with P6.2 component decisions
 **Date:** 2026-08-18
 
 ## Decision
@@ -56,13 +56,27 @@ The immersive experience must not become a dead end.
 
 ### E — Save and continue
 
-Place or Trail → Save → local state for anonymous users where appropriate, or cloud-synchronised state for authenticated users → My Explore → Saved content.
+Place or Trail → Save → Sign In / Create Account when unauthenticated → authenticated saved state → My Explore → Saved content.
+
+**Save requires an account.** Exploration itself does not.
 
 ### F — Account
 
 Explore → Save / synchronisation need → Sign In or Create Account → My Explore.
 
 Account creation must not be required merely to begin exploring.
+
+### G — Share
+
+Place / Trail / 360° Experience → Share → platform share target or copied deep link.
+
+Sharing does not require an account.
+
+## Account principle
+
+> **Accountless exploration. Account-based memory.**
+
+Users can explore, search, view Places, routes, maps and 360° experiences and share content without an account. Saving Places or Routes, creating Collections, using My Explore and synchronising saved content require an account.
 
 ## Navigation principle
 
@@ -91,5 +105,6 @@ This decision implements and remains subordinate to:
 - PDR-002 Product Information Architecture v1
 - PDR-003 Core User Journeys v1
 - PDR-004 MVP Scope & Future Roadmap
+- P6.2 Component Language decisions
 
 No new screen or major flow should be added without a clear relationship to an approved product journey or a documented architectural/product decision.
