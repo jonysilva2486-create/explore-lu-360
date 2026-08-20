@@ -1,12 +1,14 @@
-# PDR-006 — Explore Luxembourg 360 Visual Language v1 (Proposed)
+# PDR-006 — Explore Luxembourg 360 Visual Language v1
 
-**Status:** Proposed — not yet approved as final Design System
+**Status:** APPROVED / RECONCILED
 **Date:** 2026-08-18
 **Phase:** Product Structure → Design System
 
+> This document began as the PDR-006 visual-direction proposal. The proposal has now been reconciled with the completed P6.1, P6.2 and P6.3 work. The filename is retained for repository continuity; its status is no longer proposed.
+
 ## Purpose
 
-Define the visual direction of Explore Luxembourg 360 before component implementation. This document establishes the product's visual character, principles and initial design-system direction. Exact production tokens may be refined during UX/UI design after the existing brand assets are reconciled.
+Define the visual direction of Explore Luxembourg 360 before and through component implementation. This document establishes the product's visual character, principles and design-system direction. Detailed production decisions are recorded through the P6 design-system documents and their audit trail.
 
 ## 1. Core visual proposition
 
@@ -41,54 +43,31 @@ Avoid overusing national flag colours or tourism clichés. Luxembourg should app
 
 Controls, transitions and immersive technology should feel intentional and unobtrusive.
 
-## 3. Colour direction — proposed
+## 3. Colour and theme direction
 
-The initial palette should be controlled and neutral-led:
+The visual language is neutral-led and controlled:
 
-- **Ivory / warm off-white** — primary light surface and editorial canvas.
-- **Deep charcoal** — primary text and dark interface foundation; avoid absolute black as a default.
-- **Stone / mineral neutrals** — secondary surfaces, borders and cartographic context.
-- **Forest green family** — restrained nature/territory accent.
-- **One distinctive interaction accent** — reserved for active states, primary actions and selected exploration elements.
+- ivory / warm off-white for light editorial surfaces;
+- deep charcoal for primary text;
+- stone / mineral neutrals for secondary surfaces and cartographic context;
+- restrained forest-green family accents;
+- one distinctive interaction accent reserved for active states and primary exploration actions.
 
-The interface should generally use one dominant neutral family plus restrained accent colour. Colour should communicate hierarchy and state, not decorate every component.
+Dark Mode is a **soft / near-black environment**, not absolute black by default. Light and Dark are two expressions of the same identity.
 
-Exact colour tokens remain proposed until reconciled with the existing Explore Luxembourg 360 logo/brand assets.
+Exact production tokens remain implementation-level decisions subject to contrast validation and existing brand-asset reconciliation.
 
-## 4. Typography direction — proposed
+## 4. Typography
 
-Use a two-family typographic system:
+The system uses an editorial/display serif direction alongside a highly legible modern sans-serif for interface and utility content.
 
-### Editorial / Display
+Typography and content hierarchy were subsequently refined under **P6.1** and are not duplicated as a P6.3 subsystem.
 
-A contemporary serif with strong character for:
-
-- place names;
-- regional titles;
-- editorial stories;
-- major discovery moments.
-
-### Interface / Utility
-
-A highly legible modern sans-serif for:
-
-- navigation;
-- metadata;
-- controls;
-- search;
-- map labels where appropriate;
-- distances and coordinates;
-- system states.
-
-The contrast between serif and sans-serif should express **heritage + technology** without becoming ornamental.
-
-Production font selection remains a design-system decision to validate against licensing, performance, multilingual coverage and the existing brand identity.
+Production font selection remains subject to licensing, performance, multilingual coverage and brand validation.
 
 ## 5. Layout and composition
 
-The product should use an editorial composition system rather than repetitive card grids.
-
-Principles:
+The product uses an editorial composition system rather than repetitive card grids:
 
 - generous but purposeful whitespace;
 - strong visual hierarchy;
@@ -98,63 +77,37 @@ Principles:
 - content-led page rhythm;
 - minimal decorative containers.
 
-Cards are permitted when they represent a genuine content unit. Not every piece of information should be placed inside a rounded rectangle.
+Cards represent genuine content units rather than serving as a default container for every element.
 
 ## 6. Photography and media
 
 Photography is structural product content, not decoration.
 
-Use:
+Use large immersive imagery, responsive crops, strong focal composition, minimal overlays and progressive loading.
 
-- large immersive imagery;
-- carefully cropped responsive variants;
-- strong focal composition;
-- minimal overlays;
-- editorial captions/metadata when useful;
-- progressive loading and responsive delivery.
-
-The visual system should allow a place to be recognisable from its image before the user reads the interface.
+The visual system supports both the initial production reality and future richer media.
 
 ## 7. Map language
 
 The map is a primary exploration surface and must feel integrated with the Explore Luxembourg 360 identity.
 
-The future map style should establish its own hierarchy for:
+The map language establishes hierarchy for terrain, land cover, water, roads and paths, places, routes, 360° experiences and selected locations.
 
-- terrain and land cover;
-- water;
-- roads and paths;
-- administrative context;
-- places;
-- routes;
-- 360° experiences;
-- selected/focused locations.
-
-The map should not simply appear as an embedded third-party widget with unrelated visual language.
-
-Potential future integration/collaboration with Luxembourg's Géoportail remains an institutional/data consideration and does not dictate the visual language at this stage.
+It should not appear as an unrelated embedded third-party widget.
 
 ## 8. 360° visual behaviour
 
-The 360° experience should be visually dominant and interface-light.
+The 360° experience is visually dominant and interface-light.
 
-Controls should be:
+Controls are discoverable, accessible, unobtrusive and consistent across touch, mouse and keyboard contexts.
 
-- discoverable;
-- accessible;
-- unobtrusive;
-- consistent;
-- designed for touch and mouse/keyboard contexts.
-
-Transitions into and out of 360° should communicate continuity of place rather than feel like opening an unrelated media viewer.
+The system is prepared for future own 360° production without requiring a different visual identity.
 
 ## 9. Navigation philosophy
 
-Navigation should be contextual and lightweight.
+Navigation is contextual and lightweight.
 
-Avoid a large permanent menu containing every product capability.
-
-The interface should communicate the primary loop:
+The primary loop remains:
 
 **Explore → Discover → Explore → Continue**
 
@@ -162,30 +115,15 @@ The user should not need to understand the information architecture to use the p
 
 ## 10. Motion
 
-Motion is used primarily for orientation, continuity and feedback.
+Motion supports orientation, continuity and feedback, including map → place transitions, place → 360° transitions, contextual panels, state changes, save interactions and progressive media loading.
 
-Appropriate uses include:
+Motion is restrained and respects Reduced Motion.
 
-- map → place transitions;
-- place → 360° transitions;
-- contextual panels;
-- state changes;
-- save interactions;
-- loading/progressive media states.
-
-Avoid animation whose only purpose is visual novelty.
-
-Respect reduced-motion preferences.
+Detailed motion rules are recorded under **P6.3.5**.
 
 ## 11. Shape, elevation and surfaces
 
-The system should favour:
-
-- restrained corner radii;
-- thin, purposeful borders;
-- subtle elevation only when it improves hierarchy;
-- strong typography and spacing instead of heavy shadows;
-- clean surfaces.
+The system favours restrained corner radii, purposeful borders, subtle elevation and strong typography/spacing instead of heavy shadows.
 
 Glassmorphism, excessive blur and decorative shadows are not baseline styles.
 
@@ -193,41 +131,21 @@ Glassmorphism, excessive blur and decorative shadows are not baseline styles.
 
 ### Mobile
 
-The visual system should emphasise:
-
-- direct manipulation;
-- thumb-reachable controls;
-- focused content;
-- immersive media;
-- map/content transitions;
-- clear hierarchy on constrained screens.
+Direct manipulation, thumb-reachable controls, focused content, immersive media, map/content transitions and clear hierarchy are prioritised.
 
 ### Desktop
 
-The same visual language expands into:
+The same language expands into broader map surfaces, richer editorial compositions, side/context panels, multi-column exploration and larger media experiences.
 
-- broader map surfaces;
-- richer editorial compositions;
-- side/context panels;
-- multi-column exploration;
-- larger media experiences.
-
-Desktop must not simply be a stretched mobile layout.
+Desktop is not treated as a stretched mobile layout.
 
 ## 13. Accessibility
 
-Accessibility is part of the visual system:
+Accessibility is part of the visual system: sufficient contrast, visible focus, semantic hierarchy, appropriate touch targets, keyboard operation, reduced motion, accessible labels and non-map alternatives for essential geographic information.
 
-- sufficient contrast;
-- visible focus;
-- semantic hierarchy;
-- touch targets appropriate to device context;
-- keyboard operation;
-- reduced motion;
-- accessible labels;
-- non-map alternatives for essential geographic information.
+**WCAG 2.2 AA** remains the product target. Technical conformance is validated during implementation.
 
-Premium design must remain inclusive design.
+Detailed accessibility rules are recorded under **P6.3.6**.
 
 ## 14. Explicit visual anti-patterns
 
@@ -245,41 +163,50 @@ Do not use as default product language:
 - template-like navigation;
 - animation for novelty alone.
 
-## 15. Design-system foundations to define next
+## 15. Reconciled design-system structure
 
-The next detailed design-system step must convert this direction into production-ready decisions for:
+The visual direction is now operationalised through:
 
-1. colour tokens;
-2. typography families, weights and scale;
-3. spacing scale;
-4. grid and breakpoints;
-5. radii and elevation;
-6. iconography;
-7. buttons and controls;
-8. navigation patterns;
-9. map components;
-10. place/content components;
-11. 360° controls;
-12. loading/error/empty/offline states;
-13. light/dark behaviour;
-14. motion tokens and transitions;
-15. accessibility tokens and rules.
+### P6.1 — Visual Language
 
-## 16. Brand asset reconciliation gate
+Visual principles, colour direction, typography, spacing, composition, responsive behaviour and content/media language.
 
-The repository currently contains product and architecture documentation but no identifiable logo/brand asset file in the repository search. The existing official Explore Luxembourg 360 logo/brand materials must be reconciled with this visual direction before the colour and typography tokens become final.
+### P6.2 — Component Language
 
-Do not invent a replacement logo or silently redefine the existing identity.
+Navigation, Map, Place, Search & Discovery, 360° Experience, and Social / Sharing / Save.
 
-## 17. Approval gate
+### P6.3 — Design System Foundations
 
-This document is a **visual direction proposal**, not final approval of the production Design System.
+Iconography, Buttons & Controls, System States, Light / Dark Behaviour, Motion, Accessibility.
 
-The next decision should validate the concrete visual tokens and component rules against this direction and the existing brand identity.
+All three blocks are now closed at the design-definition/audit level.
+
+## 16. Brand asset reconciliation
+
+The existing official Explore Luxembourg 360 logo and brand materials remain authoritative. The design system must not invent a replacement logo or silently redefine the identity.
+
+Production token freezing remains subject to reconciliation with the approved brand assets and implementation validation.
+
+## 17. Content reality constraint
+
+The design system must remain compatible with what can actually be produced initially:
+
+- routes using Google Street View where appropriate;
+- own photography of viewpoints, landscapes and places;
+- exterior monument content initially;
+- future own 360° production and interior mapping through permissions and collaborations.
+
+The platform must be prepared for the complete future experience without assuming that advanced content exists at launch.
+
+## 18. Approval
+
+**PDR-006 — Visual Language v1: APPROVED / RECONCILED.**
+
+Detailed design decisions and audit evidence are subordinate records under P6.1, P6.2 and P6.3.
 
 ## Traceability
 
-This proposal is subordinate to:
+This document remains subordinate to:
 
 - Product Vision;
 - Architecture validation decisions;
