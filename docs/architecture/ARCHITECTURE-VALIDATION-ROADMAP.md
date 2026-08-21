@@ -106,9 +106,11 @@ Versioned REST API, `/api/v1/`, OpenAPI, clients do not access the database dire
 These are the remaining blocks required before the first production implementation begins.
 
 ## R1 — Stack & Runtime
-**STATUS: OPEN**
+**STATUS: REFINED / AWAITING FINAL APPROVAL**
 
 Close the concrete implementation stack without reopening approved architecture principles.
+
+**Refined decision document:** `docs/architecture/R1-IMPLEMENTATION-STACK-DECISION.md`
 
 Must cover:
 - React / Next.js / TypeScript validation and final approval;
@@ -118,9 +120,23 @@ Must cover:
 - package/runtime versions;
 - development and test tooling;
 - lint/formatting;
-- local development requirements.
+- local development requirements;
+- repository/development model.
 
-**Output:** Implementation Stack Decision / ADR update where appropriate.
+**Output:** Accepted Implementation Stack Decision / ADR update where appropriate.
+
+### R1 audit corrections incorporated
+
+- Next.js baseline refined to 16.3.x;
+- React baseline refined to 19.2.x;
+- Tailwind baseline refined to 4.3.x;
+- Node.js 24 LTS retained;
+- pnpm selected, with exact version fixed at bootstrap;
+- PostgreSQL/PostGIS retained without prematurely fixing database versions;
+- ORM/data-access deferred to R2;
+- Husky/lint-staged removed from architectural R1 scope;
+- PWA foundation retained while full offline behaviour remains deferred;
+- Turborepo deferred unless scale demonstrates a need.
 
 ---
 
@@ -235,7 +251,7 @@ DESIGN                               CLOSED
    ↓
 APPROVED ARCHITECTURE                CLOSED / RECONCILED
    ↓
-R1 — Stack & Runtime                 OPEN
+R1 — Stack & Runtime                 REFINED / AWAITING APPROVAL
    ↓
 R2 — Domain & Data                   OPEN
    ↓
