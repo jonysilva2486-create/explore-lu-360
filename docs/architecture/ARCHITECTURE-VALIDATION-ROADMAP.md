@@ -106,37 +106,15 @@ Versioned REST API, `/api/v1/`, OpenAPI, clients do not access the database dire
 These are the remaining blocks required before the first production implementation begins.
 
 ## R1 — Stack & Runtime
-**STATUS: REFINED / AWAITING FINAL APPROVAL**
+**STATUS: CLOSED / APPROVED**
 
-Close the concrete implementation stack without reopening approved architecture principles.
+**Decision document:** `docs/architecture/R1-IMPLEMENTATION-STACK-DECISION.md`
 
-**Refined decision document:** `docs/architecture/R1-IMPLEMENTATION-STACK-DECISION.md`
+Final decision includes Next.js 16.3.x, React 19.2.x, TypeScript strict, Tailwind CSS 4.3.x, Node.js 24 LTS, NestJS 11.x, REST/OpenAPI, PostgreSQL/PostGIS, pnpm, monorepo/pnpm workspaces, Vitest, Playwright, ESLint and Prettier.
 
-Must cover:
-- React / Next.js / TypeScript validation and final approval;
-- alignment with approved design system;
-- Node.js / NestJS validation and final approval;
-- REST/OpenAPI tooling;
-- package/runtime versions;
-- development and test tooling;
-- lint/formatting;
-- local development requirements;
-- repository/development model.
+Exact patch versions are locked at bootstrap. ORM/data access, mapping, authentication, 360 renderer, cloud, CI/CD, observability and full offline behaviour remain deferred to their roadmap blocks.
 
-**Output:** Accepted Implementation Stack Decision / ADR update where appropriate.
-
-### R1 audit corrections incorporated
-
-- Next.js baseline refined to 16.3.x;
-- React baseline refined to 19.2.x;
-- Tailwind baseline refined to 4.3.x;
-- Node.js 24 LTS retained;
-- pnpm selected, with exact version fixed at bootstrap;
-- PostgreSQL/PostGIS retained without prematurely fixing database versions;
-- ORM/data-access deferred to R2;
-- Husky/lint-staged removed from architectural R1 scope;
-- PWA foundation retained while full offline behaviour remains deferred;
-- Turborepo deferred unless scale demonstrates a need.
+**Final audit: PASS / CLOSED.**
 
 ---
 
@@ -251,9 +229,9 @@ DESIGN                               CLOSED
    ↓
 APPROVED ARCHITECTURE                CLOSED / RECONCILED
    ↓
-R1 — Stack & Runtime                 REFINED / AWAITING APPROVAL
+R1 — Stack & Runtime                 CLOSED / APPROVED
    ↓
-R2 — Domain & Data                   OPEN
+R2 — Domain & Data                   OPEN ← NEXT
    ↓
 R3 — Experience Contract             OPEN
    ↓
