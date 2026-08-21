@@ -1,7 +1,8 @@
 # R2 — Domain & Data
-## Domain Model v1 — Refined
+## Domain Model v1 — Final
 
-**Status:** REFINED / AWAITING FINAL APPROVAL
+**Status:** CLOSED / APPROVED  
+**Final audit:** PASS
 
 ## 1. Purpose
 
@@ -57,13 +58,7 @@ A Place may belong to or be spatially related to administrative and landscape co
 
 A `Place` is a core territorial object that can represent natural, cultural, historical, architectural, recreational or other identifiable elements.
 
-A Place may have:
-- Stories
-- Media
-- Experiences
-- Categories
-- Tags
-- geographic relationships
+A Place may have Stories, Media, Experiences, Categories, Tags and geographic relationships.
 
 A Place is not synonymous with POI.
 
@@ -71,12 +66,7 @@ A Place is not synonymous with POI.
 
 A `Route` represents an explorable geographic path.
 
-A Route may:
-- pass through or relate to Places;
-- cross Landscapes;
-- cross administrative boundaries;
-- contain or reference editorial content and media;
-- expose Experiences.
+A Route may pass through or relate to Places, cross Landscapes and administrative boundaries, contain or reference editorial content and media, and expose Experiences.
 
 A Route is not itself an Experience. It is a territorial/exploration object that may expose experiences.
 
@@ -86,14 +76,7 @@ A Route is not itself an Experience. It is a territorial/exploration object that
 
 An Experience may be associated with a Place, Route, Landscape, Story or another approved domain context. It is not conceptually owned exclusively by Place or Route.
 
-Experience types may include, for example:
-- `STREET_VIEW`
-- `PROPRIETARY_360`
-- `PHOTO`
-- `VIDEO`
-- `AUDIO`
-- `PANORAMA`
-- future types as justified
+Experience types may include `STREET_VIEW`, `PROPRIETARY_360`, `PHOTO`, `VIDEO`, `AUDIO`, `PANORAMA` and future types as justified.
 
 The type mechanism is preferred over creating a separate domain entity for every experience technology.
 
@@ -101,12 +84,7 @@ The type mechanism is preferred over creating a separate domain entity for every
 
 `Story` is editorial content and is not limited to a Place description.
 
-Conceptually, a Story may relate to:
-- Place
-- Route
-- Landscape
-- Experience
-- other explicitly approved editorial subjects
+Conceptually, a Story may relate to Place, Route, Landscape, Experience or other explicitly approved editorial subjects.
 
 The physical implementation may use a controlled relation model rather than creating separate Story foreign keys for every future subject type.
 
@@ -124,9 +102,7 @@ Media metadata may include source, author, rights/licence, dates, technical meta
 
 Localised content must be modelled independently from the core entity structure.
 
-Do not create fixed columns such as:
-
-`name_en`, `name_fr`, `name_pt`, `name_nl`.
+Do not create fixed columns such as `name_en`, `name_fr`, `name_pt`, `name_nl`.
 
 The model must support the current initial language set and allow additional languages without structural redesign.
 
@@ -169,54 +145,31 @@ Spatial relationships may include containment, intersection, crossing and proxim
 
 ## 14. Core relationship map
 
-```text
-                         TERRITORY
-                             │
-        ┌────────────────────┼────────────────────┐
-        ↓                    ↓                    ↓
-     REGION             MUNICIPALITY          LANDSCAPE
-        │                    │                    │
-        └──────────────┬─────┴──────────────┬─────┘
-                       ↓                    ↓
-                     PLACE ←──────────── LANDSCAPE
-                       │
-              ┌────────┼────────┐
-              ↓        ↓        ↓
-            STORY     MEDIA   EXPERIENCE
-              ↑                  ↑
-              │                  │
-            ROUTE ───────────────┘
-              │
-              └── crosses / passes through → geographic contexts
-
-USER
- │
- ├── SAVE
- ├── COLLECTION
- └── HISTORY
-```
-
-The diagram is conceptual. It does not prescribe a physical foreign-key structure.
+The relationship map is conceptual and must not be read as a physical foreign-key prescription. Territory contains the administrative and geographic/contextual dimensions; Place and Route are explorable territorial objects; Experience and Story operate across domain contexts; User owns persistent user state.
 
 ## 15. Explicit non-goals
 
-R2 does not model or decide:
-- payments;
-- marketplace;
-- reservations;
-- public social network features;
-- full comments/reviews system;
-- full gamification;
-- loyalty programmes;
-- AI editorial automation;
-- complex offline synchronisation;
-- native Android/iOS applications;
-- cloud infrastructure;
-- final storage/CDN provider;
-- final mapping provider;
-- ORM/data-access technology.
+R2 does not model or decide payments, marketplace, reservations, public social network features, a full comments/reviews system, full gamification, loyalty programmes, AI editorial automation, complex offline synchronisation, native Android/iOS applications, cloud infrastructure, final storage/CDN provider, final mapping provider or ORM/data-access technology.
 
-## 16. Next translation step
+## 16. Final audit outcome
+
+The final audit confirmed:
+- territory-first architecture is preserved;
+- administrative and landscape dimensions are correctly separated;
+- Place remains a core territorial object rather than a generic POI;
+- Route remains a territorial/exploration object and is not conflated with Experience;
+- Experience is a cross-domain exploration layer;
+- Story supports flexible editorial relationships;
+- Media remains metadata/relationship data while binary storage is deferred to the infrastructure layer;
+- multilingual content does not depend on fixed language columns;
+- accountless exploration and account-based persistent saving remain aligned with the approved product decision;
+- Collection and History remain user-state concepts with appropriate privacy boundaries;
+- PostGIS remains the geographic foundation;
+- physical schema concerns are explicitly deferred to the next stage.
+
+**Audit result: PASS — R2 CLOSED / APPROVED.**
+
+## 17. Next translation step
 
 Only after approval of this conceptual model should it be translated into:
 
