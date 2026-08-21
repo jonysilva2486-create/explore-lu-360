@@ -1,140 +1,71 @@
 # Explore Luxembourg 360 — R1 Implementation Stack Decision
 
-**Status:** REFINED / AWAITING FINAL APPROVAL  
+**Status:** CLOSED / APPROVED  
 **Phase:** Pre-Codex Readiness — R1  
-**Scope:** Concrete implementation stack and developer foundation  
-**Decision type:** Implementation decision; does not reopen approved architecture principles.
+**Scope:** Concrete implementation stack and developer foundation
 
----
+R1 converts the already-approved architecture direction into a practical implementation stack for the Explore Luxembourg 360 Web/PWA and API. It does not reopen approved architecture principles and does not decide cloud, mapping provider, authentication provider, 360° renderer, observability, or detailed database access strategy.
 
-## 1. Purpose
-
-R1 converts the already-approved architecture direction into a practical implementation stack for the Explore Luxembourg 360 Web/PWA and API.
-
-It deliberately does **not** decide cloud, mapping provider, authentication provider, 360° renderer, observability, or the detailed database access strategy. Those belong to later roadmap blocks.
-
----
-
-# 2. Core Stack
+## 1. Core Stack
 
 | Area | Decision | Status |
 |---|---|---|
 | Product delivery | Responsive Web / PWA first | ACCEPTED |
-| Frontend framework | Next.js 16.3.x | PROPOSED |
-| UI framework | React 19.2.x | PROPOSED |
-| Language | TypeScript, strict mode | PROPOSED |
-| Styling | Tailwind CSS 4.3.x | PROPOSED |
-| Backend runtime | Node.js 24 LTS | PROPOSED |
-| Backend framework | NestJS 11.x | PROPOSED |
+| Frontend framework | Next.js 16.3.x | ACCEPTED |
+| UI framework | React 19.2.x | ACCEPTED |
+| Language | TypeScript, strict mode | ACCEPTED |
+| Styling | Tailwind CSS 4.3.x | ACCEPTED |
+| Backend runtime | Node.js 24 LTS | ACCEPTED |
+| Backend framework | NestJS 11.x | ACCEPTED |
 | API | REST, `/api/v1/`, OpenAPI | ACCEPTED |
 | Database | PostgreSQL + PostGIS | ACCEPTED |
-| Package manager | pnpm | PROPOSED |
-| Repository model | Monorepo / pnpm workspaces | PROPOSED |
-| Unit/integration testing | Vitest | PROPOSED |
-| E2E testing | Playwright | PROPOSED |
-| Linting | ESLint | PROPOSED |
-| Formatting | Prettier | PROPOSED |
+| Package manager | pnpm | ACCEPTED |
+| Repository model | Monorepo / pnpm workspaces | ACCEPTED |
+| Unit/integration testing | Vitest | ACCEPTED |
+| E2E testing | Playwright | ACCEPTED |
+| Linting | ESLint | ACCEPTED |
+| Formatting | Prettier | ACCEPTED |
 
-### Versioning rule
+Exact patch versions are locked at project bootstrap through the package lockfile and explicit runtime/package-manager configuration. No unbounded `latest` dependencies in production.
 
-The versions above define the **baseline major/minor direction** for the implementation. Exact patch versions must be locked in the project bootstrap through the package manager lockfile and explicit runtime/package-manager configuration.
+## 2. Frontend
 
-Do not use an unbounded `latest` dependency for the production project.
+### Next.js
+Use **Next.js 16.3.x**. It is the application framework for responsive Web/PWA delivery, routing, rendering boundaries, metadata/SEO, image/performance tooling and navigation.
 
----
+### React
+Use **React 19.2.x**. Server rendering/components are preferred where appropriate; client components are reserved for genuinely interactive/browser-dependent experiences such as maps, 360° viewers, GPS, filters and save interactions.
 
-# 3. Frontend
+### TypeScript
+Use **TypeScript strict mode**. Prefer explicit domain/API types and shared contracts over duplicated ad-hoc shapes.
 
-## 3.1 Next.js
+## 3. Styling & Design System
 
-Use **Next.js 16.3.x** as the initial application framework.
+Use **Tailwind CSS 4.3.x** as the implementation utility layer for the approved Explore Luxembourg 360 design system. Tailwind does not replace design tokens, component rules or visual decisions.
 
-Reasons:
+The implementation must preserve the approved visual foundations, including the **soft near-black** dark-mode direction rather than absolute black as the default global background. Codex must consume approved design tokens/components rather than invent arbitrary visual values.
 
-- strong fit for responsive Web/PWA delivery;
-- routing and application structure built in;
-- server/client rendering boundaries;
-- metadata and SEO capabilities;
-- image and performance tooling;
-- current navigation improvements are relevant to the Explore 360 exploration model.
+## 4. Backend
 
-Next.js 16.3 was released in August 2026 and includes improvements to development/build performance and instant navigation capabilities. The project should still pin the exact patch version used at bootstrap rather than depending on `latest`.
+Use **Node.js 24 LTS** and **NestJS 11.x**.
 
-## 3.2 React
+The backend begins as one deployable **Modular Monolith** with explicit domain boundaries. No domain-by-domain microservices during the initial implementation.
 
-Use **React 19.2.x**.
+## 5. API
 
-React 19.2 is the current stable major/minor line and provides the foundation for the Next.js frontend.
-
-### Component rule
-
-Use server rendering/components by default where appropriate. Client components are reserved for genuinely interactive behaviour such as maps, 360° viewers, GPS, filters, save interactions and other browser-dependent experiences.
-
-Do not turn the entire application into client-side rendering without a demonstrated reason.
-
-## 3.3 TypeScript
-
-Use **TypeScript with strict mode enabled**.
-
-The implementation must favour explicit domain/API types and shared contracts over duplicated ad-hoc shapes.
-
----
-
-# 4. Styling & Design System
-
-Use **Tailwind CSS 4.3.x** as the implementation utility layer for the approved Explore Luxembourg 360 design system.
-
-Tailwind is an implementation mechanism; it does not replace the project's design tokens, component rules or visual decisions.
-
-The implementation must preserve the approved design foundations, including the soft near-black dark-mode direction rather than absolute black as a default global background.
-
-### Rule
-
-The Codex must consume the approved design tokens/components rather than inventing arbitrary visual values throughout the application.
-
----
-
-# 5. Backend
-
-## 5.1 Runtime
-
-Use **Node.js 24 LTS**.
-
-Node.js 24 is currently an LTS release. Production applications should use an Active LTS or Maintenance LTS release rather than a Current release.
-
-## 5.2 Framework
-
-Use **NestJS 11.x**.
-
-This supports the approved **Modular Monolith First** architecture and provides a clear module structure for the initial backend.
-
-## 5.3 Backend principle
-
-Do not create microservices for individual domains during the initial implementation.
-
-The backend begins as one deployable modular application with explicit domain boundaries.
-
----
-
-# 6. API
-
-The following are already approved and are therefore not reopened in R1:
+Already approved and not reopened in R1:
 
 - REST API;
-- version prefix `/api/v1/`;
+- `/api/v1/` version prefix;
 - OpenAPI documentation;
 - clients communicate through the API rather than directly with the database;
-- API/domain boundaries remain reusable by future clients, including potential native applications.
+- API/domain boundaries remain reusable by future clients, including possible native applications.
 
----
-
-# 7. Repository Model
-
-## 7.1 Monorepo
+## 6. Repository Model
 
 Use a **monorepo with pnpm workspaces**.
 
-Initial conceptual structure:
+Conceptual baseline:
 
 ```text
 explore-luxembourg-360/
@@ -151,102 +82,42 @@ explore-luxembourg-360/
 └── ...
 ```
 
-This structure is a baseline, not a licence to create unnecessary packages. A package should exist only when it represents a meaningful shared boundary.
+This is a baseline, not a licence to create unnecessary packages. A package exists only when it represents a meaningful shared boundary.
 
-## 7.2 Turborepo
+**Turborepo is deferred.** pnpm workspaces are sufficient initially; build orchestration/caching can be added if scale demonstrates the need.
 
-**Do not introduce Turborepo initially.**
+## 7. Testing
 
-pnpm workspaces are sufficient for the first implementation. Build orchestration/caching can be added later if project scale demonstrates the need.
+**Vitest** for unit/integration tests covering domain logic, services, utilities, transformations and application/API logic.
 
----
-
-# 8. Testing
-
-## Unit / integration
-
-Use **Vitest** for:
-
-- domain logic;
-- services;
-- utilities;
-- transformations;
-- API/application logic;
-- focused integration tests.
-
-## End-to-end
-
-Use **Playwright** for realistic user journeys.
-
-A representative Explore 360 journey should eventually be testable as:
+**Playwright** for realistic end-to-end journeys. A representative journey is:
 
 ```text
-Explore
-  ↓
-Find / select place
-  ↓
-Open Place
-  ↓
-Open story / media
-  ↓
-Open 360° experience
-  ↓
-Save
-  ↓
-Authenticate when required
-  ↓
-Verify saved collection
+Explore → Find/select place → Open Place → Story/media → 360° → Save → Authenticate when required → Verify collection
 ```
 
 Testing must validate user-visible behaviour, not only isolated code units.
 
----
+## 8. Code Quality
 
-# 9. Code Quality
+Use **ESLint** for static code quality and **Prettier** for formatting. Formatting should be predictable; linting should protect meaningful project quality without unnecessary friction.
 
-Use:
+Husky/lint-staged are implementation tooling only and are not an R1 architectural decision.
 
-- **ESLint** for static code-quality/linting rules;
-- **Prettier** for formatting.
-
-Formatting should be automatic and predictable. Linting should protect real project quality without becoming an unnecessary source of friction.
-
-Husky/lint-staged are **not an R1 architectural decision**. They may be introduced as implementation tooling if useful.
-
----
-
-# 10. Package and Runtime Reproducibility
-
-The project must make the development environment reproducible.
+## 9. Reproducibility & Local Development
 
 Minimum expectations:
 
 - explicit Node.js version configuration;
 - explicit package-manager configuration;
 - committed lockfile;
-- pinned dependency versions through the package manifest/lockfile;
+- pinned dependency versions;
 - documented local setup;
-- no production secrets committed to Git.
+- no production secrets in Git.
 
-The exact pnpm version is fixed during project bootstrap rather than prematurely hard-coded in this roadmap.
+The exact pnpm version is fixed during bootstrap.
 
----
-
-# 11. Local Development
-
-The intended developer experience is:
-
-```text
-clone repository
-    ↓
-pnpm install
-    ↓
-pnpm dev
-    ↓
-Web + API + required local services
-```
-
-The project should provide predictable commands for at least:
+Expected commands:
 
 ```text
 pnpm dev
@@ -256,31 +127,15 @@ pnpm typecheck
 pnpm build
 ```
 
-The exact orchestration of local PostgreSQL/PostGIS and other services belongs to the implementation setup and R5 operational decisions where relevant.
+The exact orchestration of local PostgreSQL/PostGIS and other services belongs to implementation setup and later operational decisions.
 
----
+## 10. PWA Boundary
 
-# 12. PWA Boundary
+The stack supports the approved Web/PWA-first strategy. R1 does not implement the complete offline architecture.
 
-The selected stack must support the approved Web/PWA-first strategy.
+Deferred: offline maps, downloadable regions, complex offline synchronisation, background GPS engine and full offline content packages. These are addressed later under R5.5 unless product scope changes.
 
-R1 does **not** implement the complete offline architecture.
-
-The following remain outside the R1 decision:
-
-- offline maps;
-- downloadable regions;
-- complex offline synchronisation;
-- background GPS engine;
-- full offline content packages.
-
-Those boundaries are defined later under R5.5 unless the product scope changes.
-
----
-
-# 13. Explicitly Deferred Decisions
-
-R1 must not silently decide the following:
+## 11. Explicitly Deferred
 
 ### R2 — Domain & Data
 - ORM/data-access strategy;
@@ -305,42 +160,30 @@ R1 must not silently decide the following:
 - backups/rollback;
 - offline MVP boundary.
 
----
+## 12. Decision Principles
 
-# 14. Decision Principles
-
-The implementation stack follows four project principles:
-
-1. **Stable before fashionable.** Prefer mature LTS foundations over chasing the newest runtime.
-2. **Simple before complex.** Do not add infrastructure because it might be useful someday.
+1. **Stable before fashionable.** Prefer mature LTS foundations.
+2. **Simple before complex.** Do not add infrastructure merely because it might be useful someday.
 3. **Product before technology.** Technology serves the approved Explore 360 experience.
-4. **Future-ready without overbuilding.** Keep clean boundaries for future native clients and future scale without implementing them prematurely.
+4. **Future-ready without overbuilding.** Preserve clean boundaries for future clients and scale without implementing them prematurely.
 
 > **Boring where possible. Powerful where necessary.**
 
----
+## 13. Final Audit
 
-# 15. Audit Corrections Incorporated
+**Status: PASS / CLOSED**
 
-The R1 audit identified and this refinement incorporates the following corrections:
+The final audit confirms that R1:
 
-- Next.js baseline refined to **16.3.x**;
-- React baseline refined to **19.2.x**;
-- Tailwind baseline refined to **4.3.x**;
-- Node.js 24 LTS retained;
-- pnpm remains the selected package manager, but its exact version is fixed during bootstrap;
-- PostgreSQL/PostGIS remain approved without prematurely fixing database versions in R1;
-- ORM/data-access remains explicitly deferred to R2;
-- Husky/lint-staged removed from architectural R1 scope;
-- PWA support remains a foundation capability, while full offline behaviour is deferred;
-- Turborepo is explicitly deferred unless scale demonstrates a need.
+- respects approved Product, Design and Architecture decisions;
+- introduces no contradiction with Web/PWA-first;
+- does not reopen Modular Monolith;
+- keeps native Android/iOS outside the current MVP while preserving future API/client compatibility;
+- separates stack decisions from later provider, data and operations decisions;
+- avoids premature infrastructure complexity;
+- provides a sufficiently concrete foundation for the next roadmap block;
+- defines explicit boundaries so Codex does not need to infer the basic technology stack.
 
----
+**R1 is CLOSED / APPROVED.**
 
-# 16. R1 Gate
-
-**Current status: REFINED / AWAITING FINAL APPROVAL**
-
-R1 may be marked **CLOSED** only after the refined proposal is visually reviewed, approved, audited as final, and recorded as an accepted implementation decision.
-
-After closure, the Master Roadmap must be re-checked before starting R2.
+The next roadmap block is **R2 — Domain & Data**, but only after re-checking the Master Roadmap and project history as required by the project execution rule.
