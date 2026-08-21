@@ -119,18 +119,20 @@ Exact patch versions are locked at bootstrap. ORM/data access, mapping, authenti
 ---
 
 ## R2 — Domain & Data
-**STATUS: OPEN**
+**STATUS: CLOSED / APPROVED**
 
-Define the minimum coherent domain/data model required by the first vertical slice.
+**Decision document:** `docs/architecture/R2-DOMAIN-MODEL-V1.md`
 
-Must cover Place, Route/Trail, Media, Experience/360° Experience, User/Identity, Collection/Save, required editorial content, geographic relationships, initial PostgreSQL/PostGIS schema, media rights metadata, MVP search indexing strategy, migrations and seed data.
+Domain Model v1 is approved as a conceptual, territory-first model. It covers Territory, administrative and landscape contexts, Place, Route, Experience, Media, Story, Category, Tag, User, Save, Collection and History, including multilingual content, accountless exploration, account-based persistent saving and PostGIS geography.
 
-**Rule:** Do not build the complete future domain model.
+The final audit specifically confirmed the separation between administrative territory and Landscape, the cross-domain nature of Experience, flexible Story relationships, and the separation between conceptual domain and physical database implementation.
+
+**Final audit: PASS / CLOSED.**
 
 ---
 
 ## R3 — Experience Contract / First Vertical Slice
-**STATUS: OPEN**
+**STATUS: OPEN ← NEXT**
 
 Turn the approved journey **Explore → Map → Place → Story/Media → 360° → Continue Exploring** into an implementation-ready contract.
 
@@ -231,9 +233,9 @@ APPROVED ARCHITECTURE                CLOSED / RECONCILED
    ↓
 R1 — Stack & Runtime                 CLOSED / APPROVED
    ↓
-R2 — Domain & Data                   OPEN ← NEXT
+R2 — Domain & Data                   CLOSED / APPROVED
    ↓
-R3 — Experience Contract             OPEN
+R3 — Experience Contract             OPEN ← NEXT
    ↓
 R4 — External Infrastructure         OPEN
    ↓
