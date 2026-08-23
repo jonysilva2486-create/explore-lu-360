@@ -6,13 +6,9 @@
 
 ## 0. Governing rule
 
-This roadmap is the execution map, but not the authority for historical status by itself. Before starting any item, reconcile it against the project conversation/history, approved ADRs and decisions, Volume II — Software Architecture, and current GitHub documentation.
+This roadmap is the execution map, but not the authority for historical status by itself. Before starting any item, reconcile it against the project conversation/history, approved ADRs and current GitHub documentation.
 
-If an item is already decided elsewhere, do not repeat the decision. Update this roadmap to reflect reality and move to the first genuinely unresolved dependency.
-
-### Mandatory workflow
-
-**Check plan → reconcile history/GitHub → proposal → demonstration when useful → user approval → audit → refine if necessary → record in GitHub → re-check this roadmap → move to the next planned block.**
+**Mandatory workflow:** Check plan → reconcile history/GitHub → proposal → demonstration when useful → user approval → audit → refine if necessary → record in GitHub → re-check this roadmap → move to the next planned block.
 
 Do not invent the next block during execution.
 
@@ -28,13 +24,7 @@ Do not invent the next block during execution.
 - Accountless exploration / account-based memory — CLOSED
 - Initial content-production strategy — CLOSED
 
-### Initial content reality
-
-The first implementation must work with content the project can realistically produce initially: curated routes, Google Street View integration, own photography, viewpoints, exterior monument/place documentation, and place/editorial information.
-
-Future capabilities include proprietary 360° capture and authorised interior mapping, without requiring a redesign of the core platform.
-
----
+Initial implementation must work with realistically producible content: curated routes, Google Street View integration, own photography, viewpoints, exterior monument/place documentation and place/editorial information. Future proprietary 360° capture and authorised interior mapping must not require a redesign of the core platform.
 
 # 2. DESIGN — CLOSED
 
@@ -47,156 +37,110 @@ Future capabilities include proprietary 360° capture and authorised interior ma
 ## P6.3 — Design System Foundations
 **CLOSED / APPROVED**
 
-Includes Iconography, Buttons & Controls, System States, Light/Dark Behaviour, Motion and Accessibility.
-
-Dark mode preference is **soft / near-black**, not absolute black as the global background.
-
----
+Includes Iconography, Buttons & Controls, System States, Light/Dark Behaviour, Motion and Accessibility. Dark mode uses the approved soft/near-black direction rather than absolute black.
 
 # 3. APPROVED ARCHITECTURE — RECONCILED
 
-These decisions are not to be reopened unless their documented review trigger is reached.
-
 ## ADR-001 — Web/PWA First, Native-Ready
-
 Responsive Web/PWA first; mobile-first; desktop supported; native Android/iOS outside current MVP; architecture remains native-ready.
 
 **Status: ACCEPTED / VALIDATED**
 
 ## ADR-002 — Modular Monolith First
-
 Modular monolith for initial implementation, with explicit domain boundaries and future service extraction only when justified.
 
 **Status: ACCEPTED**
 
 ## ADR-003 — Data Foundation
-
 PostgreSQL/PostGIS as authoritative data foundation; Redis only where justified; OpenSearch as derived search capability when justified.
 
 **Status: ACCEPTED**
 
 ## ADR-004 — Provider-Independent Geospatial Architecture
-
 Provider-independent geospatial abstraction; official Luxembourg sources, OSM, Mapbox, MapTiler and project data may participate as sources/providers; no assumed partnership or licensing without validation.
 
 **Status: ACCEPTED**
 
 ## ADR-005 — Identity & Authentication
-
 OAuth 2.0/OIDC, JWT/session model, RBAC, accountless exploration and account-based memory/synchronisation. Auth0 remains the current candidate pending concrete validation.
 
 **Status: ARCHITECTURE ACCEPTED; IMPLEMENTATION VALIDATION REMAINS**
 
 ## ADR-006 — Media & 360° Strategy
-
 Google Street View for broad existing coverage; Explore 360 proprietary 360° for differentiation; own photography/video for editorial content; Object Storage + CDN for proprietary media; PostgreSQL stores metadata/relationships rather than large binaries.
 
 **Status: ACCEPTED**
 
 ## ADR-007 — API Architecture
-
 Versioned REST API, `/api/v1/`, OpenAPI, clients do not access the database directly, and API/domain boundaries remain reusable by future clients.
 
 **Status: ACCEPTED**
 
----
-
-# 4. PRE-CODEX READINESS — OPEN WORK
-
-These are the remaining blocks required before the first production implementation begins.
+# 4. PRE-CODEX READINESS
 
 ## R1 — Stack & Runtime
 **STATUS: CLOSED / APPROVED**
 
-**Decision document:** `docs/architecture/R1-IMPLEMENTATION-STACK-DECISION.md`
+Decision document: `docs/architecture/R1-IMPLEMENTATION-STACK-DECISION.md`
 
-Final decision includes Next.js 16.3.x, React 19.2.x, TypeScript strict, Tailwind CSS 4.3.x, Node.js 24 LTS, NestJS 11.x, REST/OpenAPI, PostgreSQL/PostGIS, pnpm, monorepo/pnpm workspaces, Vitest, Playwright, ESLint and Prettier.
-
-Exact patch versions are locked at bootstrap. ORM/data access, mapping, authentication, 360 renderer, cloud, CI/CD, observability and full offline behaviour remain deferred to their roadmap blocks.
+Final stack: Next.js 16.3.x, React 19.2.x, TypeScript strict, Tailwind CSS 4.3.x, Node.js 24 LTS, NestJS 11.x, REST/OpenAPI, PostgreSQL/PostGIS, pnpm, monorepo/pnpm workspaces, Vitest, Playwright, ESLint and Prettier. Exact patch versions are locked at bootstrap. Provider, ORM, cloud, observability and full offline decisions remain deferred to their roadmap blocks.
 
 **Final audit: PASS / CLOSED.**
-
----
 
 ## R2 — Domain & Data
 **STATUS: CLOSED / APPROVED**
 
-**Decision document:** `docs/architecture/R2-DOMAIN-MODEL-V1.md`
+Decision document: `docs/architecture/R2-DOMAIN-MODEL-V1.md`
 
-Domain Model v1 is approved as a conceptual, territory-first model. It covers Territory, administrative and landscape contexts, Place, Route, Experience, Media, Story, Category, Tag, User, Save, Collection and History, including multilingual content, accountless exploration, account-based persistent saving and PostGIS geography.
-
-The final audit specifically confirmed the separation between administrative territory and Landscape, the cross-domain nature of Experience, flexible Story relationships, and the separation between conceptual domain and physical database implementation.
+Approved conceptual territory-first model covering Territory, administrative and landscape contexts, Place, Route, Experience, Media, Story, Category, Tag, User, Save, Collection and History. It explicitly separates administrative territory from Landscape, keeps Experience cross-domain, supports flexible Story relationships, multilingual content, accountless exploration, account-based persistent saving and PostGIS geography.
 
 **Final audit: PASS / CLOSED.**
 
----
-
 ## R3 — Experience Contract / First Vertical Slice
-**STATUS: OPEN ← NEXT**
+**STATUS: CLOSED / APPROVED**
 
-Turn the approved journey **Explore → Map → Place → Story/Media → 360° → Continue Exploring** into an implementation-ready contract.
+Decision document: `docs/architecture/R3-EXPERIENCE-CONTRACT-VERTICAL-SLICE.md`
 
-Must cover exact screens, component usage, transitions, loading/empty/error states, accountless behaviour, account/save behaviour, Street View, proprietary media, 360° fallbacks, map/place data, API calls, acceptance criteria and representative real content.
+Approved first vertical slice:
 
-**Output:** First Vertical Slice Implementation Specification.
+**Explore → Discover → Place → Story/Media → Experience → Continue Exploring**
 
----
+The slice is genuinely end-to-end across Web/PWA → API → domain → PostgreSQL/PostGIS → media/experience boundary → Web/PWA. It preserves accountless exploration, requires authentication for persistent cross-device Save, and uses a fallback Experience hierarchy: proprietary 360° → Street View → panoramic/photo → editorial media.
+
+The first slice includes loading, empty, error, unavailable Experience, permission-denied and limited-connectivity states. Complete offline architecture is deferred to R5. Search is not a mandatory dependency. My Explore is intentionally minimal. MUST HAVE versus FUTURE is explicit to prevent silent scope growth. A representative real/curated content pack is required.
+
+A nine-panel visual companion was approved for documentation; written Product/Architecture contracts remain authoritative.
+
+**Final audit: PASS / CLOSED.**
 
 ## R4 — External Infrastructure & Providers
-**STATUS: OPEN**
+**STATUS: OPEN ← NEXT**
 
-Validate concrete technologies without reopening the approved architecture strategy.
+Validate concrete technologies without reopening approved architecture.
 
 ### R4.1 Mapping provider
-Evaluate relevant options such as Mapbox, MapTiler, OSM and official Luxembourg sources for licensing, commercial use, cost, quotas, coverage, geocoding/routing, rendering, Luxembourg requirements and lock-in risk.
+Evaluate Mapbox, MapTiler, OSM and official Luxembourg sources for licensing, commercial use, cost, quotas, coverage, geocoding/routing, rendering, Luxembourg requirements and lock-in risk.
 
 ### R4.2 Authentication provider
-Validate Auth0 or select an alternative if necessary, considering cost, OIDC/OAuth, sessions/tokens, GDPR/privacy, account deletion/export and integration complexity.
+Validate Auth0 or an alternative considering OIDC/OAuth, sessions/tokens, GDPR/privacy, account deletion/export, cost and integration complexity.
 
 ### R4.3 360° renderer
 Select and validate the initial Web/PWA renderer for mobile performance, touch, fullscreen, Street View integration, proprietary 360°, accessibility and fallback behaviour.
 
 ### R4.4 Media storage/CDN
-Define the initial storage/CDN approach for proprietary assets, including asset structure, URLs, thumbnails, responsive media, permissions, rights metadata and future processing.
-
----
+Define initial storage/CDN approach for proprietary assets, including asset structure, URLs, thumbnails, responsive media, permissions, rights metadata and future processing.
 
 ## R5 — Operations / Cloud / Security
 **STATUS: OPEN**
 
-Define the smallest credible operational foundation for the first vertical slice.
-
-### R5.1 Cloud & deployment
-Volume II gives a target direction including AWS, Docker, Kubernetes/Helm and GitHub Actions. Do not overbuild the first slice.
-
-Decide cloud boundary, environments, container strategy, whether Kubernetes is justified initially or deferred, deployment method, secrets/configuration, backups, rollback and cost-control boundaries.
-
-### R5.2 CI/CD
-Define the minimum pipeline for lint, type checks, tests, build, appropriate security checks, preview/staging deployment and production approval.
-
-### R5.3 Observability
-Rationalise Prometheus, Grafana, Sentry and Datadog rather than adopting all automatically. Define logs, errors, metrics, traces where justified, alerts, dashboards and health checks.
-
-### R5.4 Security / privacy / legal baseline
-Cover MVP-relevant controls for secrets, authentication, authorisation, personal data, location permissions, account deletion/data handling, Google attribution/terms, media rights, storage access control and basic auditability.
-
-### R5.5 Offline MVP boundary
-Explicitly define what the PWA may cache in MVP. Full offline maps, downloadable regions and complex synchronisation remain out of scope unless explicitly changed.
-
----
+Define the smallest credible operational foundation for the first vertical slice: cloud/deployment, CI/CD, observability, security/privacy/legal baseline, backups/rollback and the explicit MVP offline boundary. Do not overbuild the first slice.
 
 ## R6 — Codex Readiness
 **STATUS: OPEN**
 
-Prepare a stable implementation contract so Codex does not have to infer architecture.
-
-Must cover repository structure, module boundaries, naming conventions, TypeScript/API conventions, environment variables, secrets policy, testing, lint/format rules, Git workflow, Definition of Done, acceptance criteria, seed/demo data, first vertical slice implementation brief, constraints and explicit non-goals.
-
-### Codex rule
+Prepare the stable implementation contract: repository structure, module boundaries, naming conventions, TypeScript/API conventions, environment variables, secrets policy, testing, lint/format rules, Git workflow, Definition of Done, acceptance criteria, seed/demo data, first vertical slice brief, constraints and explicit non-goals.
 
 Codex implements approved Product, Design and Architecture. It must not silently redesign product, architecture or scope.
-
----
 
 # 5. FINAL PRE-CODEX GATE
 
@@ -209,8 +153,6 @@ The project may enter implementation only when the audit explicitly states:
 
 > **READY FOR CODEX**
 
----
-
 # 6. CODEX START
 
 After the final gate:
@@ -219,8 +161,6 @@ After the final gate:
 2. Codex implements the first vertical slice.
 3. Work remains constrained by approved Product, Design and Architecture decisions.
 4. New architectural decisions require explicit review rather than silent invention during coding.
-
----
 
 # 7. EXECUTION ORDER
 
@@ -235,9 +175,9 @@ R1 — Stack & Runtime                 CLOSED / APPROVED
    ↓
 R2 — Domain & Data                   CLOSED / APPROVED
    ↓
-R3 — Experience Contract             OPEN ← NEXT
+R3 — Experience Contract             CLOSED / APPROVED
    ↓
-R4 — External Infrastructure         OPEN
+R4 — External Infrastructure         OPEN ← NEXT
    ↓
 R5 — Operations / Cloud / Security   OPEN
    ↓
@@ -251,8 +191,6 @@ APPLICATION FOUNDATION
    ↓
 FIRST VERTICAL SLICE
 ```
-
----
 
 # 8. NON-NEGOTIABLE PROJECT RULE
 
