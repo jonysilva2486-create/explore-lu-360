@@ -119,21 +119,31 @@ A nine-panel visual companion was approved for documentation; written Product/Ar
 Validate concrete technologies without reopening approved architecture.
 
 ### R4.1 Mapping provider
-**STATUS: REFINED / AWAITING FINAL AUDIT**
+**STATUS: CLOSED / APPROVED**
 
 Decision document: `docs/architecture/R4.1-MAPPING-PROVIDER-VALIDATION.md`
 
-Provider-independent mapping remains mandatory. Mapbox and MapTiler are the principal basemap candidates; Géoportail/ACT is the strategic official Luxembourg data layer under external validation; OSM remains a source/ecosystem rather than direct production tile infrastructure; Google Street View remains the principal external 360° Experience provider.
+Provider-independent mapping remains mandatory. Mapbox and MapTiler are approved interchangeable basemap candidates behind the internal abstraction; Géoportail/ACT is the strategic official Luxembourg data layer under external validation; OSM remains a source/ecosystem rather than direct production tile infrastructure; Google Street View remains the principal external 360° Experience provider.
 
-Refinements recorded: MapTiler Free is for testing/personal/non-commercial use and is not assumed to cover commercial production; Mapbox Permanent Geocoding is not treated as a free-tier MVP dependency; advanced routing/geocoding/map matching/elevation/3D are not automatic MVP requirements; candidate providers remain interchangeable behind an internal abstraction; free-first/cost-controlled is a governing R4 rule.
+Final audit confirmed the free-first/cost-controlled rule, the MapTiler Free non-commercial limitation, the Mapbox Permanent Geocoding restriction, the explicit MUST HAVE versus SHOULD/FUTURE boundary, and the separation between basemap provider and Street View Experience. No single basemap provider is prematurely locked.
+
+Géoportail/ACT remains an external dependency: the initial contact has been made and any technical/institutional guidance will be incorporated when received. This pending response does not block unrelated R4 work and does not constitute an assumed partnership or licensing approval.
+
+**Final audit: PASS / CLOSED / APPROVED.**
 
 ### R4.2 Authentication provider
+**OPEN — NEXT**
+
 Validate Auth0 or an alternative considering OIDC/OAuth, sessions/tokens, GDPR/privacy, account deletion/export, cost and integration complexity.
 
 ### R4.3 360° renderer
+**OPEN**
+
 Select and validate the initial Web/PWA renderer for mobile performance, touch, fullscreen, Street View integration, proprietary 360°, accessibility and fallback behaviour.
 
 ### R4.4 Media storage/CDN
+**OPEN**
+
 Define initial storage/CDN approach for proprietary assets, including asset structure, URLs, thumbnails, responsive media, permissions, rights metadata and future processing.
 
 ## R5 — Operations / Cloud / Security
@@ -185,9 +195,9 @@ R3 — Experience Contract             CLOSED / APPROVED
    ↓
 R4 — External Infrastructure         OPEN
    ↓
-R4.1 — Mapping Provider              REFINED / AWAITING FINAL AUDIT
+R4.1 — Mapping Provider              CLOSED / APPROVED
    ↓
-R4.2 — Authentication                OPEN
+R4.2 — Authentication                OPEN ← NEXT
    ↓
 R4.3 — 360° Renderer                 OPEN
    ↓
