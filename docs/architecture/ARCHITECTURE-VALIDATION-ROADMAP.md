@@ -114,12 +114,18 @@ A nine-panel visual companion was approved for documentation; written Product/Ar
 **Final audit: PASS / CLOSED.**
 
 ## R4 — External Infrastructure & Providers
-**STATUS: OPEN ← NEXT**
+**STATUS: OPEN**
 
 Validate concrete technologies without reopening approved architecture.
 
 ### R4.1 Mapping provider
-Evaluate Mapbox, MapTiler, OSM and official Luxembourg sources for licensing, commercial use, cost, quotas, coverage, geocoding/routing, rendering, Luxembourg requirements and lock-in risk.
+**STATUS: REFINED / AWAITING FINAL AUDIT**
+
+Decision document: `docs/architecture/R4.1-MAPPING-PROVIDER-VALIDATION.md`
+
+Provider-independent mapping remains mandatory. Mapbox and MapTiler are the principal basemap candidates; Géoportail/ACT is the strategic official Luxembourg data layer under external validation; OSM remains a source/ecosystem rather than direct production tile infrastructure; Google Street View remains the principal external 360° Experience provider.
+
+Refinements recorded: MapTiler Free is for testing/personal/non-commercial use and is not assumed to cover commercial production; Mapbox Permanent Geocoding is not treated as a free-tier MVP dependency; advanced routing/geocoding/map matching/elevation/3D are not automatic MVP requirements; candidate providers remain interchangeable behind an internal abstraction; free-first/cost-controlled is a governing R4 rule.
 
 ### R4.2 Authentication provider
 Validate Auth0 or an alternative considering OIDC/OAuth, sessions/tokens, GDPR/privacy, account deletion/export, cost and integration complexity.
@@ -177,7 +183,15 @@ R2 — Domain & Data                   CLOSED / APPROVED
    ↓
 R3 — Experience Contract             CLOSED / APPROVED
    ↓
-R4 — External Infrastructure         OPEN ← NEXT
+R4 — External Infrastructure         OPEN
+   ↓
+R4.1 — Mapping Provider              REFINED / AWAITING FINAL AUDIT
+   ↓
+R4.2 — Authentication                OPEN
+   ↓
+R4.3 — 360° Renderer                 OPEN
+   ↓
+R4.4 — Media / CDN                   OPEN
    ↓
 R5 — Operations / Cloud / Security   OPEN
    ↓
