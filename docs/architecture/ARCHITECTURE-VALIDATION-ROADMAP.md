@@ -114,7 +114,7 @@ A nine-panel visual companion was approved for documentation; written Product/Ar
 **Final audit: PASS / CLOSED.**
 
 ## R4 — External Infrastructure & Providers
-**STATUS: OPEN**
+**STATUS: CLOSED / APPROVED**
 
 Validate concrete technologies without reopening approved architecture.
 
@@ -156,12 +156,22 @@ A visual companion was approved for documentation; the written architecture cont
 **Final audit: PASS / CLOSED / APPROVED.**
 
 ### R4.4 Media storage/CDN
-**STATUS: OPEN — NEXT**
+**STATUS: CLOSED / APPROVED**
 
-Define initial storage/CDN approach for proprietary assets, including asset structure, URLs, thumbnails, responsive media, permissions, rights metadata and future processing.
+Decision document: `docs/architecture/R4.4-MEDIA-STORAGE-CDN.md`
+
+Cloudflare R2 is the approved primary object storage and media delivery foundation for Explore Luxembourg 360. Backblaze B2 is retained as a future strategic backup/archive candidate and is not required for MVP. Supabase Storage is not selected for the current media layer.
+
+The approved media architecture separates private masters/originals from processed and public derivatives, stores media metadata and relationships in PostgreSQL rather than large binaries, uses application-level provider abstraction, supports responsive images/thumbnails/lazy loading and progressive/tiled 360° delivery, and uses Cloudflare edge caching/CDN delivery for public assets where appropriate.
+
+Public media should use versioned/immutable asset keys where practical so replacements do not depend on immediate CDN cache invalidation. Provider-specific edge-network numbers or transport details are not application requirements.
+
+The MVP remains free-first/pay-as-you-grow: R2 is the only required media storage service. B2 may be introduced later for second-copy backup, archive, disaster recovery or retention protection when real project needs justify it.
+
+**Final audit: PASS / CLOSED / APPROVED.**
 
 ## R5 — Operations / Cloud / Security
-**STATUS: OPEN**
+**STATUS: OPEN — NEXT**
 
 Define the smallest credible operational foundation for the first vertical slice: cloud/deployment, CI/CD, observability, security/privacy/legal baseline, backups/rollback and the explicit MVP offline boundary. Do not overbuild the first slice.
 
@@ -207,7 +217,7 @@ R2 — Domain & Data                   CLOSED / APPROVED
    ↓
 R3 — Experience Contract             CLOSED / APPROVED
    ↓
-R4 — External Infrastructure         OPEN
+R4 — External Infrastructure         CLOSED / APPROVED
    ↓
 R4.1 — Mapping Provider              CLOSED / APPROVED
    ↓
@@ -215,9 +225,9 @@ R4.2 — Authentication                CLOSED / APPROVED
    ↓
 R4.3 — 360° Renderer & Capture      CLOSED / APPROVED
    ↓
-R4.4 — Media / CDN                   OPEN ← NEXT
+R4.4 — Media / CDN                   CLOSED / APPROVED
    ↓
-R5 — Operations / Cloud / Security   OPEN
+R5 — Operations / Cloud / Security   OPEN ← NEXT
    ↓
 R6 — Codex Readiness                 OPEN
    ↓
