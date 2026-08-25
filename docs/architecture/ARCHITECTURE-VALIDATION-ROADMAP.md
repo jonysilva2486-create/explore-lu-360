@@ -147,16 +147,16 @@ The final audit confirmed the free-first strategy, current Free-plan assumptions
 
 Decision document: `docs/architecture/R4.3-360-RENDERER-CAPTURE-PIPELINE.md`
 
-Google Street View is the primary visual/distribution layer for project-created outdoor trail coverage. Explore 360 retains an independent proprietary 360° Experience layer using Photo Sphere Viewer as the initial open-source renderer. The project-created trail is captured with the approved Insta360 X6 field kit and follows a two-pass workflow: Pass 1 documents the trail continuously; Pass 2 captures selected special 360°, photographic and editorial content.
+Google Street View is the primary visual/distribution layer for project-created outdoor trail coverage. The Explore 360 proprietary 360° layer remains independently renderable, with Photo Sphere Viewer as the initial open-source renderer. The approved capture standard uses two passes: **Pass 1 — Trail Capture** for continuous route documentation, followed by **Pass 2 — Experience Capture** for deliberate 360°, photography, heritage, nature, viewpoint and Story content. The field kit is fixed as Insta360 X6 + Magic Selfie Stick/invisible-style pole + backpack mount + power bank + extra batteries.
 
-The pipeline covers planning, trail capture, backup, QC, Street View publication, experience capture, editorial/360 processing, Route linking, final QC and publication. Street View ↔ Explore 360 ↔ Return to Trail is an approved product requirement, with the exact Google custom-panorama versus application-transition implementation reserved for technical PoC validation. Outdoor trail coverage and indoor/special immersive content have separate default pipelines. Google Embed is preferred when sufficient for cost control; more advanced APIs require justification.
+The audit confirmed the Street View ↔ Explore 360 transition requirement, outdoor/indoor distinction, Embed-first cost guardrail, project-owned Route/GPS/Experience identity, and the rule that Google panorama IDs are external references rather than permanent territorial identifiers. Future X6/3D investigation is preserved as a non-MVP option, especially for castles, monuments and interiors. The first real route capture remains the required field-validation event for Capture Standard v1.
 
-Google panorama IDs are external references, not permanent territorial identifiers; Route identity, coordinates and Experience relationships remain project-owned. Future 3D capture/visualisation using the X6 is explicitly retained as research only and is outside MVP.
+A visual companion was approved for documentation; the written architecture contract remains authoritative.
 
 **Final audit: PASS / CLOSED / APPROVED.**
 
 ### R4.4 Media storage/CDN
-**OPEN — NEXT**
+**STATUS: OPEN — NEXT**
 
 Define initial storage/CDN approach for proprietary assets, including asset structure, URLs, thumbnails, responsive media, permissions, rights metadata and future processing.
 
