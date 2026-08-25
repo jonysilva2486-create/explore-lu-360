@@ -62,9 +62,9 @@ Provider-independent geospatial abstraction; official Luxembourg sources, OSM, M
 **Status: ACCEPTED**
 
 ## ADR-005 — Identity & Authentication
-OAuth 2.0/OIDC, JWT/session model, RBAC, accountless exploration and account-based memory/synchronisation. Auth0 remains the current candidate pending concrete validation.
+OAuth 2.0/OIDC, JWT/session model, RBAC, accountless exploration and account-based memory/synchronisation. Auth0 is the preferred initial Identity Provider following R4.2 validation.
 
-**Status: ARCHITECTURE ACCEPTED; IMPLEMENTATION VALIDATION REMAINS**
+**Status: ACCEPTED / VALIDATED — Auth0 preferred**
 
 ## ADR-006 — Media & 360° Strategy
 Google Street View for broad existing coverage; Explore 360 proprietary 360° for differentiation; own photography/video for editorial content; Object Storage + CDN for proprietary media; PostgreSQL stores metadata/relationships rather than large binaries.
@@ -132,26 +132,18 @@ Géoportail/ACT remains an external dependency: the initial contact has been mad
 **Final audit: PASS / CLOSED / APPROVED.**
 
 ### R4.2 Authentication provider
-**STATUS: REFINED / AWAITING FINAL AUDIT**
+**STATUS: CLOSED / APPROVED**
 
 Decision document: `docs/architecture/R4.2-AUTHENTICATION-PROVIDER.md`
 
-Auth0 is the preferred initial Identity Provider. Accountless exploration remains the default; authentication is introduced for persistent user features such as Saves and Collections. Passwords and bespoke authentication infrastructure are not stored or implemented by Explore 360.
+Auth0 is the preferred initial Identity Provider. The approved model is accountless exploration with authentication only for persistent user features such as Saves and Collections. Credentials remain with the specialised identity provider; Explore Luxembourg 360 does not store passwords. Auth0 remains behind an application authentication boundary, while PostgreSQL remains authoritative for application-domain user data.
 
-The application retains its own domain User and personal application data in PostgreSQL, linked to the external identity through an authentication boundary/adapter. Domain code must not depend directly on Auth0-specific user types.
+The final audit confirmed the free-first strategy, current Free-plan assumptions, accountless UX, provider abstraction, data minimisation, GDPR responsibility boundaries, deletion/export requirements and the distinction between architectural scalability and unlimited free usage. Current Auth0 features/pricing and applicable terms must be revalidated at implementation/bootstrap.
 
-The free-first rule remains mandatory: the current Auth0 Free plan is treated as a time-sensitive assumption and no paid tier is assumed during MVP validation while the free plan satisfies the approved requirements and applicable terms.
-
-GDPR refinement: Auth0 provides identity-security and privacy capabilities that support our GDPR obligations; it does **not** make Explore Luxembourg 360 automatically GDPR-compliant. Explore 360 remains responsible for lawful basis, transparency, minimisation, retention, deletion, export, controller/processor responsibilities and applicable contractual arrangements.
-
-Scalability refinement: the architecture is designed to scale beyond the initial free tier without requiring a change to the application's authentication model. This is an architectural goal, not a promise of unlimited users at zero cost.
-
-Custom-domain verification requirements, Free-plan features/limits and pricing must be revalidated at implementation time.
-
-**Refinement recorded in GitHub. Final audit remains pending.**
+**Final audit: PASS / CLOSED / APPROVED.**
 
 ### R4.3 360° renderer
-**OPEN**
+**OPEN — NEXT**
 
 Select and validate the initial Web/PWA renderer for mobile performance, touch, fullscreen, Street View integration, proprietary 360°, accessibility and fallback behaviour.
 
@@ -211,9 +203,9 @@ R4 — External Infrastructure         OPEN
    ↓
 R4.1 — Mapping Provider              CLOSED / APPROVED
    ↓
-R4.2 — Authentication                REFINED / AWAITING FINAL AUDIT
+R4.2 — Authentication                CLOSED / APPROVED
    ↓
-R4.3 — 360° Renderer                 OPEN
+R4.3 — 360° Renderer                 OPEN ← NEXT
    ↓
 R4.4 — Media / CDN                   OPEN
    ↓
