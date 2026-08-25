@@ -132,9 +132,23 @@ Géoportail/ACT remains an external dependency: the initial contact has been mad
 **Final audit: PASS / CLOSED / APPROVED.**
 
 ### R4.2 Authentication provider
-**OPEN — NEXT**
+**STATUS: REFINED / AWAITING FINAL AUDIT**
 
-Validate Auth0 or an alternative considering OIDC/OAuth, sessions/tokens, GDPR/privacy, account deletion/export, cost and integration complexity.
+Decision document: `docs/architecture/R4.2-AUTHENTICATION-PROVIDER.md`
+
+Auth0 is the preferred initial Identity Provider. Accountless exploration remains the default; authentication is introduced for persistent user features such as Saves and Collections. Passwords and bespoke authentication infrastructure are not stored or implemented by Explore 360.
+
+The application retains its own domain User and personal application data in PostgreSQL, linked to the external identity through an authentication boundary/adapter. Domain code must not depend directly on Auth0-specific user types.
+
+The free-first rule remains mandatory: the current Auth0 Free plan is treated as a time-sensitive assumption and no paid tier is assumed during MVP validation while the free plan satisfies the approved requirements and applicable terms.
+
+GDPR refinement: Auth0 provides identity-security and privacy capabilities that support our GDPR obligations; it does **not** make Explore Luxembourg 360 automatically GDPR-compliant. Explore 360 remains responsible for lawful basis, transparency, minimisation, retention, deletion, export, controller/processor responsibilities and applicable contractual arrangements.
+
+Scalability refinement: the architecture is designed to scale beyond the initial free tier without requiring a change to the application's authentication model. This is an architectural goal, not a promise of unlimited users at zero cost.
+
+Custom-domain verification requirements, Free-plan features/limits and pricing must be revalidated at implementation time.
+
+**Refinement recorded in GitHub. Final audit remains pending.**
 
 ### R4.3 360° renderer
 **OPEN**
@@ -197,7 +211,7 @@ R4 — External Infrastructure         OPEN
    ↓
 R4.1 — Mapping Provider              CLOSED / APPROVED
    ↓
-R4.2 — Authentication                OPEN ← NEXT
+R4.2 — Authentication                REFINED / AWAITING FINAL AUDIT
    ↓
 R4.3 — 360° Renderer                 OPEN
    ↓
