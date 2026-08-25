@@ -142,13 +142,21 @@ The final audit confirmed the free-first strategy, current Free-plan assumptions
 
 **Final audit: PASS / CLOSED / APPROVED.**
 
-### R4.3 360° renderer
-**OPEN — NEXT**
+### R4.3 360° renderer & capture pipeline
+**STATUS: CLOSED / APPROVED**
 
-Select and validate the initial Web/PWA renderer for mobile performance, touch, fullscreen, Street View integration, proprietary 360°, accessibility and fallback behaviour.
+Decision document: `docs/architecture/R4.3-360-RENDERER-CAPTURE-PIPELINE.md`
+
+Google Street View is the primary visual/distribution layer for project-created outdoor trail coverage. Explore 360 retains an independent proprietary 360° Experience layer using Photo Sphere Viewer as the initial open-source renderer. The project-created trail is captured with the approved Insta360 X6 field kit and follows a two-pass workflow: Pass 1 documents the trail continuously; Pass 2 captures selected special 360°, photographic and editorial content.
+
+The pipeline covers planning, trail capture, backup, QC, Street View publication, experience capture, editorial/360 processing, Route linking, final QC and publication. Street View ↔ Explore 360 ↔ Return to Trail is an approved product requirement, with the exact Google custom-panorama versus application-transition implementation reserved for technical PoC validation. Outdoor trail coverage and indoor/special immersive content have separate default pipelines. Google Embed is preferred when sufficient for cost control; more advanced APIs require justification.
+
+Google panorama IDs are external references, not permanent territorial identifiers; Route identity, coordinates and Experience relationships remain project-owned. Future 3D capture/visualisation using the X6 is explicitly retained as research only and is outside MVP.
+
+**Final audit: PASS / CLOSED / APPROVED.**
 
 ### R4.4 Media storage/CDN
-**OPEN**
+**OPEN — NEXT**
 
 Define initial storage/CDN approach for proprietary assets, including asset structure, URLs, thumbnails, responsive media, permissions, rights metadata and future processing.
 
@@ -205,9 +213,9 @@ R4.1 — Mapping Provider              CLOSED / APPROVED
    ↓
 R4.2 — Authentication                CLOSED / APPROVED
    ↓
-R4.3 — 360° Renderer                 OPEN ← NEXT
+R4.3 — 360° Renderer & Capture      CLOSED / APPROVED
    ↓
-R4.4 — Media / CDN                   OPEN
+R4.4 — Media / CDN                   OPEN ← NEXT
    ↓
 R5 — Operations / Cloud / Security   OPEN
    ↓
