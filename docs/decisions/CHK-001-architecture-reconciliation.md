@@ -1,7 +1,8 @@
 # CHK-001 — Architecture Reconciliation Checkpoint
 
-**Status:** Accepted
-**Date:** 2026-08-18
+**Status:** Accepted / Reconciled
+**Date:** 2026-08-18  
+**Last reconciled:** 2026-09-03
 **Decision owner:** Explore Luxembourg 360
 
 ## Purpose
@@ -46,9 +47,11 @@ The system must distinguish between:
 2. map rendering technology;
 3. Explore Luxembourg 360 proprietary/domain data.
 
-**Géoportail / ACT** is considered a strategically important potential source and institutional collaboration. No partnership, API availability, licensing right or technical dependency is assumed until formally established.
+**Géoportail / ACT** is the preferred primary official Luxembourg geospatial provider for applicable official geographic/topographic information and services, subject to the applicable technical, licensing, attribution, caching and institutional conditions.
 
-External mapping providers must not become an unnecessary architectural lock-in.
+**Mapbox and MapTiler** remain secondary/fallback rendering/infrastructure candidates behind the abstraction boundary. **OpenStreetMap** remains an important open/community source and ecosystem rather than direct production tile infrastructure. **Google Street View** remains the principal external 360° Experience provider.
+
+The provider-independent architecture remains mandatory; the current provider direction does not constitute permanent exclusivity or institutional endorsement.
 
 ## Reconciliation decisions
 
@@ -68,6 +71,10 @@ The approved PWA-first, native-ready strategy remains in force. Native/cross-pla
 
 The existence of PostgreSQL/PostGIS, object storage, Redis and OpenSearch in the target architecture does not imply that every component must be deployed or heavily used from the first milestone. Each dependency should earn its operational complexity through a real requirement.
 
+### Offline
+
+The MVP is **offline-aware, not offline-first**. R5.6 defines the essential offline boundary: locally available content, available local media/360, already available route/map resources, GPS/GNSS positioning and graceful degradation. Dedicated downloadable experiences, offline maps/navigation and offline synchronisation remain future evolution.
+
 ## Quality rule
 
 No infrastructure component should be introduced merely because it appears in the target architecture. Initial implementation choices must balance product value, operational simplicity, scalability, security and reversibility.
@@ -75,3 +82,7 @@ No infrastructure component should be introduced merely because it appears in th
 ## Consequence
 
 The architectural vision remains ambitious and future-proof while the first implementation remains deliberately simple enough for a zero-code, early-stage product to be built, understood and validated without premature distributed-system complexity.
+
+## Reconciliation record
+
+This checkpoint is retained as the architectural reconciliation record. Later approved decisions, including the R4.1 provider-validation outcome, the R4.3 360° capture strategy and R5.6 MVP offline boundary, supersede only the earlier assumptions they explicitly replace; they do not invalidate the underlying provider-independent, modular and evolution-ready architecture.
