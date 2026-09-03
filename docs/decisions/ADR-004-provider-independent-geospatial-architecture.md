@@ -1,7 +1,8 @@
 # ADR-004 — Provider-Independent Geospatial Architecture
 
-**Status:** Accepted
-**Date:** 2026-08-18
+**Status:** Accepted / Reconciled
+**Date:** 2026-08-18  
+**Last reconciled:** 2026-09-03
 **Decision owner:** Explore Luxembourg 360
 
 ## Context
@@ -10,7 +11,7 @@ Mapping and geospatial information are foundational to Explore Luxembourg 360. T
 
 Volume II identifies Mapbox, OpenStreetMap, MapTiler, official Luxembourg geographic/topographic sources and custom platform data as relevant components.
 
-The project also identifies Géoportail / the Luxembourg Administration du cadastre et de la topographie as a strategically important potential source and future institutional collaboration partner.
+The project also identified Géoportail / the Luxembourg Administration du cadastre et de la topographie as a strategically important official source and potential institutional collaboration partner. Subsequent provider validation and contact with ACT resulted in the current decision to treat Géoportail / ACT as the preferred primary official geospatial provider, subject to the applicable technical and licensing conditions.
 
 ## Decision
 
@@ -20,15 +21,19 @@ The product domain and application code must not be tightly coupled to a single 
 
 A dedicated geospatial integration boundary will allow the platform to combine different sources according to purpose.
 
+**Current provider direction:** Géoportail / ACT is the preferred primary official Luxembourg geospatial provider; Mapbox and MapTiler remain interchangeable secondary/fallback rendering/infrastructure candidates where appropriate; OpenStreetMap remains an important open/community source; Google Street View remains the principal external 360° experience provider.
+
+This is a current architectural/provider direction, not a claim of permanent exclusivity or institutional endorsement.
+
 ## Roles of the main sources/providers
 
 ### Géoportail / official Luxembourg sources
 
-Treat Géoportail as a strategic official geospatial source and potential institutional collaboration partner.
+Treat Géoportail / ACT as the **preferred primary official Luxembourg geospatial provider** for applicable official geographic/topographic information and services, subject to licensing, technical access, attribution, caching and any institutional conditions.
 
-Where licensing, technical access and collaboration agreements permit, official Luxembourg datasets and services should be integrated through defined geographic data interfaces.
+Where permitted, official Luxembourg datasets and services should be integrated through defined geographic data interfaces.
 
-Géoportail is not required to be the sole map-rendering engine. Its greatest strategic value may be as an authoritative source of Luxembourg-specific geographic information and official services.
+Géoportail / ACT is not required to be the sole map-rendering engine. Its strategic value includes authoritative Luxembourg-specific geographic information and official services.
 
 ### OpenStreetMap
 
@@ -36,11 +41,11 @@ Use OpenStreetMap as an important open/community geographic data source, subject
 
 ### Mapbox
 
-Evaluate Mapbox as a potential initial map-rendering and interaction provider, including cost, licensing, performance, coverage and integration with the platform's 360° experience.
+Treat Mapbox as a secondary/fallback map-rendering and geospatial-services candidate where its capabilities, pricing and terms are appropriate.
 
 ### MapTiler
 
-Evaluate MapTiler as a rendering/tile and geographic infrastructure alternative or complement, particularly where it provides useful independence or cost/technical advantages.
+Treat MapTiler as a secondary/fallback rendering/tile and geographic infrastructure alternative or complement, particularly where it provides useful independence or cost/technical advantages.
 
 ### Explore Luxembourg 360 data
 
@@ -69,7 +74,7 @@ A single vendor does not need to perform all four roles.
 
 ## Provider selection process
 
-Before permanently selecting the initial map-rendering provider, the project will evaluate:
+The current provider direction has been established without removing the provider-independent boundary. Before production infrastructure is permanently locked, the implementation should validate:
 
 - licensing and attribution;
 - commercial usage conditions;
@@ -86,9 +91,11 @@ Before permanently selecting the initial map-rendering provider, the project wil
 - resilience and vendor lock-in;
 - operational complexity.
 
+The production choice between the applicable rendering/service components remains subject to technical proof and commercial/licensing validation. The preferred official geospatial source is Géoportail / ACT.
+
 ## Institutional collaboration
 
-The project should explore a professional relationship with the relevant Luxembourg public geospatial authorities before production dependence is established.
+The project should maintain a professional relationship with the relevant Luxembourg public geospatial authorities.
 
 Potential objectives include:
 
@@ -99,7 +106,7 @@ Potential objectives include:
 - exploring integration or collaboration opportunities;
 - ensuring the platform complements rather than misrepresents official geographic information.
 
-No assumption of partnership, endorsement or special access is made until formally confirmed.
+No assumption of endorsement or special access is made beyond what has been formally confirmed.
 
 ## Consequences
 
@@ -120,4 +127,6 @@ No assumption of partnership, endorsement or special access is made until formal
 
 ## Review trigger
 
-Revisit the provider selection after the geospatial evaluation and prototype phase, before production map infrastructure is locked.
+Revisit the provider selection if technical proof, licensing/usage conditions, pricing, ACT guidance, coverage, user experience requirements or operational constraints materially change.
+
+**Reconciliation note:** This ADR preserves the original provider-independent architectural decision while incorporating the later R4.1 provider-validation outcome. It should be read together with the current R4.1 record.
