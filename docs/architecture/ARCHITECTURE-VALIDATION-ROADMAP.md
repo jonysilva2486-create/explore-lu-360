@@ -57,9 +57,9 @@ PostgreSQL/PostGIS as authoritative data foundation; Redis only where justified;
 **Status: ACCEPTED**
 
 ## ADR-004 — Provider-Independent Geospatial Architecture
-Provider-independent geospatial abstraction; official Luxembourg sources, OSM, Mapbox, MapTiler and project data may participate as sources/providers; no assumed partnership or licensing without validation.
+Provider-independent geospatial abstraction remains mandatory. **Géoportail / ACT is the current preferred primary official Luxembourg geospatial provider.** Mapbox and MapTiler remain secondary/fallback candidates behind the abstraction; OpenStreetMap remains an open/community geographic source/ecosystem; Google Street View remains the principal external 360° Experience provider.
 
-**Status: ACCEPTED**
+**Status: ACCEPTED / RECONCILED**
 
 ## ADR-005 — Identity & Authentication
 OAuth 2.0/OIDC, JWT/session model, RBAC, accountless exploration and account-based memory/synchronisation. Auth0 is the preferred initial Identity Provider following R4.2 validation.
@@ -67,9 +67,9 @@ OAuth 2.0/OIDC, JWT/session model, RBAC, accountless exploration and account-bas
 **Status: ACCEPTED / VALIDATED — Auth0 preferred**
 
 ## ADR-006 — Media & 360° Strategy
-Google Street View for broad existing coverage; Explore 360 proprietary 360° for differentiation; own photography/video for editorial content; Object Storage + CDN for proprietary media; PostgreSQL stores metadata/relationships rather than large binaries.
+Google Street View for existing external coverage; Explore 360 proprietary 360° for selected trails/routes and locations; own photography/video for editorial content; Object Storage + CDN for proprietary media; PostgreSQL stores metadata/relationships rather than large binaries.
 
-**Status: ACCEPTED**
+**Status: ACCEPTED / RECONCILED**
 
 ## ADR-007 — API Architecture
 Versioned REST API, `/api/v1/`, OpenAPI, clients do not access the database directly, and API/domain boundaries remain reusable by future clients.
@@ -83,7 +83,7 @@ Versioned REST API, `/api/v1/`, OpenAPI, clients do not access the database dire
 
 Decision document: `docs/architecture/R1-IMPLEMENTATION-STACK-DECISION.md`
 
-Final stack: Next.js 16.3.x, React 19.2.x, TypeScript strict, Tailwind CSS 4.3.x, Node.js 24 LTS, NestJS 11.x, REST/OpenAPI, PostgreSQL/PostGIS, pnpm, monorepo/pnpm workspaces, Vitest, Playwright, ESLint and Prettier. Exact patch versions are locked at bootstrap. Provider, ORM, cloud, observability and full offline decisions remain deferred to their roadmap blocks.
+Final stack: Next.js 16.3.x, React 19.2.x, TypeScript strict, Tailwind CSS 4.3.x, Node.js 24 LTS, NestJS 11.x, REST/OpenAPI, PostgreSQL/PostGIS, pnpm, monorepo/pnpm workspaces, Vitest, Playwright, ESLint and Prettier. Exact patch versions are locked at bootstrap. Provider, ORM, cloud, observability and detailed offline implementation remain subject to their dedicated roadmap/implementation decisions.
 
 **Final audit: PASS / CLOSED.**
 
@@ -107,7 +107,7 @@ Approved first vertical slice:
 
 The slice is genuinely end-to-end across Web/PWA → API → domain → PostgreSQL/PostGIS → media/experience boundary → Web/PWA. It preserves accountless exploration, requires authentication for persistent cross-device Save, and uses a fallback Experience hierarchy: proprietary 360° → Street View → panoramic/photo → editorial media.
 
-The first slice includes loading, empty, error, unavailable Experience, permission-denied and limited-connectivity states. Complete offline architecture is deferred to R5. Search is not a mandatory dependency. My Explore is intentionally minimal. MUST HAVE versus FUTURE is explicit to prevent silent scope growth. A representative real/curated content pack is required.
+The first slice includes loading, empty, error, unavailable Experience, permission-denied and limited-connectivity states. Complete offline architecture is defined by the narrower MVP boundary in R5.6. Search is not a mandatory dependency. My Explore is intentionally minimal. MUST HAVE versus FUTURE is explicit to prevent silent scope growth. A representative real/curated content pack is required.
 
 A nine-panel visual companion was approved for documentation; written Product/Architecture contracts remain authoritative.
 
@@ -123,11 +123,11 @@ Validate concrete technologies without reopening approved architecture.
 
 Decision document: `docs/architecture/R4.1-MAPPING-PROVIDER-VALIDATION.md`
 
-Provider-independent mapping remains mandatory. Mapbox and MapTiler are approved interchangeable basemap candidates behind the internal abstraction; Géoportail/ACT is the strategic official Luxembourg data layer under external validation; OSM remains a source/ecosystem rather than direct production tile infrastructure; Google Street View remains the principal external 360° Experience provider.
+Provider-independent mapping remains mandatory. **Géoportail / ACT is the current primary official Luxembourg geospatial provider.** Mapbox and MapTiler remain secondary/fallback candidates behind the internal abstraction; OSM remains a source/ecosystem rather than direct production tile infrastructure; Google Street View remains the principal external 360° Experience provider.
 
-Final audit confirmed the free-first/cost-controlled rule, the MapTiler Free non-commercial limitation, the Mapbox Permanent Geocoding restriction, the explicit MUST HAVE versus SHOULD/FUTURE boundary, and the separation between basemap provider and Street View Experience. No single basemap provider is prematurely locked.
+The 2026-09-02 ACT response closed the previously pending provider-strategy validation at the architectural level. Dataset-level licensing, attribution, caching and special conditions remain to be checked before concrete production reuse. No partnership, endorsement or blanket licensing approval is assumed.
 
-Géoportail/ACT remains an external dependency: the initial contact has been made and any technical/institutional guidance will be incorporated when received. This pending response does not block unrelated R4 work and does not constitute an assumed partnership or licensing approval.
+The final audit confirmed the free-first/cost-controlled rule, provider abstraction, explicit MUST HAVE versus SHOULD/FUTURE boundary, and separation between geospatial infrastructure and the 360° Experience layer.
 
 **Final audit: PASS / CLOSED / APPROVED.**
 
@@ -147,7 +147,7 @@ The final audit confirmed the free-first strategy, current Free-plan assumptions
 
 Decision document: `docs/architecture/R4.3-360-RENDERER-CAPTURE-PIPELINE.md`
 
-Google Street View is the primary visual/distribution layer for project-created outdoor trail coverage. The Explore 360 proprietary 360° layer remains independently renderable, with Photo Sphere Viewer as the initial open-source renderer. The approved capture standard uses two passes: **Pass 1 — Trail Capture** for continuous route documentation, followed by **Pass 2 — Experience Capture** for deliberate 360°, photography, heritage, nature, viewpoint and Story content. The field kit is fixed as Insta360 X6 + Magic Selfie Stick/invisible-style pole + backpack mount + power bank + extra batteries.
+Google Street View is the primary external visual/distribution layer for project-created outdoor trail coverage. The Explore 360 proprietary 360° layer remains independently renderable, with Photo Sphere Viewer as the initial open-source renderer. The approved capture standard uses two passes: **Pass 1 — Trail Capture** for continuous route documentation, followed by **Pass 2 — Experience Capture** for deliberate 360°, photography, heritage, nature, viewpoint and Story content. The field kit is fixed as Insta360 X6 + Magic Selfie Stick/invisible-style pole + backpack mount + power bank + extra batteries.
 
 The audit confirmed the Street View ↔ Explore 360 transition requirement, outdoor/indoor distinction, Embed-first cost guardrail, project-owned Route/GPS/Experience identity, and the rule that Google panorama IDs are external references rather than permanent territorial identifiers. Future X6/3D investigation is preserved as a non-MVP option, especially for castles, monuments and interiors. The first real route capture remains the required field-validation event for Capture Standard v1.
 
@@ -170,30 +170,61 @@ The MVP remains free-first/pay-as-you-grow: R2 is the only required media storag
 
 **Final audit: PASS / CLOSED / APPROVED.**
 
-## R5 — Operations / Cloud / Security
+### R4 — provider conclusion
+
+**Primary official geospatial provider:** Géoportail / ACT.  
+**Project-owned geographic authority:** PostgreSQL/PostGIS.  
+**Secondary/fallback geospatial candidates:** Mapbox / MapTiler.  
+**Open geographic source/ecosystem:** OpenStreetMap.  
+**Principal external 360° provider:** Google Street View.  
+**Proprietary 360°:** Explore Luxembourg 360 own content.
+
+These roles are complementary and remain behind explicit application boundaries. Provider-specific choices must not leak into Product/UI/domain contracts.
+
+# 5. R5 — OPERATIONS / CLOUD / SECURITY — CLOSED
+
+R5 is complete. It defines the smallest credible operational foundation for the first vertical slice: cloud/deployment, CI/CD, observability, security/privacy/legal baseline, backups/recovery/rollback and the explicit MVP offline boundary.
+
+### R5.1 — Cloud & Deployment
+**CLOSED / APPROVED / FINAL AUDIT PASS**
+
+### R5.2 — CI/CD & Release Operations
+**CLOSED / APPROVED / FINAL AUDIT PASS**
+
+### R5.3 — Observability & Operations
+**CLOSED / APPROVED / FINAL AUDIT PASS**
+
+### R5.4 — Security & Privacy Operations
+**CLOSED / APPROVED / FINAL AUDIT PASS**
+
+### R5.5 — Backup / Recovery / Rollback
+**CLOSED / APPROVED / FINAL AUDIT PASS**
+
+### R5.6 — MVP Offline Boundary
+**CLOSED / APPROVED / FINAL AUDIT PASS**
+
+R5.6 establishes the MVP as **offline-aware, not offline-first**. The MVP supports locally available content, GPS/GNSS where available, graceful degradation and preservation of locally available state. Full downloadable experiences, dedicated offline maps/navigation, offline sync, offline uploads, advanced offline media and offline 3D remain future evolution.
+
+# 6. R6 — CODEX READINESS
+
 **STATUS: OPEN — NEXT**
-
-Define the smallest credible operational foundation for the first vertical slice: cloud/deployment, CI/CD, observability, security/privacy/legal baseline, backups/rollback and the explicit MVP offline boundary. Do not overbuild the first slice.
-
-## R6 — Codex Readiness
-**STATUS: OPEN**
 
 Prepare the stable implementation contract: repository structure, module boundaries, naming conventions, TypeScript/API conventions, environment variables, secrets policy, testing, lint/format rules, Git workflow, Definition of Done, acceptance criteria, seed/demo data, first vertical slice brief, constraints and explicit non-goals.
 
 Codex implements approved Product, Design and Architecture. It must not silently redesign product, architecture or scope.
 
-# 5. FINAL PRE-CODEX GATE
+# 7. FINAL PRE-CODEX GATE
 
-## Architecture + Product + Design Implementation Readiness Audit
+## Architecture + Product + Design + Operations + Implementation Readiness Audit
 **STATUS: NOT STARTED**
 
-Before production implementation, audit Product, Design, Architecture, Operations and Implementation readiness, including approved ADRs, stack, domain model, API contracts, mapping, authentication, media/360°, storage, cloud, environments, CI/CD, observability, security/privacy, backups/rollback, repository structure, tests, seed data, first vertical slice, acceptance criteria and Codex instructions.
+Before production implementation, audit Product, Design, Architecture, Operations and Implementation readiness, including approved ADRs, stack, domain model, API contracts, mapping, authentication, media/360°, storage, cloud, environments, CI/CD, observability, security/privacy, backups/rollback, offline boundary, repository structure, tests, seed data, first vertical slice, acceptance criteria and Codex instructions.
 
 The project may enter implementation only when the audit explicitly states:
 
 > **READY FOR CODEX**
 
-# 6. CODEX START
+# 8. CODEX START
 
 After the final gate:
 
@@ -202,7 +233,7 @@ After the final gate:
 3. Work remains constrained by approved Product, Design and Architecture decisions.
 4. New architectural decisions require explicit review rather than silent invention during coding.
 
-# 7. EXECUTION ORDER
+# 9. EXECUTION ORDER
 
 ```text
 PRODUCT                              CLOSED
@@ -227,9 +258,21 @@ R4.3 — 360° Renderer & Capture      CLOSED / APPROVED
    ↓
 R4.4 — Media / CDN                   CLOSED / APPROVED
    ↓
-R5 — Operations / Cloud / Security   OPEN ← NEXT
+R5 — Operations / Cloud / Security   CLOSED / APPROVED
    ↓
-R6 — Codex Readiness                 OPEN
+R5.1 — Cloud & Deployment            CLOSED
+   ↓
+R5.2 — CI/CD                         CLOSED
+   ↓
+R5.3 — Observability                 CLOSED
+   ↓
+R5.4 — Security & Privacy            CLOSED
+   ↓
+R5.5 — Backup / Recovery             CLOSED
+   ↓
+R5.6 — MVP Offline Boundary          CLOSED
+   ↓
+R6 — Codex Readiness                 OPEN ← NEXT
    ↓
 FINAL PRE-CODEX AUDIT                🔒 GATE
    ↓
@@ -240,7 +283,7 @@ APPLICATION FOUNDATION
 FIRST VERTICAL SLICE
 ```
 
-# 8. NON-NEGOTIABLE PROJECT RULE
+# 10. NON-NEGOTIABLE PROJECT RULE
 
 **We do not move forward by memory or improvisation.**
 
