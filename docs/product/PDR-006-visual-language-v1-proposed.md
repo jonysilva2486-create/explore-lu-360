@@ -2,6 +2,7 @@
 
 **Status:** APPROVED / RECONCILED
 **Date:** 2026-08-18
+**Last reconciled:** 2026-09-03
 **Phase:** Product Structure → Design System
 
 > This document began as the PDR-006 visual-direction proposal. The proposal has now been reconciled with the completed P6.1, P6.2 and P6.3 work. The filename is retained for repository continuity; its status is no longer proposed.
@@ -191,7 +192,8 @@ Production token freezing remains subject to reconciliation with the approved br
 
 The design system must remain compatible with what can actually be produced initially:
 
-- routes using Google Street View where appropriate;
+- existing Google Street View coverage where appropriate;
+- project-created 360° trail/route coverage using the approved capture workflow where selected routes justify it;
 - own photography of viewpoints, landscapes and places;
 - exterior monument content initially;
 - future own 360° production and interior mapping through permissions and collaborations.
