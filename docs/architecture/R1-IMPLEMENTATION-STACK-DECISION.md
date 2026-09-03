@@ -133,7 +133,7 @@ The exact orchestration of local PostgreSQL/PostGIS and other services belongs t
 
 The stack supports the approved Web/PWA-first strategy. R1 does not implement the complete offline architecture.
 
-Deferred: offline maps, downloadable regions, complex offline synchronisation, background GPS engine and full offline content packages. These are addressed later under R5.5 unless product scope changes.
+Deferred: dedicated offline maps, downloadable regions/experiences, complex offline synchronisation, background GPS engine and full offline content packages. The **MVP offline boundary is defined in R5.6**; deeper offline capabilities remain future evolution.
 
 ## 11. Explicitly Deferred
 
