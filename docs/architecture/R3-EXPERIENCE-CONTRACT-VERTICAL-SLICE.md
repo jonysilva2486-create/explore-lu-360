@@ -132,7 +132,7 @@ The slice must explicitly cover:
 - permission denied for location;
 - limited connectivity/network interruption.
 
-Limited connectivity is a runtime state in R3. A complete offline caching/synchronisation architecture is **not** part of R3 and remains under R5.
+Limited connectivity is a runtime state in R3. The **complete offline architecture is not part of R3; the MVP offline boundary is defined in R5.6.**
 
 The product must remain explorable when location permission is denied.
 
@@ -293,7 +293,7 @@ The final audit confirms:
 - Experience remains a cross-domain layer;
 - accountless exploration is preserved;
 - persistent saving requires authentication and remains synchronisable;
-- offline scope is explicitly deferred to R5;
+- offline scope is explicitly bounded by R5.6 for the MVP;
 - Search is not a mandatory first-slice dependency;
 - My Explore is intentionally minimal;
 - MUST HAVE versus FUTURE is explicit and protects the implementation scope;
