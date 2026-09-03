@@ -1,21 +1,22 @@
 # ADR-006 — Media & 360° Strategy
 
-**Status:** Accepted
-**Date:** 2026-08-18
+**Status:** Accepted / Reconciled
+**Date:** 2026-08-18  
+**Last reconciled:** 2026-09-03
 **Decision owner:** Explore Luxembourg 360
 
 ## Context
 
 Immersive media is a defining part of Explore Luxembourg 360, but capturing and hosting a complete 360° representation of Luxembourg would create unnecessary cost, operational complexity and duplication of existing coverage.
 
-Google Street View already provides broad road and route coverage. Explore Luxembourg 360 should use that existing coverage where it adequately serves the exploration purpose, while investing selectively in proprietary media where it creates meaningful product differentiation.
+Google Street View already provides broad road and route coverage. Explore Luxembourg 360 should use that existing coverage where it adequately serves the exploration purpose, while selectively creating proprietary coverage where owned immersive content adds meaningful product differentiation.
 
 ## Decision
 
-Explore Luxembourg 360 will adopt a **hybrid media strategy**:
+Explore Luxembourg 360 will adopt a **hybrid media and 360° strategy**:
 
-1. **Google Street View for existing route coverage** where its coverage and interaction model are appropriate.
-2. **Explore Luxembourg 360 proprietary 360° capture** for selected experiences where owned immersive content adds clear value.
+1. **Google Street View for existing external coverage** where its coverage and interaction model are appropriate.
+2. **Explore Luxembourg 360 proprietary 360° capture for selected trails/routes and locations**, using the approved capture and publication pipeline where applicable.
 3. **Own photography and video** for editorial, storytelling and contextual content.
 4. **Object Storage + CDN** for proprietary media assets.
 5. **PostgreSQL** stores media metadata and relationships, not large media binaries.
@@ -30,9 +31,11 @@ Explore Luxembourg 360 will not copy Google Street View imagery into its own med
 
 All Google Maps Platform / Street View integration must be reviewed against the applicable current terms, attribution requirements, API quotas, caching/storage restrictions and commercial-use conditions before production launch.
 
-## Proprietary 360° content
+## Explore Luxembourg 360 proprietary 360° capture
 
-Explore Luxembourg 360 will capture its own 360° imagery selectively rather than attempting to cover every road or trail.
+Explore Luxembourg 360 will selectively create its own 360° coverage using the approved capture workflow rather than attempting to cover every road or trail indiscriminately.
+
+The trail/route capture model may use the project's Insta360 X6 equipment with GPS-linked capture, processing and publication through the approved Google Street View pipeline, subject to the applicable technical, legal and platform requirements.
 
 Priority candidates include:
 
@@ -41,6 +44,7 @@ Priority candidates include:
 - interiors where permission is obtained;
 - museums and cultural locations where authorised;
 - distinctive natural locations;
+- trails/routes where continuous or strategically placed coverage creates genuine exploration value;
 - locations insufficiently represented by existing coverage;
 - special experiences where the immersive presentation itself is part of the product value.
 
@@ -52,9 +56,9 @@ The editorial principle is:
 
 The strategic model is:
 
-**Google for coverage. Explore 360 for differentiation.**
+**Google for existing coverage. Explore 360 for owned trail/route coverage and differentiation.**
 
-Google Street View can provide the connective journey along roads and covered routes. Explore Luxembourg 360 proprietary media should concentrate on the moments, places and stories that deserve a dedicated experience.
+Google Street View can provide existing road and covered-route coverage. Explore Luxembourg 360 proprietary media should concentrate on trails, routes, moments, places and stories that deserve dedicated project-created coverage.
 
 ## Media architecture
 
@@ -80,6 +84,28 @@ Explore Luxembourg 360
 ```
 
 The database stores ownership, relationships, dimensions, processing state, versions, rights metadata and references. Large binary assets remain outside PostgreSQL.
+
+## 360° capture and processing pipeline
+
+The approved capture workflow is conceptually:
+
+```text
+X6 Capture
+   ↓
+GPS-linked source
+   ↓
+Ingest / validation
+   ↓
+Processing / optimisation
+   ↓
+Project-owned master + derivatives
+   ↓
+Publication / integration
+   ├── Google Street View where appropriate
+   └── Explore Luxembourg 360 proprietary experiences where appropriate
+```
+
+The exact capture cadence, route segmentation, metadata schema and publication automation are implementation details and must respect the applicable platform requirements.
 
 ## Media processing
 
@@ -118,6 +144,7 @@ The system should be capable of recording:
 - Dramatically reduces initial capture and storage investment.
 - Focuses proprietary effort on experiences that differentiate the product.
 - Preserves the ability to create a distinctive owned media library over time.
+- Allows trail/route coverage to become a genuine Explore 360 asset rather than relying exclusively on existing road coverage.
 - Scales storage independently from transactional application data.
 - Supports professional media workflows as the platform grows.
 
@@ -126,8 +153,8 @@ The system should be capable of recording:
 ### Positive
 
 - Lower initial capital and operational cost.
-- Faster geographic coverage.
-- Strong differentiation through selective proprietary experiences.
+- Faster geographic coverage through existing Street View.
+- Strong differentiation through selective proprietary trail/route and location experiences.
 - Clear separation between external and owned media.
 - Scalable media infrastructure.
 
@@ -140,4 +167,6 @@ The system should be capable of recording:
 
 ## Review trigger
 
-Revisit this strategy if Street View coverage, API terms/costs, licensing conditions, user experience requirements or the project's proprietary 360° capture programme materially change.
+Revisit this strategy if Street View coverage, API terms/costs, licensing conditions, user experience requirements, the proprietary 360° capture programme or the capture/publishing pipeline materially change.
+
+**Reconciliation note:** This ADR preserves the original hybrid-media decision while incorporating the later R4.3 decision that project-created 360° trail/route coverage is an important proprietary use case.
