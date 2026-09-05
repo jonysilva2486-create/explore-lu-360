@@ -83,7 +83,7 @@ Versioned REST API, `/api/v1/`, OpenAPI, clients do not access the database dire
 
 Decision document: `docs/architecture/R1-IMPLEMENTATION-STACK-DECISION.md`
 
-Final stack: Next.js 16.3.x, React 19.2.x, TypeScript strict, Tailwind CSS 4.3.x, Node.js 24 LTS, NestJS 11.x, REST/OpenAPI, PostgreSQL/PostGIS, pnpm, monorepo/pnpm workspaces, Vitest, Playwright, ESLint and Prettier. Exact patch versions are locked at bootstrap. Provider, ORM, cloud, observability and detailed offline implementation remain subject to their dedicated roadmap/implementation decisions.
+Final stack: Next.js 16.3.x, React 19.2.x, TypeScript strict, Tailwind CSS 4.3.x, Node.js 24 LTS, NestJS 11.x, REST/OpenAPI, PostgreSQL/PostGIS, pnpm, monorepo/pnpm workspaces, Vitest, Playwright, ESLint and Prettier. Exact patch versions are locked at bootstrap. Provider, ORM, cloud, observability and detailed offline implementation were intentionally outside R1 and have since been resolved through the dedicated R2/R4/R5 decisions.
 
 **Final audit: PASS / CLOSED.**
 
@@ -207,18 +207,22 @@ R5.6 establishes the MVP as **offline-aware, not offline-first**. The MVP suppor
 
 # 6. R6 — CODEX READINESS
 
-**STATUS: OPEN — NEXT**
+**STATUS: CLOSED / APPROVED**
 
-Prepare the stable implementation contract: repository structure, module boundaries, naming conventions, TypeScript/API conventions, environment variables, secrets policy, testing, lint/format rules, Git workflow, Definition of Done, acceptance criteria, seed/demo data, first vertical slice brief, constraints and explicit non-goals.
+Decision document: `docs/architecture/R6-CODEX-READINESS.md`
 
-Codex implements approved Product, Design and Architecture. It must not silently redesign product, architecture or scope.
+R6 defines the stable implementation contract: repository structure, module boundaries, naming conventions, TypeScript/API conventions, environment variables, secrets policy, testing, lint/format rules, Git workflow, Definition of Done, acceptance criteria, seed/demo data, first vertical slice brief, security constraints, provider boundaries, offline boundary, scope control, change-control and explicit non-goals.
+
+Codex implements approved Product, Design and Architecture. It must not silently redesign product, architecture or scope. Decision Authority explicitly separates implementation freedom from project-level decisions requiring human approval.
+
+**Final audit: PASS / CLOSED / APPROVED.**
 
 # 7. FINAL PRE-CODEX GATE
 
 ## Architecture + Product + Design + Operations + Implementation Readiness Audit
-**STATUS: NOT STARTED**
+**STATUS: IN PROGRESS**
 
-Before production implementation, audit Product, Design, Architecture, Operations and Implementation readiness, including approved ADRs, stack, domain model, API contracts, mapping, authentication, media/360°, storage, cloud, environments, CI/CD, observability, security/privacy, backups/rollback, offline boundary, repository structure, tests, seed data, first vertical slice, acceptance criteria and Codex instructions.
+This is the active final gate before Codex implementation. Audit Product, Design, Architecture, Operations and Implementation readiness, including approved ADRs, stack, domain model, API contracts, mapping, authentication, media/360°, storage, cloud, environments, CI/CD, observability, security/privacy, backups/rollback, offline boundary, repository structure, tests, seed data, first vertical slice, acceptance criteria and Codex instructions.
 
 The project may enter implementation only when the audit explicitly states:
 
@@ -272,9 +276,9 @@ R5.5 — Backup / Recovery             CLOSED
    ↓
 R5.6 — MVP Offline Boundary          CLOSED
    ↓
-R6 — Codex Readiness                 OPEN ← NEXT
+R6 — Codex Readiness                 CLOSED / APPROVED
    ↓
-FINAL PRE-CODEX AUDIT                🔒 GATE
+FINAL PRE-CODEX AUDIT                🔒 IN PROGRESS
    ↓
 READY FOR CODEX                      🚀
    ↓
