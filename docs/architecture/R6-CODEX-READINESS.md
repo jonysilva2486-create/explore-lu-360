@@ -1,6 +1,6 @@
 # Explore Luxembourg 360 — R6 Codex Readiness
 
-**Status:** Proposed / Ready for final approval
+**Status:** Approved / Closed
 **Phase:** Pre-implementation readiness
 **Purpose:** Define the implementation contract and decision boundaries for Codex before application code is introduced.
 
@@ -537,34 +537,34 @@ These may be revisited through explicit future decisions.
 
 Before R6 is formally closed:
 
-- [ ] Repository structure confirmed
-- [ ] Module boundaries confirmed
-- [ ] Domain ownership confirmed
-- [ ] API conventions confirmed
-- [ ] Naming conventions confirmed
-- [ ] Environment strategy confirmed
-- [ ] Secrets boundary confirmed
-- [ ] Testing strategy confirmed
-- [ ] Git/CI workflow confirmed
-- [ ] Definition of Done confirmed
-- [ ] Acceptance criteria confirmed
-- [ ] Seed/demo data strategy confirmed
-- [ ] First vertical slice confirmed
-- [ ] Provider boundaries confirmed
-- [ ] Offline MVP boundary confirmed
-- [ ] Security guardrails confirmed
-- [ ] Scope/non-goals confirmed
-- [ ] Decision Authority confirmed
-- [ ] Change-control process confirmed
-- [ ] Codex operating instructions confirmed
+- [x] Repository structure confirmed
+- [x] Module boundaries confirmed
+- [x] Domain ownership confirmed
+- [x] API conventions confirmed
+- [x] Naming conventions confirmed
+- [x] Environment strategy confirmed
+- [x] Secrets boundary confirmed
+- [x] Testing strategy confirmed
+- [x] Git/CI workflow confirmed
+- [x] Definition of Done confirmed
+- [x] Acceptance criteria confirmed
+- [x] Seed/demo data strategy confirmed
+- [x] First vertical slice confirmed
+- [x] Provider boundaries confirmed
+- [x] Offline MVP boundary confirmed
+- [x] Security guardrails confirmed
+- [x] Scope/non-goals confirmed
+- [x] Decision Authority confirmed
+- [x] Change-control process confirmed
+- [x] Codex operating instructions confirmed
 
 ---
 
 ## 27. Readiness gate
 
-R6 is ready for closure when the checklist above has been reviewed and no unresolved material implementation ambiguity remains.
+R6 has been reviewed and the implementation contract contains no unresolved material implementation ambiguity.
 
-Formal status transition:
+Formal status:
 
 ```text
 R6 — PROPOSED
