@@ -6,6 +6,8 @@
 
 R1 converts the already-approved architecture direction into a practical implementation stack for the Explore Luxembourg 360 Web/PWA and API. It does not reopen approved architecture principles and does not decide cloud, mapping provider, authentication provider, 360° renderer, observability, or detailed database access strategy.
 
+> **Historical deferrals:** The provider, cloud, authentication, 360° renderer, media storage/CDN, observability, security/privacy, backup/rollback and offline items listed as deferred below were intentionally outside R1's scope at the time. They were subsequently resolved by the approved R4/R5 decisions. Where a later approved decision exists, that later decision supersedes the historical deferral; the historical R1 text is retained for traceability.
+
 ## 1. Core Stack
 
 | Area | Decision | Status |
@@ -137,6 +139,8 @@ Deferred: dedicated offline maps, downloadable regions/experiences, complex offl
 
 ## 11. Explicitly Deferred
 
+The following deferrals describe R1's scope at the time it was approved. They are historical and must be read together with the later approved roadmap decisions referenced below.
+
 ### R2 — Domain & Data
 - ORM/data-access strategy;
 - detailed PostgreSQL/PostGIS schema;
@@ -144,11 +148,15 @@ Deferred: dedicated offline maps, downloadable regions/experiences, complex offl
 - domain aggregates/entities;
 - search indexing model.
 
+**Later status:** resolved through R2 and subsequent implementation-readiness decisions.
+
 ### R4 — External Infrastructure & Providers
 - mapping provider;
 - authentication provider;
 - 360° renderer;
 - media storage/CDN provider.
+
+**Later status:** resolved through R4.1, R4.2, R4.3 and R4.4. See the Master Roadmap for the current authoritative status.
 
 ### R5 — Operations / Cloud / Security
 - cloud provider/boundary;
@@ -159,6 +167,8 @@ Deferred: dedicated offline maps, downloadable regions/experiences, complex offl
 - security/privacy operational controls;
 - backups/rollback;
 - offline MVP boundary.
+
+**Later status:** resolved through R5.1–R5.6. The approved MVP offline boundary is specifically defined in R5.6.
 
 ## 12. Decision Principles
 
@@ -186,4 +196,4 @@ The final audit confirms that R1:
 
 **R1 is CLOSED / APPROVED.**
 
-The next roadmap block is **R2 — Domain & Data**, but only after re-checking the Master Roadmap and project history as required by the project execution rule.
+The next roadmap block is **R2 — Domain & Data**, but only after re-checking the Master Roadmap and project history as required by the project execution rule. This final sentence is historical roadmap context; later approved roadmap status supersedes it.
