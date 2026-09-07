@@ -1,7 +1,8 @@
 # PDR-004 — MVP Scope
 
-**Status:** Accepted
+**Status:** Accepted — scope clarification applied during Final Pre-Codex Audit
 **Date:** 2026-08-18
+**Audit clarification:** 2026-09-07
 
 ## Decision
 
@@ -20,9 +21,21 @@ The MVP must allow a user to:
 | Photography / Media | ✅ | Initial media support, architected for future scale. |
 | 360° | ✅ | First immersive experience; advanced hotspot/navigation systems can follow later. |
 | Search | ✅ | Useful conventional search first; advanced semantic/AI search later. |
-| Save | ✅ | Save places initially; broader collections can evolve later. |
+| Save | ✅ | Save Places and basic Routes/Trails; broader collections can evolve later. |
 | Account / Authentication | ✅ | Minimal foundation for identity and cross-device synchronization. |
 | Trails / Routes | ✅ basic | View route, geometry, distance, information, related places and save; advanced tracking later. |
+
+### Explicit MVP save scope
+
+The Final Pre-Codex Audit resolves the previous wording ambiguity as follows:
+
+- **Save Place:** MVP.
+- **Save Route/Trail:** MVP, as part of the basic Route/Trail capability.
+- **Saved Places:** MVP personal view.
+- **Saved Trails:** MVP personal view corresponding to saved basic Routes/Trails.
+- **Collections:** authenticated capability may remain minimal; richer collection management is not required for the first vertical slice.
+
+Codex must therefore not remove `Saved Trails` merely because the first vertical slice proves `Save Place` first. The vertical slice is intentionally narrower than the complete MVP screen inventory.
 
 ## Phase 2 backlog
 
