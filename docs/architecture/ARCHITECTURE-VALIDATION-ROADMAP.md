@@ -1,7 +1,7 @@
 # Explore Luxembourg 360 — Pre-Codex Master Roadmap
 
 **Status:** ACTIVE MASTER ROADMAP  
-**Phase:** Architecture & Implementation Readiness  
+**Phase:** Final Pre-Codex Audit & Implementation Readiness  
 **Purpose:** Canonical execution map from completed product/design foundations to the Codex implementation start.
 
 ## 0. Governing rule
@@ -38,6 +38,13 @@ Initial implementation must work with realistically producible content: curated 
 **CLOSED / APPROVED**
 
 Includes Iconography, Buttons & Controls, System States, Light/Dark Behaviour, Motion and Accessibility. Dark mode uses the approved soft/near-black direction rather than absolute black.
+
+## Pre-Codex Design Implementation Contract
+**CLOSED / APPROVED**
+
+Canonical implementation contract: `docs/design/PRE-CODEX-DESIGN-IMPLEMENTATION-CONTRACT.md`
+
+The contract freezes the current product typography direction (Cormorant Garamond + Inter), canonical colour tokens, semantic-token requirement, premium composition rules, responsive behaviour, accessibility target and anti-generic/anti-Codex visual quality gate.
 
 # 3. APPROVED ARCHITECTURE — RECONCILED
 
@@ -107,9 +114,7 @@ Approved first vertical slice:
 
 The slice is genuinely end-to-end across Web/PWA → API → domain → PostgreSQL/PostGIS → media/experience boundary → Web/PWA. It preserves accountless exploration, requires authentication for persistent cross-device Save, and uses a fallback Experience hierarchy: proprietary 360° → Street View → panoramic/photo → editorial media.
 
-The first slice includes loading, empty, error, unavailable Experience, permission-denied and limited-connectivity states. Complete offline architecture is defined by the narrower MVP boundary in R5.6. Search is not a mandatory dependency. My Explore is intentionally minimal. MUST HAVE versus FUTURE is explicit to prevent silent scope growth. A representative real/curated content pack is required.
-
-A nine-panel visual companion was approved for documentation; written Product/Architecture contracts remain authoritative.
+The slice includes the MVP Saved Trails scope clarification recorded in PDR-004. The first vertical slice proves Save Place first; this does not remove Saved Trails from the broader MVP.
 
 **Final audit: PASS / CLOSED.**
 
@@ -138,7 +143,7 @@ Decision document: `docs/architecture/R4.2-AUTHENTICATION-PROVIDER.md`
 
 Auth0 is the preferred initial Identity Provider. The approved model is accountless exploration with authentication only for persistent user features such as Saves and Collections. Credentials remain with the specialised identity provider; Explore Luxembourg 360 does not store passwords. Auth0 remains behind an application authentication boundary, while PostgreSQL remains authoritative for application-domain user data.
 
-The final audit confirmed the free-first strategy, current Free-plan assumptions, accountless UX, provider abstraction, data minimisation, GDPR responsibility boundaries, deletion/export requirements and the distinction between architectural scalability and unlimited free usage. Current Auth0 features/pricing and applicable terms must be revalidated at implementation/bootstrap.
+The current Auth0 tenant is development-only. Production/staging identity will use an EU-region tenant if required by the final privacy/data-placement assessment; this is recorded in `docs/architecture/ENVIRONMENT-DATA-RESIDENCY-POLICY.md`.
 
 **Final audit: PASS / CLOSED / APPROVED.**
 
@@ -149,9 +154,7 @@ Decision document: `docs/architecture/R4.3-360-RENDERER-CAPTURE-PIPELINE.md`
 
 Google Street View is the primary external visual/distribution layer for project-created outdoor trail coverage. The Explore 360 proprietary 360° layer remains independently renderable, with Photo Sphere Viewer as the initial open-source renderer. The approved capture standard uses two passes: **Pass 1 — Trail Capture** for continuous route documentation, followed by **Pass 2 — Experience Capture** for deliberate 360°, photography, heritage, nature, viewpoint and Story content. The field kit is fixed as Insta360 X6 + Magic Selfie Stick/invisible-style pole + backpack mount + power bank + extra batteries.
 
-The audit confirmed the Street View ↔ Explore 360 transition requirement, outdoor/indoor distinction, Embed-first cost guardrail, project-owned Route/GPS/Experience identity, and the rule that Google panorama IDs are external references rather than permanent territorial identifiers. Future X6/3D investigation is preserved as a non-MVP option, especially for castles, monuments and interiors. The first real route capture remains the required field-validation event for Capture Standard v1.
-
-A visual companion was approved for documentation; the written architecture contract remains authoritative.
+The provider roles are explicitly reconciled in `docs/architecture/PROVIDER-EXPERIENCE-RECONCILIATION.md`: R3 defines user-facing experience priority; R4.3 defines distribution practicality for continuous trail capture.
 
 **Final audit: PASS / CLOSED / APPROVED.**
 
@@ -213,6 +216,8 @@ Decision document: `docs/architecture/R6-CODEX-READINESS.md`
 
 R6 defines the stable implementation contract: repository structure, module boundaries, naming conventions, TypeScript/API conventions, environment variables, secrets policy, testing, lint/format rules, Git workflow, Definition of Done, acceptance criteria, seed/demo data, first vertical slice brief, security constraints, provider boundaries, offline boundary, scope control, change-control and explicit non-goals.
 
+The pre-Codex design implementation contract is additionally defined at `docs/design/PRE-CODEX-DESIGN-IMPLEMENTATION-CONTRACT.md`.
+
 Codex implements approved Product, Design and Architecture. It must not silently redesign product, architecture or scope. Decision Authority explicitly separates implementation freedom from project-level decisions requiring human approval.
 
 **Final audit: PASS / CLOSED / APPROVED.**
@@ -220,15 +225,37 @@ Codex implements approved Product, Design and Architecture. It must not silently
 # 7. FINAL PRE-CODEX GATE
 
 ## Architecture + Product + Design + Operations + Implementation Readiness Audit
-**STATUS: IN PROGRESS — BLOCKERS / VERIFICATIONS IDENTIFIED**
+**STATUS: IN PROGRESS — CLOSURE PASS ACTIVE**
 
-Canonical audit record: `docs/architecture/FINAL-PRE-CODEX-AUDIT.md`
+Canonical first-pass audit: `docs/architecture/FINAL-PRE-CODEX-AUDIT.md`  
+Canonical closure record: `docs/architecture/FINAL-PRE-CODEX-CLOSURE-RECORD.md`
 
-The first final-gate audit pass was recorded on 2026-09-07. It confirms that the approved architecture is coherent, but `READY FOR CODEX` is **not yet authorised**. The remaining material items are tracked in the canonical audit, including historical Volume I reconciliation, Saved Trails scope, typography/token freezing, provider-wording reconciliation, Google API-key restrictions, Auth0 EU-region environment strategy, Render EU-region selection, branch protection verification and CI establishment.
+The first final-gate audit pass was recorded on 2026-09-07. The closure pass has now resolved the documentation and decision ambiguities that could be resolved before code exists.
 
-The project may enter implementation only when the audit explicitly states:
+### Current remaining gates before `READY FOR CODEX`
 
-> **READY FOR CODEX**
+1. **GitHub governance:** manually verify `main` branch protection and direct-push controls.
+2. **Google security:** apply the dedicated key/application/API restriction policy before the first real Maps integration.
+
+These are explicit security/governance gates, not reasons to begin coding with unsafe defaults.
+
+### Implementation/production gates tracked separately
+
+The following are intentionally deferred until the corresponding implementation or production stage and must not be forgotten:
+
+- CI execution proven on a real PR;
+- R2 bucket/security/CORS/signed-URL implementation;
+- EU Auth0 production tenant and privacy/contractual review;
+- Render Frankfurt production resources;
+- ACT/Géoportail dataset-level rights validation;
+- recovery inventory and restore test;
+- monitoring/alert ownership;
+- privacy/GDPR operational artefacts and DPIA screening;
+- rights/EXIF/GPS publication workflow;
+- first real route capture validation;
+- production domain/DNS.
+
+The project must not claim production readiness until these gates are closed.
 
 # 8. CODEX START
 
@@ -280,7 +307,9 @@ R5.6 — MVP Offline Boundary          CLOSED
    ↓
 R6 — Codex Readiness                 CLOSED / APPROVED
    ↓
-FINAL PRE-CODEX AUDIT                🔒 IN PROGRESS
+FINAL PRE-CODEX AUDIT                🔒 CLOSURE PASS ACTIVE
+   ↓
+GITHUB GOVERNANCE + GOOGLE KEY       🔒 USER VERIFICATION
    ↓
 READY FOR CODEX                      🚀
    ↓
