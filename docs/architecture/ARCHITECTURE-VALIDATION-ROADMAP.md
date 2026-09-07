@@ -220,9 +220,11 @@ Codex implements approved Product, Design and Architecture. It must not silently
 # 7. FINAL PRE-CODEX GATE
 
 ## Architecture + Product + Design + Operations + Implementation Readiness Audit
-**STATUS: IN PROGRESS**
+**STATUS: IN PROGRESS — BLOCKERS / VERIFICATIONS IDENTIFIED**
 
-This is the active final gate before Codex implementation. Audit Product, Design, Architecture, Operations and Implementation readiness, including approved ADRs, stack, domain model, API contracts, mapping, authentication, media/360°, storage, cloud, environments, CI/CD, observability, security/privacy, backups/rollback, offline boundary, repository structure, tests, seed data, first vertical slice, acceptance criteria and Codex instructions.
+Canonical audit record: `docs/architecture/FINAL-PRE-CODEX-AUDIT.md`
+
+The first final-gate audit pass was recorded on 2026-09-07. It confirms that the approved architecture is coherent, but `READY FOR CODEX` is **not yet authorised**. The remaining material items are tracked in the canonical audit, including historical Volume I reconciliation, Saved Trails scope, typography/token freezing, provider-wording reconciliation, Google API-key restrictions, Auth0 EU-region environment strategy, Render EU-region selection, branch protection verification and CI establishment.
 
 The project may enter implementation only when the audit explicitly states:
 
