@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #171A19;
+  --paper: #F5F3EE;
+  --white: #FFFFFF;
+  --stone: #D9D6CE;
+  --slate: #68706C;
+  --forest: #263C32;
+  --moss: #52685A;
+  --lichen: #879587;
+  --copper: #A46645;
+
+  --page-background: var(--paper);
+  --surface: var(--white);
+  --primary-text: var(--ink);
+  --secondary-text: var(--slate);
+  --border: var(--stone);
+  --primary-action: var(--forest);
+  --accent: var(--copper);
+}
+
+* { box-sizing: border-box; }
+
+html { min-height: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--page-background);
+  color: var(--primary-text);
+  font-family: var(--font-sans), Arial, sans-serif;
+}
+
+button, input { font: inherit; }
+
+::selection { background: var(--forest); color: var(--white); }
+
+:focus-visible {
+  outline: 3px solid var(--copper);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
