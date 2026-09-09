@@ -8,7 +8,7 @@ export class MapLibreDevProvider implements MapProvider {
       container,
       center: [6.13, 49.78],
       zoom: 8.2,
-      attributionControl: true,
+      attributionControl: false,
       style: {
         version: 8,
         sources: {
@@ -23,6 +23,7 @@ export class MapLibreDevProvider implements MapProvider {
       },
     });
 
+    map.addControl(new maplibregl.AttributionControl(), "bottom-right");
     map.addControl(new maplibregl.NavigationControl({ showCompass: true }), "top-right");
 
     places.forEach((place) => {
