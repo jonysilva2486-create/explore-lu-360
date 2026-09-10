@@ -170,4 +170,5 @@ Provide a concise institutional conclusion showing how the proposed financial, o
 **Roadmap:** APPROVED  
 **Point 1:** CLOSED / APPROVED  
 **Point 2:** CLOSED / APPROVED  
-**Next point:** 3 — Phases de développement et niveaux de maturité
+**Point 3:** CLOSED / APPROVED  
+**Next point:** 4 — Structure des coûts
