@@ -46,6 +46,14 @@ The volume must clearly distinguish between:
 
 For public or institutional funding, preference must be given to current official sources.
 
+### Canonical approved decisions
+
+Final decisions that have completed the mandatory workflow are recorded in:
+
+`docs/viability/VOLUME-III-APPROVED-DECISIONS.md`
+
+This file is the canonical decision record for closed Volume III points. Closed decisions must not be silently reopened.
+
 ---
 
 # 1. Objet et rôle du volume
@@ -160,5 +168,6 @@ Provide a concise institutional conclusion showing how the proposed financial, o
 ## Current execution position
 
 **Roadmap:** APPROVED  
-**Next point:** 1 — Objet et rôle du volume  
-**Point 1 status:** Proposal v0.1 presented; not yet audited or approved as final content.
+**Point 1:** CLOSED / APPROVED  
+**Point 2:** CLOSED / APPROVED  
+**Next point:** 3 — Phases de développement et niveaux de maturité
