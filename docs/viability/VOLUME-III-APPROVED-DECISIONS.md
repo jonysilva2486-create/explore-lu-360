@@ -59,19 +59,15 @@ Le projet ne doit pas être remodelé pour correspondre artificiellement à FEDE
 ## Quatre dimensions de la viabilité
 
 ### 1. Viabilité financière
-
 Capacité à supporter les coûts de création, d’exploitation, de maintenance et de croissance du projet.
 
 ### 2. Viabilité opérationnelle
-
 Capacité réelle à produire et capter les contenus, actualiser les informations et maintenir la plateforme dans la durée.
 
 ### 3. Viabilité institutionnelle
-
 Capacité à disposer d’un cadre crédible pour collaborer avec administrations publiques, communes, organismes touristiques, partenaires et financeurs.
 
 ### 4. Viabilité territoriale
-
 Capacité à créer une utilité pertinente pour le territoire et ses utilisateurs : découverte du Luxembourg, valorisation du patrimoine et de la nature, accès à l’information territoriale, visibilité de lieux moins connus, expérience numérique et bénéfices potentiels pour visiteurs, résidents et acteurs locaux.
 
 **Important :** cet impact territorial n’est pas présenté comme déjà démontré. Le Volume III doit déterminer les conditions permettant de créer cette valeur, de la démontrer et, ultérieurement, de la mesurer.
@@ -89,13 +85,11 @@ Capacité à créer une utilité pertinente pour le territoire et ses utilisateu
 La viabilité d’Explore Luxembourg 360 repose sur sept principes structurants.
 
 ## 1. Croissance maîtrisée
-
 La dimension du projet ne doit pas croître plus vite que sa capacité à produire, actualiser et maintenir ce qui existe déjà.
 
 Le projet doit pouvoir commencer à une échelle réaliste, démontrer son fonctionnement, apprendre, puis grandir progressivement.
 
 ## 2. Coûts structurels maîtrisés
-
 Lorsque plusieurs solutions permettent d’atteindre un niveau de service satisfaisant, le projet privilégie celles qui réduisent les dépendances et les coûts récurrents, notamment lorsque des infrastructures publiques ou des données ouvertes appropriées existent.
 
 Cette optimisation ne doit pas sacrifier de manière significative la qualité du produit, la sécurité, la fiabilité ou l’expérience utilisateur.
@@ -103,7 +97,6 @@ Cette optimisation ne doit pas sacrifier de manière significative la qualité d
 > Optimiser le coût, pas sacrifier le produit.
 
 ## 3. Financement comme accélérateur
-
 Les financements publics ou institutionnels peuvent accélérer le développement, l’acquisition d’équipement, la réalisation d’un pilote ou l’expansion du projet.
 
 L’objectif est toutefois de réduire, lorsque cela est possible, la dépendance structurelle du fonctionnement de base à une succession permanente de subventions.
@@ -111,7 +104,6 @@ L’objectif est toutefois de réduire, lorsque cela est possible, la dépendanc
 Cette règle ne suppose pas que le projet puisse fonctionner sans aucun financement public : cette possibilité devra être vérifiée ultérieurement à partir des coûts réels et des scénarios financiers.
 
 ## 4. Expansion fondée sur des preuves
-
 La progression approuvée est :
 
 > Construire → tester → mesurer → apprendre → financer / étendre.
@@ -121,7 +113,6 @@ Une extension territoriale doit être justifiée par des résultats, des usages,
 Le projet ne part donc pas du principe qu’il faut financer et capturer tout le Luxembourg dès le départ.
 
 ## 5. Gratuité universelle pour le public
-
 **Décision structurelle :** les contenus et fonctionnalités destinés à l’utilisateur final ou au visiteur sont gratuits, sans restriction commerciale d’accès au contenu public.
 
 Cette décision inclut explicitement **My Explore 360**.
@@ -133,7 +124,6 @@ La viabilité économique ne doit donc pas reposer sur un paywall placé devant 
 Des protections techniques raisonnables contre des usages abusifs pourront être nécessaires si certaines fonctionnalités génèrent des coûts importants de stockage, traitement ou infrastructure. Elles ne devront pas devenir un paywall déguisé.
 
 ## 6. Diversification des ressources
-
 À terme, la pérennité du projet ne doit pas dépendre excessivement :
 
 - du fondateur seul ;
@@ -149,7 +139,6 @@ Les produits, prix, proportions et modèles précis ne sont pas décidés à ce 
 Une éventuelle **version ou capacité hors ligne** reste une hypothèse future à analyser et non une décision approuvée.
 
 ## 7. Réinvestissement prioritaire dans le projet
-
 Pendant les phases de construction et de consolidation, les ressources obtenues doivent prioritairement renforcer le projet :
 
 - couverture territoriale ;
@@ -177,8 +166,133 @@ Ces décisions appartiennent aux points ultérieurs du roadmap.
 
 ---
 
+# 3. Phases de développement et niveaux de maturité
+
+**Status:** CLOSED / APPROVED
+
+La maturité d’Explore Luxembourg 360 est structurée en cinq phases distinctes. Chaque phase répond à une question différente et possède ses propres besoins, risques et conditions de passage.
+
+La progression n’est pas automatique. Le projet avance lorsque les preuves disponibles et sa capacité réelle le justifient.
+
+## Phase 1 — POC · Preuve de concept
+
+### Objectif
+Démontrer la chaîne essentielle de l’expérience Explore Luxembourg 360 de bout en bout :
+
+> Territoire réel → capture / données → intégration → publication → exploration par l’utilisateur.
+
+Le POC ne suppose ni un produit complet ni une couverture territoriale significative. Il doit démontrer que les composants essentiels peuvent fonctionner ensemble dans une expérience intégrée.
+
+### Question de maturité
+> Le concept fonctionne-t-il techniquement comme une expérience intégrée ?
+
+## Phase 2 — Pilote territorial
+
+### Objectif
+Tester le projet sur un territoire **limité mais suffisamment représentatif** pour produire des enseignements utiles.
+
+Le pilote doit permettre d’observer notamment :
+
+- l’utilisation réelle ;
+- la production et la publication des contenus ;
+- les processus de mise à jour ;
+- le retour des utilisateurs ;
+- la capacité opérationnelle ;
+- différents éléments territoriaux pertinents pour l’expérience E360.
+
+La zone pilote ne doit donc être ni trop large pour rester maîtrisable, ni trop limitée pour empêcher un apprentissage représentatif.
+
+### Question de maturité
+> Le projet est-il utile et maîtrisable dans un territoire réel ?
+
+## Phase 3 — Première exploitation réelle
+
+### Objectif
+Passer du test à un service effectivement disponible et maintenu.
+
+Cette phase suppose une expérience publique suffisamment cohérente, des usages réels, des processus de mise à jour et une observation pendant une durée suffisamment représentative pour faire apparaître les besoins de continuité, de maintenance et les coûts que des tests courts peuvent masquer.
+
+Aucune durée fixe n’est définie à ce stade. Elle devra être suffisamment longue pour produire une observation opérationnelle pertinente.
+
+### Question de maturité
+> Pouvons-nous exploiter et maintenir le projet de manière continue ?
+
+## Phase 4 — Extension territoriale
+
+### Objectif
+Répliquer progressivement le modèle et vérifier que l’augmentation de la couverture ne rend pas le projet insoutenable.
+
+L’extension doit tester la capacité de montée en échelle de :
+
+- l’infrastructure ;
+- la production et la capture ;
+- les processus ;
+- la maintenance ;
+- la capacité humaine et opérationnelle ;
+- les relations ou besoins institutionnels associés à une couverture plus large.
+
+L’objectif n’est pas simplement de capturer davantage de lieux, mais de vérifier que le modèle reste soutenable lorsqu’il est reproduit.
+
+### Question de maturité
+> Pouvons-nous grandir sans dégrader la soutenabilité du projet ?
+
+## Phase 5 — Déploiement national
+
+### Objectif
+Atteindre une capacité technique, opérationnelle et institutionnelle permettant à Explore Luxembourg 360 d’agir progressivement à l’échelle du Luxembourg.
+
+**Décision structurelle :** le déploiement national ne signifie pas une couverture de 100 % du territoire.
+
+Il signifie que le projet possède les processus, l’infrastructure, la capacité opérationnelle et le cadre de collaboration nécessaires pour travailler à l’échelle nationale, tout en continuant à développer et actualiser sa couverture progressivement.
+
+### Question de maturité
+> Le projet peut-il fonctionner durablement à l’échelle nationale ?
+
+## Gate de décision entre les phases
+
+Chaque passage d’une phase à la suivante doit faire l’objet d’une décision explicite. Quatre résultats sont possibles :
+
+- **GO** — les conditions sont suffisamment réunies pour avancer ;
+- **HOLD** — rester à ce niveau et recueillir davantage de preuves ;
+- **ADAPT** — modifier l’approche, le périmètre ou le modèle avant de poursuivre ;
+- **STOP** — ne pas poursuivre cette direction lorsque sa viabilité n’est pas suffisamment démontrée.
+
+Les critères mesurables permettant de prendre ces décisions ne sont pas fixés ici. Ils relèvent du **Point 14 — Indicateurs de viabilité et critères de décision**.
+
+## Croissance non obligatoire
+
+Aucune phase n’impose automatiquement le passage à la suivante.
+
+Maintenir Explore Luxembourg 360 à une échelle démontrée, utile et soutenable peut constituer une décision saine. Un résultat **HOLD** peut donc être une décision stratégique positive et non un échec.
+
+> La croissance n’est pas, à elle seule, un indicateur de réussite.
+
+## Conséquence financière
+
+Il n’existe pas un coût unique d’« Explore Luxembourg 360 ».
+
+Chaque niveau de maturité entraîne des besoins, des risques et des conditions de financement différents. Cette distinction servira de base aux analyses de coûts, budgets et scénarios financiers des Points 4, 5 et 6.
+
+## Frontières de décision du Point 3
+
+Le Point 3 ne fixe volontairement pas :
+
+- de calendrier ou de date de passage entre les phases ;
+- de budget par phase ;
+- de programme de financement ;
+- de structure juridique ;
+- de modèle de revenus ;
+- de partenaires obligatoires ;
+- de KPI ou seuil chiffré pour GO / HOLD / ADAPT / STOP ;
+- de stratégie détaillée de déploiement territorial.
+
+La stratégie territoriale concrète relève du Point 13, les critères mesurables du Point 14 et la trajectoire financière et chronologique du Point 15.
+
+---
+
 ## État d’exécution après validation
 
 - **Point 1 — Objet et rôle du volume:** CLOSED / APPROVED
 - **Point 2 — Principes de viabilité du projet:** CLOSED / APPROVED
-- **Next:** Point 3 — Phases de développement et niveaux de maturité
+- **Point 3 — Phases de développement et niveaux de maturité:** CLOSED / APPROVED
+- **Next:** Point 4 — Structure des coûts
