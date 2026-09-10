@@ -34,7 +34,7 @@ jobs:
           node-version: 24
 
       - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Lint
         run: pnpm lint
@@ -47,3 +47,9 @@ jobs:
 
       - name: Build
         run: pnpm build
+
+      - name: Foundation smoke tests
+        run: pnpm test:smoke
+
+      - name: Verify lockfile was not modified
+        run: git diff --exit-code -- pnpm-lock.yaml

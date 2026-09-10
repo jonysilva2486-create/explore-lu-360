@@ -1,8 +1,16 @@
 # Explore Luxembourg 360 — Pre-Codex Master Roadmap
 
 **Status:** ACTIVE MASTER ROADMAP  
-**Phase:** Final Pre-Codex Audit & Implementation Readiness  
-**Purpose:** Canonical execution map from completed product/design foundations to the Codex implementation start.
+**Phase:** Application foundation — closure in progress (reconciled 2026-09-10)
+**Purpose:** Canonical technical execution map from approved decisions through foundation closure to the first vertical slice.
+
+## Current implementation checkpoint — 2026-09-10
+
+Application code already exists on `feature/foundation` through PR #1. The original build issue is resolved. Product, design and R1–R6 approval means their **definitions** are closed, not that their implementation is complete.
+
+The owner has approved a foundation-only closure pass: reconcile records, correct API lint coverage, enforce the lockfile, verify GitHub governance, inventory official assets and strengthen foundation tests. **Do not implement PostgreSQL/PostGIS, OpenAPI, Auth0, Place, Story, Media, Experience or Save in this pass. No merge is authorised.**
+
+Current execution item: [Foundation validation and closure](FOUNDATION-VALIDATION-RECORD.md). The next implementation milestone remains R3, but starts only after foundation closure and project approval. The historical pre-Codex gate is not retrospectively declared closed because code exists. Volume III continues independently under its own roadmap.
 
 ## 0. Governing rule
 
@@ -225,7 +233,7 @@ Codex implements approved Product, Design and Architecture. It must not silently
 # 7. FINAL PRE-CODEX GATE
 
 ## Architecture + Product + Design + Operations + Implementation Readiness Audit
-**STATUS: IN PROGRESS — CLOSURE PASS ACTIVE**
+**STATUS: RECONCILED — GOVERNANCE / INTEGRATION GATES STILL OPEN**
 
 Canonical first-pass audit: `docs/architecture/FINAL-PRE-CODEX-AUDIT.md`  
 Canonical closure record: `docs/architecture/FINAL-PRE-CODEX-CLOSURE-RECORD.md`
@@ -237,7 +245,7 @@ The first final-gate audit pass was recorded on 2026-09-07. The closure pass has
 1. **GitHub governance:** manually verify `main` branch protection and direct-push controls.
 2. **Google security:** apply the dedicated key/application/API restriction policy before the first real Maps integration.
 
-These are explicit security/governance gates, not reasons to begin coding with unsafe defaults.
+These remain explicit security/governance gates. Google restrictions must be verified before actual Google integration; the current temporary MapLibre/OSM shell does not integrate Google. GitHub governance must be corrected and verified before protected integration. Current observations and the manual checklist are in `FOUNDATION-VALIDATION-RECORD.md`; neither gate is silently waived.
 
 ### Implementation/production gates tracked separately
 
@@ -259,10 +267,10 @@ The project must not claim production readiness until these gates are closed.
 
 # 8. CODEX START
 
-After the final gate:
+Current state reconciles the original planned order with the code now present:
 
-1. Codex creates the application foundation.
-2. Codex implements the first vertical slice.
+1. Application foundation exists on the feature branch; closure and PR review remain in progress.
+2. Close the foundation's applicable technical, asset and governance findings before starting the first vertical slice.
 3. Work remains constrained by approved Product, Design and Architecture decisions.
 4. New architectural decisions require explicit review rather than silent invention during coding.
 
@@ -307,15 +315,15 @@ R5.6 — MVP Offline Boundary          CLOSED
    ↓
 R6 — Codex Readiness                 CLOSED / APPROVED
    ↓
-FINAL PRE-CODEX AUDIT                🔒 CLOSURE PASS ACTIVE
+FINAL PRE-CODEX AUDIT                HISTORICAL AUDIT / LIVE GATES TRACKED
    ↓
-GITHUB GOVERNANCE + GOOGLE KEY       🔒 USER VERIFICATION
+APPLICATION FOUNDATION              IMPLEMENTED / CLOSURE IN PROGRESS
    ↓
-READY FOR CODEX                      🚀
+FOUNDATION VALIDATION + GOVERNANCE   CURRENT WORK / NO MERGE APPROVAL
    ↓
-APPLICATION FOUNDATION
+FOUNDATION REVIEW / APPROVAL        REQUIRED BEFORE R3
    ↓
-FIRST VERTICAL SLICE
+FIRST VERTICAL SLICE                NOT STARTED
 ```
 
 # 10. NON-NEGOTIABLE PROJECT RULE
@@ -330,4 +338,4 @@ At the end of every completed block:
 4. confirm the next unresolved item from this roadmap;
 5. only then begin the next block.
 
-This roadmap remains the single operational map until the project reaches **READY FOR CODEX**.
+This roadmap remains the technical execution map. Foundation closure does not close provider-integration or public-production gates; those remain tracked in the closure record. The original pre-Codex audit remains historical evidence, not a claim that implementation has not begun.
