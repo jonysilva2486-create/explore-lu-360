@@ -290,9 +290,184 @@ La stratégie territoriale concrète relève du Point 13, les critères mesurabl
 
 ---
 
+# 4. Structure des coûts
+
+**Status:** CLOSED / APPROVED
+
+Avant d’attribuer des montants, Explore Luxembourg 360 identifie les ressources qu’il peut consommer. La structure distingue les dépenses monétaires, les contributions en nature et la capacité humaine afin de ne pas confondre faible besoin de trésorerie et faible coût opérationnel.
+
+## Huit familles de coûts
+
+1. **Infrastructure numérique** — domaine, hébergement, base de données, CDN/trafic, sauvegardes, supervision, sécurité, stockage de production/archives, stockage de diffusion et capacité de traitement.
+2. **Cartographie, données et services externes** — Géoportail/ACT, services cartographiques, Street View, APIs et autres fournisseurs. Leur présence n’implique pas automatiquement un coût ; conditions, limites et tarification éventuelle doivent être vérifiées.
+3. **Production et gestion des contenus** — préparation terrain, capture 360°, photographie, GPS/GPX, POIs, traitement, stitching/conversion si nécessaire, métadonnées, publication, contrôle qualité, archivage et actualisation.
+4. **Équipement et renouvellement** — acquisition, accessoires, batteries, stockage physique, matériel informatique pertinent, entretien/réparation, risque d’indisponibilité et renouvellement futur.
+5. **Terrain, mobilité et logistique** — transports, déplacements, accès, logistique des missions, dépenses directement liées au terrain et besoins raisonnables de sécurité ou de conditions de capture.
+6. **Développement, maintenance et exploitation technique** — développement, tests, corrections, mises à jour, sécurité, compatibilité, maintenance technique, évolution du produit et support opérationnel.
+7. **Cadre juridique, administratif et assurance** — autorisations, protection des données, droits et licences, contrats/conventions, assurances, comptabilité ou conseil juridique éventuels et obligations liées à la future structure.
+8. **Communication, partenariats et développement du projet** — présentations, démonstrations, supports, communication, réunions, événements, contacts institutionnels et ressources nécessaires au développement des relations du projet.
+
+## Matrice de lecture
+
+Chaque coût peut être analysé selon cinq dimensions :
+
+**Famille × Nature × Forme × Priorité × Maturité**
+
+### Nature
+- Initial / ponctuel
+- Récurrent fixe
+- Variable
+- Renouvellement
+- Conditionnel
+
+### Forme
+- Dépense monétaire
+- Contribution en nature
+- Temps / capacité humaine
+
+### Priorité
+- Essentiel
+- Utile / amélioration
+- Optionnel
+
+La priorité dépend de la phase de maturité : un élément optionnel au POC peut devenir essentiel lors d’une exploitation réelle ou d’une extension.
+
+### Maturité
+- POC
+- Pilote
+- Exploitation
+- Extension
+- National
+
+## Capacité humaine transversale
+
+La capacité humaine doit être suivie au minimum sur les fonctions suivantes :
+
+- développement technique ;
+- capture terrain ;
+- traitement / publication ;
+- mise à jour / maintenance ;
+- administration / partenariats.
+
+La limite du projet peut être financière, mais également humaine : une infrastructure peu coûteuse ne garantit pas qu’une personne puisse produire et maintenir une couverture croissante.
+
+## Deux distinctions structurantes
+
+> **Coût déjà engagé ≠ besoin de financement futur.**
+
+Un équipement déjà acquis reste un investissement du projet, sans devenir une nouvelle demande de trésorerie.
+
+> **Absence de paiement ≠ absence de coût ou de consommation de ressources.**
+
+Le temps du fondateur, les services gratuits et les contributions en nature restent des ressources mobilisées.
+
+Reconnaître le travail du porteur ne décide ni son salaire ni sa future rémunération. Ces questions restent hors du Point 4.
+
+## Frontière du Point 4
+
+Le Point 4 définit **ce qui peut coûter ou consommer des ressources**. Il n’attribue pas encore de budget global et ne décide ni financement, ni structure juridique, ni modèle de revenus.
+
+Les valeurs et besoins minimaux relèvent du Point 5, les scénarios du Point 6, le financement public du Point 7, le porteur juridique du Point 8 et les revenus du Point 9.
+
+---
+
+# 5. Budget minimal de fonctionnement
+
+**Status:** CLOSED / APPROVED
+
+## Principe
+
+> Le budget minimal ne cherche pas le coût le plus bas possible. Il cherche le coût le plus bas compatible avec un fonctionnement crédible, sûr et reproductible.
+
+Le budget minimal distingue trois lectures :
+
+1. **Minimum de trésorerie** — dépenses effectivement payées ou à payer.
+2. **Minimum opérationnel réel** — trésorerie + matériel existant + services gratuits + contributions en nature + temps/capacité humaine.
+3. **Minimum soutenable** — niveau minimal permettant de fonctionner sans dépendre durablement de solutions fragiles ou non reproductibles.
+
+Le budget doit être recalculé à chaque changement de maturité. Un budget de POC ne doit pas être présenté comme le coût permanent ou national du projet.
+
+## Quatre blocs budgétaires
+
+### A. Investissement déjà engagé
+
+- **Insta360 X6 Essential Pack : 800,00 €**, déjà financée par le porteur du projet.
+
+Ce montant fait partie de l’investissement total du projet mais ne constitue plus un besoin de financement futur immédiat.
+
+### B. Besoin immédiat pour capture / POC
+
+Références budgétaires approuvées au 10/09/2026 :
+
+- 3rdPersonView Shoulder Mount : **204,49 €** ;
+- power bank 20 000 mAh : **52,99 €** ;
+- 2 × microSD 256 GB UHS-I V30+ : **123,80 €**.
+
+**Besoin immédiat identifié : 381,28 €**, hors éventuels frais de livraison.
+
+### C. Besoin de court terme pour production
+
+- HDD externe 5 TB : **131,90 €** ;
+- moniteur 27 pouces 4K IPS USB-C : **322,16 €**.
+
+**Besoin de court terme identifié : 454,06 €**.
+
+Le moniteur n’est pas bloquant pour la preuve de concept, mais devient essentiel pour un flux régulier de traitement, édition et production. Un HDD externe constitue le minimum initial d’archive physique hors ligne ; un second HDD relève de l’évolution de résilience.
+
+### D. Socle numérique récurrent
+
+La première exploitation réelle repose sur la direction technique déjà approuvée : Render pour le runtime Web/API et PostgreSQL/PostGIS managé, Cloudflare pour DNS/edge/CDN, R2 pour le stockage média, Auth0 pour l’identité, Géoportail/ACT pour la couche géospatiale, Google Street View pour la distribution/expérience 360 externe, GitHub Actions pour CI/CD et une supervision externe free-first.
+
+Le scénario technique de référence reconstruit pour Render donne **environ 53 USD/mois** pour une configuration minimale plausible comprenant Web + API + PostgreSQL/PostGIS en production et un staging persistant isolé.
+
+**Ce montant n’est pas verrouillé.** Il s’agit d’un ordre de grandeur à revalider lors du dimensionnement réel ; R2, domaine, dépassements de trafic et autres coûts variables restent séparés.
+
+Une provision de travail de **~60 €/an** est retenue pour le nom de domaine `.lu` jusqu’au choix du registrar.
+
+ChatGPT Plus / Codex, actuellement supporté par le porteur à **20 €/mois**, est enregistré comme **outil temporaire de développement**. Il ne constitue pas une dépendance technique du service Explore Luxembourg 360 en production.
+
+## Ressources déjà disponibles
+
+Le projet dispose déjà :
+
+- du laptop et du smartphone du porteur ;
+- de **500 GB de stockage Insta360 inclus** avec l’achat de la caméra.
+
+Ces ressources réduisent le besoin de trésorerie mais restent des ressources mobilisées. Le stockage Insta360 est complémentaire et ne remplace ni le stockage opérationnel R2 ni l’archive physique hors ligne.
+
+## Synthèse physique de la première phase
+
+- **Investissement physique déjà engagé : 800,00 €**
+- **Besoin physique encore identifié : 835,34 €**
+- **Équipement physique total identifié : 1 635,34 €**
+
+Les valeurs d’équipement sont des références approuvées pour le Point 5, issues de dépenses déjà engagées ou de prix fournisseurs observés. Elles doivent être revalidées avant achat en cas de modification de prix, promotion, disponibilité ou livraison.
+
+## Contribution du porteur
+
+Le développement technique, la capture terrain, le traitement/publication, les mises à jour, la maintenance et les relations institutionnelles sont actuellement principalement assurés par le porteur du projet.
+
+Cette contribution doit être suivie comme **temps / capacité humaine**. Le Point 5 ne lui attribue pas artificiellement un salaire ou un taux horaire.
+
+## Éléments hors minimum initial
+
+Ne sont pas automatiquement intégrés au minimum initial :
+
+- Sentry payant ;
+- Backblaze B2 ;
+- second HDD ;
+- infrastructures avancées ;
+- APIs payantes lorsque les solutions gratuites approuvées suffisent.
+
+Ils pourront être ajoutés lorsque l’usage, la résilience, la conformité ou la montée en charge les justifient.
+
+---
+
 ## État d’exécution après validation
 
 - **Point 1 — Objet et rôle du volume:** CLOSED / APPROVED
 - **Point 2 — Principes de viabilité du projet:** CLOSED / APPROVED
 - **Point 3 — Phases de développement et niveaux de maturité:** CLOSED / APPROVED
-- **Next:** Point 4 — Structure des coûts
+- **Point 4 — Structure des coûts:** CLOSED / APPROVED
+- **Point 5 — Budget minimal de fonctionnement:** CLOSED / APPROVED
+- **Next:** Point 6 — Scénarios financiers
