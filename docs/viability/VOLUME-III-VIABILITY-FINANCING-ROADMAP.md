@@ -171,4 +171,6 @@ Provide a concise institutional conclusion showing how the proposed financial, o
 **Point 1:** CLOSED / APPROVED  
 **Point 2:** CLOSED / APPROVED  
 **Point 3:** CLOSED / APPROVED  
-**Next point:** 4 — Structure des coûts
+**Point 4:** CLOSED / APPROVED  
+**Point 5:** CLOSED / APPROVED  
+**Next point:** 6 — Scénarios financiers
