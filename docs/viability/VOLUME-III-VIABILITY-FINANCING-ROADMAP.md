@@ -95,11 +95,11 @@ Determine the minimum realistic cost of keeping Explore Luxembourg 360 operation
 Build distinct financial scenarios rather than one artificial global budget:
 
 - projet personnel / POC;
-- pilote financé;
+- pilote territorial;
 - exploitation structurée;
 - croissance territoriale.
 
-Each scenario must identify its costs, needs, assumptions and risks.
+Each scenario must identify its costs, needs, assumptions and risks. Financial scenarios are analytical configurations, not additional maturity phases or promises of spending.
 
 ---
 
@@ -173,4 +173,5 @@ Provide a concise institutional conclusion showing how the proposed financial, o
 **Point 3:** CLOSED / APPROVED  
 **Point 4:** CLOSED / APPROVED  
 **Point 5:** CLOSED / APPROVED  
-**Next point:** 6 — Scénarios financiers
+**Point 6:** CLOSED / APPROVED  
+**Next point:** 7 — Stratégie de financement public
