@@ -962,6 +962,195 @@ La structure juridique relève du Point 8 et le modèle économique / revenus du
 
 ---
 
+# 8. Structure juridique et porteur du projet
+
+**Status:** CLOSED / APPROVED
+
+## Principe directeur
+
+> La création d’une structure juridique n’est pas une étape automatique de maturité. Elle devient nécessaire lorsque la personnalité juridique apporte une protection, une capacité contractuelle, une éligibilité financière, une gouvernance ou une continuité que le projet individuel ne peut plus fournir.
+
+## Décision au stade actuel
+
+Pendant le POC, Explore Luxembourg 360 reste un **projet individuel**.
+
+La formalisation n’est déclenchée ni automatiquement par le passage au pilote, ni par l’existence d’un financement potentiel. Elle intervient lorsqu’un besoin réel de séparation des risques, d’activité économique, de financement, de gouvernance ou de continuité le justifie.
+
+## Déclencheurs de formalisation
+
+Six déclencheurs sont retenus :
+
+1. **Activité économique habituelle** — E360 commence à vendre ou prester régulièrement des services.
+2. **Responsabilité** — les risques opérationnels ou contractuels rendent inadaptée l’exposition directe du patrimoine personnel du porteur.
+3. **Financement** — un programme pertinent exige un type déterminé de porteur juridique.
+4. **Contrats institutionnels** — les partenaires ont besoin d’une contrepartie juridiquement autonome.
+5. **Gouvernance / équipe** — d’autres personnes obtiennent des droits, pouvoirs ou responsabilités structurels.
+6. **Continuité** — le projet doit pouvoir continuer juridiquement au-delà de la disponibilité personnelle du fondateur.
+
+> Le passage du POC au pilote ne crée pas, à lui seul, l’obligation de constituer une société ou une association.
+
+## Shortlist juridique approuvée
+
+### Projet individuel
+
+Constitue l’état actuel et le mode retenu pendant le POC.
+
+Avantages : souplesse, coûts administratifs minimaux, absence de structure artificielle.
+
+Limites : absence de séparation patrimoniale et de continuité juridique autonome.
+
+### SARL-S → SARL
+
+Constitue la trajectoire entrepreneuriale classique à privilégier si E360 développe une activité économique régulière, notamment des services B2B/B2G.
+
+La SARL-S permet notamment :
+
+- un associé unique ;
+- un capital compris entre 1 € et 12 000 € ;
+- la facturation et la contractualisation ;
+- l’embauche ;
+- la séparation entre patrimoine personnel et société ;
+- l’accès potentiel aux instruments destinés aux entreprises/PME selon leurs propres conditions.
+
+La SARL-S est considérée comme un **véhicule entrepreneurial initial**, et non nécessairement comme une structure définitive.
+
+Une évolution vers une SARL devient naturelle lorsque le capital, la gouvernance ou l’entrée de personnes morales dans le capital le justifient.
+
+### SARL-S / SARL avec agrément SIS
+
+L’agrément de Société d’Impact Sociétal est retenu comme option stratégique majeure si E360 combine :
+
+- activité économique continue ;
+- mission territoriale / sociétale juridiquement engageante ;
+- volonté de mesurer l’impact ;
+- règles de réinvestissement et de distribution compatibles avec la mission.
+
+La SIS n’est pas une forme juridique autonome : l’agrément peut notamment s’appliquer à une SARL-S ou SARL répondant aux conditions prévues.
+
+La cohésion territoriale fait partie des finalités pouvant entrer dans la logique d’une SIS.
+
+L’agrément SIS implique des contraintes réelles de gouvernance :
+
+- au moins 50 % du capital en **parts d’impact**, sans droit aux dividendes ;
+- parts de rendement éventuelles limitées et distribution conditionnée par l’atteinte des objectifs sociétaux ;
+- indicateurs et rapport d’impact ;
+- obligations de suivi et de transparence ;
+- contraintes spécifiques de gouvernance et de rémunération.
+
+Une SIS à **100 % de parts d’impact** peut bénéficier d’avantages fiscaux spécifiques, mais renonce à la distribution de dividendes via des parts de rendement.
+
+Le choix entre une SIS 50–99 % impact et 100 % impact n’est pas décidé au Point 8.
+
+> La SIS doit être considérée comme un engagement de mission et de gouvernance, pas comme un label marketing ou un moyen automatique d’obtenir des subventions.
+
+Une SARL-S/SARL avec agrément SIS ne devient pas automatiquement éligible aux aides réservées aux ASBL, communes ou organismes touristiques spécifiques.
+
+### ASBL
+
+L’ASBL reste une option pertinente si E360 évolue vers un **projet collectif**, à gouvernance associative, sans logique de propriété économique individuelle du fondateur.
+
+La loi ne doit pas être interprétée comme interdisant de manière absolue toute recette ou toute opération économique à une ASBL. La question centrale est plutôt de savoir si la nature réelle d’E360 reste cohérente avec un projet associatif ne cherchant pas à procurer un gain matériel à ses membres.
+
+La structure devient particulièrement cohérente si :
+
+- l’intérêt général / collectif domine ;
+- la gouvernance appartient réellement à plusieurs membres ;
+- la propriété économique personnelle du projet n’est pas recherchée ;
+- les financements et activités sont compatibles avec l’objet associatif.
+
+Elle devient moins cohérente si l’objectif central est de construire une entreprise dont les actifs et la valeur économique appartiennent au fondateur et qui développe une activité commerciale structurante.
+
+## Modèles écartés comme structure stratégique principale
+
+### Entreprise individuelle
+
+Peut servir de transition commerciale simple, mais n’apporte pas de séparation patrimoniale suffisante pour la trajectoire envisagée et n’est donc pas retenue comme structure stratégique de long terme.
+
+### GIE
+
+Peut devenir utile comme outil de coopération entre acteurs économiques existants, mais n’est pas adapté comme véhicule de naissance d’E360.
+
+### Fondation
+
+Structure disproportionnée par rapport aux besoins actuels d’E360 et non retenue comme voie stratégique.
+
+## Test par scénario
+
+- **POC personnel** → projet individuel.
+- **Pilote financé par un tiers** → portage institutionnel ponctuel possible, encadré contractuellement.
+- **Services réguliers B2B/B2G** → SARL-S, puis SARL si nécessaire.
+- **Activité économique + mission territoriale juridiquement engageante** → SARL-S/SARL avec agrément SIS à étudier prioritairement.
+- **Projet collectif sans propriété économique individuelle** → ASBL.
+
+## Portage institutionnel ponctuel
+
+> **Portage institutionnel ponctuel ≠ transfert de propriété d’Explore Luxembourg 360.**
+
+Une commune, un ORT, une ASBL ou un autre partenaire éligible peut éventuellement porter un projet/pilote spécifique sans devenir automatiquement propriétaire de la plateforme ou de l’ensemble des actifs E360.
+
+Toute convention de ce type doit définir au minimum :
+
+- propriété intellectuelle ;
+- données et licences ;
+- droits d’utilisation et de réutilisation ;
+- maintenance ;
+- responsabilités ;
+- durée ;
+- sortie de partenariat ;
+- traitement des actifs et contenus produits avec le financement.
+
+## Inventaire des actifs avant toute constitution
+
+Avant de créer une future entité, E360 doit établir un inventaire de pré-constitution couvrant au minimum :
+
+- code et documentation ;
+- textes, design et identité ;
+- photographies et panoramas 360° ;
+- bases de données ;
+- marque / nom / domaine ;
+- équipement physique ;
+- comptes et services techniques ;
+- licences, APIs, Open Data et autres droits de tiers.
+
+Pour chaque actif, l’inventaire doit identifier :
+
+**Actif → titulaire actuel → origine → droits / licences de tiers → transférabilité → traitement futur.**
+
+Le Point 8 ne décide pas que tous les actifs doivent être transférés à une future entité.
+
+Deux grandes options restent ouvertes :
+
+- maintien chez le fondateur avec licence accordée à l’entité ;
+- transfert / apport à l’entité lorsque cela est pertinent.
+
+Cette décision devra être prise actif par actif.
+
+## Relation avec le modèle économique
+
+La décision finale entre :
+
+- SARL-S / SARL ;
+- SARL-S / SARL + SIS ;
+- ASBL ;
+
+doit être réévaluée après la définition du **Point 9 — Modèle économique et sources de revenus**.
+
+Le Point 8 ne fixe donc pas définitivement la future forme juridique. Il définit le moment où une structure devient nécessaire, les options cohérentes et les critères permettant de choisir.
+
+## Frontières du Point 8
+
+Le Point 8 :
+
+- ne définit pas encore les produits ou services payants ;
+- ne fixe aucun tarif ;
+- ne décide aucune rémunération du fondateur ;
+- ne choisit pas définitivement entre société, SIS et ASBL ;
+- ne transfère aucun actif par anticipation.
+
+Ces sujets dépendent notamment du modèle économique du Point 9 et, pour certains, des décisions opérationnelles ultérieures.
+
+---
+
 ## État d’exécution après validation
 
 - **Point 1 — Objet et rôle du volume:** CLOSED / APPROVED
@@ -971,4 +1160,5 @@ La structure juridique relève du Point 8 et le modèle économique / revenus du
 - **Point 5 — Budget minimal de fonctionnement:** CLOSED / APPROVED
 - **Point 6 — Scénarios financiers:** CLOSED / APPROVED
 - **Point 7 — Stratégie de financement public:** CLOSED / APPROVED
-- **Next:** Point 8 — Structure juridique et porteur du projet
+- **Point 8 — Structure juridique et porteur du projet:** CLOSED / APPROVED
+- **Next:** Point 9 — Modèle économique et sources de revenus
