@@ -174,4 +174,5 @@ Provide a concise institutional conclusion showing how the proposed financial, o
 **Point 4:** CLOSED / APPROVED  
 **Point 5:** CLOSED / APPROVED  
 **Point 6:** CLOSED / APPROVED  
-**Next point:** 7 — Stratégie de financement public
+**Point 7:** CLOSED / APPROVED  
+**Next point:** 8 — Structure juridique et porteur du projet
