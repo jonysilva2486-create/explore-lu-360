@@ -463,6 +463,160 @@ Ils pourront être ajoutés lorsque l’usage, la résilience, la conformité ou
 
 ---
 
+# 6. Scénarios financiers
+
+**Status:** CLOSED / APPROVED
+
+## Principe
+
+> Un scénario financier n’est ni une prévision ni une promesse de dépense. Il représente une configuration de travail permettant de comprendre comment les besoins du projet évoluent avec sa maturité.
+
+Les scénarios financiers ne constituent pas de nouvelles phases de maturité. Ils fournissent une lecture économique des phases déjà définies au Point 3.
+
+## Correspondance avec la maturité
+
+1. **Projet personnel / POC** — analyse principalement la phase POC.
+2. **Pilote territorial** — analyse principalement la phase pilote territorial.
+3. **Exploitation structurée** — analyse principalement la première exploitation réelle.
+4. **Croissance territoriale** — analyse l’extension territoriale et la progression éventuelle vers une capacité nationale.
+
+Le quatrième scénario ne constitue pas un budget national et ne suppose pas une couverture intégrale du Luxembourg.
+
+## Grille commune d’analyse
+
+Chaque scénario doit être analysé selon huit dimensions :
+
+1. **Périmètre** — ce que le scénario cherche réellement à réaliser.
+2. **Ressources déjà disponibles** — équipement, services gratuits, contributions et autres ressources existantes.
+3. **Dépenses de trésorerie** — sommes réellement payées ou à payer.
+4. **Capacité humaine** — fonctions et temps nécessaires, sans monétisation artificielle.
+5. **Coût total mobilisé** — ensemble des ressources consommées par le scénario.
+6. **Trésorerie non couverte** — partie du besoin monétaire restant sans couverture identifiée.
+7. **Niveau de confiance** — statut de fiabilité de chaque valeur.
+8. **Risque principal / condition de passage** — élément pouvant bloquer, retarder ou justifier le passage au niveau suivant.
+
+## Trois lectures financières distinctes
+
+### Coût total mobilisé
+Comprend les dépenses monétaires, le matériel, les services/contributions et la capacité humaine mobilisée.
+
+### Besoin de trésorerie
+Correspond aux dépenses monétaires réellement nécessaires au scénario.
+
+### Trésorerie non couverte
+Correspond à la partie du besoin de trésorerie pour laquelle aucune couverture n’est encore identifiée.
+
+Le Point 6 identifie ce besoin non couvert sans décider de sa source. Les mécanismes potentiels de couverture relèvent notamment des Points 7 et 9.
+
+## Scénario 1 — Projet personnel / POC
+
+### Objectif
+Démontrer la chaîne essentielle territoire → capture/données → intégration → publication → exploration.
+
+### Base financière
+- investissement déjà engagé de **800,00 €** ;
+- besoin immédiat de capture identifié de **381,28 €** ;
+- outils de développement temporaires ;
+- forte contribution directe du porteur du projet.
+
+L’infrastructure doit rester aussi légère que possible tant que le développement reste principalement local. Une infrastructure complète de production ne doit pas être imposée artificiellement au POC.
+
+### Risque principal
+> Confondre un POC peu coûteux avec un service peu coûteux à exploiter.
+
+## Scénario 2 — Pilote territorial
+
+### Objectif
+Tester l’utilité, la production, les mises à jour et l’exploitation du projet sur un territoire limité mais suffisamment représentatif.
+
+### Base financière
+Le scénario peut intégrer notamment :
+
+- domaine ;
+- infrastructure publique de production ;
+- stockage ;
+- répétition des captures terrain ;
+- traitement et publication ;
+- communication ;
+- maintenance ;
+- équipement de production de court terme, dont le besoin déjà identifié de **454,06 €**.
+
+Aucune source de financement n’est présupposée. Le scénario mesure le besoin financier ; le Point 7 analysera les mécanismes de financement public potentiellement adaptés.
+
+### Risque principal
+> Construire un pilote plus large que la capacité réelle de le maintenir.
+
+## Scénario 3 — Exploitation structurée
+
+### Objectif
+Maintenir un service public réel, cohérent et continu.
+
+### Base financière et opérationnelle
+La structure de coûts peut notamment comprendre :
+
+- infrastructure permanente ;
+- sauvegardes et récupération ;
+- stockage média croissant ;
+- maintenance technique ;
+- actualisation territoriale ;
+- continuité opérationnelle ;
+- renouvellement progressif du matériel.
+
+La dépendance illimitée au travail gratuit du porteur ne peut pas être traitée comme une hypothèse durable. Cette dépendance doit être observée et mesurée comme un risque opérationnel, sans décider ici d’un salaire, d’une embauche ou d’une structure juridique.
+
+### Risque principal
+> Viabilité technique sans viabilité humaine.
+
+## Scénario 4 — Croissance territoriale
+
+### Objectif
+Comprendre comment les besoins évoluent lorsque la couverture augmente, sans fabriquer un budget national artificiel.
+
+### Formule conceptuelle
+
+> Socle fixe + coûts variables d’expansion + capacité humaine supplémentaire + éventuels paliers d’infrastructure.
+
+La croissance doit être suivie à partir d’unités observables telles que :
+
+- km ou territoire capté ;
+- sessions terrain ;
+- heures de capture ;
+- heures de traitement/publication ;
+- volume de médias produit ;
+- stockage ;
+- fréquence de mise à jour ;
+- capacité humaine disponible.
+
+Cette logique doit permettre d’identifier quels coûts restent relativement fixes, lesquels augmentent progressivement et lesquels changent par paliers.
+
+### Risque principal
+> Les coûts humains et de contenu peuvent augmenter plus vite que l’infrastructure technique.
+
+## Niveau de confiance des valeurs
+
+Chaque valeur financière ou opérationnelle utilisée dans les scénarios doit être qualifiée :
+
+- **Confirmé** — dépense réelle déjà engagée ;
+- **Vérifié** — prix, condition ou information externe actuellement vérifiable ;
+- **Estimé** — projection fondée sur l’usage ou les données disponibles ;
+- **Hypothétique** — dépend d’une décision, d’un volume ou d’un événement futur.
+
+> Plus le scénario s’éloigne de la situation actuelle du projet, plus les valeurs doivent être présentées comme des hypothèses à tester plutôt que comme des prévisions.
+
+## Frontières du Point 6
+
+Le Point 6 ne :
+
+- choisit aucun programme ou mécanisme de financement ;
+- décide aucune structure juridique ;
+- suppose aucun revenu commercial ;
+- fixe aucun budget national ;
+- calcule pas encore en détail la pérennité et la maintenance de long terme.
+
+Ces questions relèvent respectivement des Points 7, 8, 9, 13 et 11 selon leur nature.
+
+---
+
 ## État d’exécution après validation
 
 - **Point 1 — Objet et rôle du volume:** CLOSED / APPROVED
@@ -470,4 +624,5 @@ Ils pourront être ajoutés lorsque l’usage, la résilience, la conformité ou
 - **Point 3 — Phases de développement et niveaux de maturité:** CLOSED / APPROVED
 - **Point 4 — Structure des coûts:** CLOSED / APPROVED
 - **Point 5 — Budget minimal de fonctionnement:** CLOSED / APPROVED
-- **Next:** Point 6 — Scénarios financiers
+- **Point 6 — Scénarios financiers:** CLOSED / APPROVED
+- **Next:** Point 7 — Stratégie de financement public
