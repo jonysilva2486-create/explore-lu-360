@@ -175,4 +175,5 @@ Provide a concise institutional conclusion showing how the proposed financial, o
 **Point 5:** CLOSED / APPROVED  
 **Point 6:** CLOSED / APPROVED  
 **Point 7:** CLOSED / APPROVED  
-**Next point:** 8 — Structure juridique et porteur du projet
+**Point 8:** CLOSED / APPROVED  
+**Next point:** 9 — Modèle économique et sources de revenus
