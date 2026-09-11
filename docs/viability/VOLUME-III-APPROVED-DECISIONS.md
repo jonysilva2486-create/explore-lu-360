@@ -617,6 +617,351 @@ Ces questions relèvent respectivement des Points 7, 8, 9, 13 et 11 selon leur n
 
 ---
 
+# 7. Stratégie de financement public
+
+**Status:** CLOSED / APPROVED
+
+## Principe directeur
+
+> La meilleure source de financement n’est pas nécessairement celle qui offre le montant le plus élevé, mais celle qui correspond au niveau de maturité, au porteur et aux besoins réels du projet sans en déformer la mission.
+
+Le financement doit s’adapter au projet. Explore Luxembourg 360 ne doit pas être modifié artificiellement pour devenir éligible à une subvention, à un programme d’innovation ou à un mécanisme d’investissement.
+
+La compatibilité thématique avec un programme ne constitue jamais, à elle seule, une preuve d’éligibilité. Avant toute candidature, il faut vérifier séparément :
+
+- l’éligibilité du porteur ;
+- l’éligibilité du projet ;
+- l’éligibilité des dépenses ;
+- le calendrier de l’appel ;
+- les règles de cofinancement ;
+- le besoin de préfinancement / trésorerie ;
+- les éventuelles incompatibilités avec d’autres aides.
+
+## Trois familles de financement externe
+
+### 1. Financement public / territorial
+
+Constitue le cœur du Point 7 :
+
+- développement rural ;
+- LEADER ;
+- aide nationale à l’infrastructure touristique ;
+- FEDER ;
+- Interreg ;
+- autres programmes publics nationaux ou européens pertinents.
+
+### 2. Innovation / entreprise
+
+Devient pertinent uniquement si la maturité et le futur porteur du projet le justifient :
+
+- Fit 4 Start ;
+- aides à l’innovation PME ;
+- R&D ;
+- aides générales PME ;
+- instruments européens d’innovation et de scale-up.
+
+### 3. Financement externe complémentaire
+
+Doit rester distinct d’une subvention publique :
+
+- crowdfunding reward/community ;
+- dette et prêts ;
+- business angels / equity ;
+- sponsoring ou mécénat compatibles avec la mission.
+
+Le Point 7 identifie ces sources comme options de couverture externe mais ne définit pas encore un modèle de revenus commerciaux, qui relève du Point 9.
+
+## Priorités approuvées
+
+### A1 — Développement rural : à investiguer en premier
+
+Le régime luxembourgeois relatif aux infrastructures et équipements récréatifs, culturels et touristiques constitue une piste prioritaire.
+
+Décisions approuvées :
+
+- une personne physique ou juridique peut appartenir aux catégories de bénéficiaires ;
+- les communes rurales pertinentes pour le projet incluent notamment Mersch et Useldange ;
+- l’aide peut atteindre **40 % des dépenses éligibles** ;
+- le projet doit représenter au minimum **5 000 €** de coûts éligibles et être accessible au public ;
+- la demande doit être déposée avant la mise en œuvre ou la première acquisition/facture ;
+- les dépenses de personnel, de fonctionnement, de maintenance et les contributions en nature ne sont pas automatiquement éligibles dans ce régime.
+
+**Distinction obligatoire :** l’éligibilité potentielle du porteur ne constitue pas une confirmation d’éligibilité du projet E360 ou de ses dépenses.
+
+L’éligibilité du matériel de capture 360, du développement digital, du stockage, de l’équipement informatique et de la production de contenus doit être prévalidée avec le Service du Développement rural.
+
+Les **835,34 €** d’équipement encore identifiés au Point 5 ne suffisent pas, à eux seuls, à atteindre le seuil minimal de 5 000 €. Il ne faut donc pas gonfler artificiellement le POC pour atteindre le seuil d’une aide.
+
+Les investissements déjà réalisés, notamment l’Insta360 X6 déjà acquise, ne doivent pas être réintégrés artificiellement dans une future demande d’aide.
+
+### A1 — LEADER Zentrum Westen : très forte compatibilité territoriale
+
+LEADER Zentrum Westen constitue une piste prioritaire pour un futur **pilote territorial**.
+
+Le programme est cohérent avec plusieurs dimensions d’E360 :
+
+- développement territorial ;
+- tourisme et Slow Tourism ;
+- coopération locale ;
+- patrimoine ;
+- numérisation comme dimension transversale.
+
+Des références régionales démontrent une compatibilité de typologie, notamment des projets associant territoire, tourisme et outils numériques interactifs, ainsi que des projets touristiques intégrant l’innovation digitale.
+
+**Important :** ces références ne constituent pas une promesse de financement d’E360.
+
+Les pourcentages observés dans d’autres projets LEADER ne doivent jamais être appliqués automatiquement au projet. Le taux, les dépenses éligibles, la part de cofinancement et le **mode de portage** doivent être déterminés avec le GAL / bureau LEADER.
+
+Le bureau LEADER doit être considéré comme un interlocuteur de pré-analyse permettant de :
+
+- tester l’adéquation du concept ;
+- déterminer le meilleur porteur ;
+- identifier les partenaires pertinents ;
+- préciser le montage et les règles financières.
+
+### A2 — Aide nationale à l’infrastructure touristique : excellent fit, porteur à résoudre
+
+Cette aide présente une compatibilité particulièrement forte avec E360 car elle couvre notamment le **développement et l’acquisition d’outils numériques dédiés au tourisme**, ainsi que la valorisation du patrimoine naturel, historique et culturel.
+
+Le soutien peut atteindre **50 % des coûts d’investissement éligibles**.
+
+Le blocage actuel est juridique : le porteur individuel d’E360 n’appartient pas aux bénéficiaires identifiés pour cette aide. Les bénéficiaires comprennent notamment des communes, syndicats de communes, parcs naturels, ASBL/fondations actives dans le tourisme et certains GIE de promotion touristique.
+
+**Décision de lecture :**
+
+- compatibilité du projet : **très élevée** ;
+- accessibilité juridique actuelle : **faible** ;
+- potentiel futur : **élevé** si le Point 8 mène naturellement à un porteur éligible ou à un partenariat institutionnel approprié.
+
+Une société commerciale ordinaire ne doit pas être supposée éligible à ce régime en l’absence de confirmation réglementaire.
+
+### A2 — Crowdfunding reward/community : financement + validation
+
+Le crowdfunding communautaire peut être utilisé comme source complémentaire au POC ou au pilote.
+
+Il doit porter sur un objectif concret et compréhensible, par exemple :
+
+- financer les premiers kilomètres de capture ;
+- documenter un ensemble défini de lieux ;
+- contribuer à un pilote territorial ou patrimonial.
+
+Il présente une double utilité :
+
+1. financement complémentaire ;
+2. mesure de l’intérêt et de l’engagement de la communauté.
+
+Les récompenses ne doivent jamais créer un paywall ou remettre en cause la gratuité universelle du contenu public approuvée au Point 2.
+
+Avant une campagne réelle, le cadre fiscal, comptable, contractuel et la compatibilité avec d’autres aides doivent être vérifiés.
+
+Le crowdfunding en capital ou en prêt réglementé est une option de maturité entrepreneuriale future et ne constitue pas une priorité du POC.
+
+## Programmes de priorité B / B-C
+
+### FEDER — watchlist stratégique
+
+Le call luxembourgeois 2026 consacré notamment à la digitalisation a démontré une forte compatibilité thématique avec certaines dimensions d’E360, mais il est clôturé.
+
+Décision :
+
+> FEDER est une opportunité stratégique à surveiller, et non une recette disponible ou acquise.
+
+Toute future analyse devra être refaite à partir des règles du nouvel appel, de son budget, de ses bénéficiaires et de ses dépenses éligibles.
+
+### Fit 4 Start — opportunité conditionnelle
+
+Fit 4 Start peut devenir pertinent si E360 évolue naturellement vers un projet technologique / data-driven disposant d’une capacité entrepreneuriale et de scale-up réelle.
+
+Principaux éléments vérifiés lors du Point 7 :
+
+- la société ne doit pas nécessairement être constituée au moment de la candidature ;
+- l’équipe doit compter au moins **deux personnes** ;
+- les exigences de présence/dédication du programme doivent être respectées ;
+- le programme peut offrir jusqu’à **150 000 € equity-free**, sous réserve du parcours et des conditions applicables.
+
+E360 ne doit pas inventer artificiellement de l’IA, de la R&D ou une logique de startup pour devenir compatible avec Fit 4 Start.
+
+### Aides à l’innovation PME — instrument complémentaire futur
+
+Ces aides deviennent pertinentes uniquement si le projet est porté par une PME répondant aux conditions du régime.
+
+Certains services de conseil et de soutien à l’innovation peuvent atteindre un taux élevé, jusqu’à **100 %** dans les limites et catégories prévues par le régime, tandis que d’autres catégories suivent des taux différents.
+
+**Important :** cette aide ne doit jamais être résumée comme « l’État finance 100 % du développement du site ».
+
+Une autre conséquence approuvée est que l’obtention d’une subvention ne supprime pas automatiquement le besoin de trésorerie : certaines aides sont versées après réalisation ou par tranches liées aux dépenses effectuées.
+
+### Œuvre Nationale — option pour des sous-projets ciblés
+
+Peut être pertinente pour des sous-projets autonomes orientés patrimoine, mémoire, culture, environnement ou impact public, sous réserve du porteur éligible.
+
+Exemples conceptuels possibles :
+
+- Mémoire 360 ;
+- Patrimoine accessible 360 ;
+- Histoires du territoire.
+
+L’Œuvre ne doit pas être considérée comme une source générique de financement de l’ensemble de la plateforme E360.
+
+## Programmes de priorité C
+
+### Interreg Grande Région
+
+Pertinent uniquement si un futur projet possède une **véritable dimension transfrontalière**, avec partenaires, actions et publics de part et d’autre de la frontière.
+
+E360 ne doit pas inventer une dimension transfrontalière uniquement pour devenir éligible.
+
+### R&D
+
+À envisager seulement si le projet rencontre un véritable problème de recherche ou de développement expérimental comportant une incertitude technologique réelle.
+
+Le développement normal d’une plateforme web, l’intégration d’APIs, la cartographie ou la capture 360 ne deviennent pas automatiquement de la R&D.
+
+### Aides générales PME, DIGITAL, Horizon, SNCI et instruments similaires
+
+Constituent des options de maturité supérieure à surveiller ou à utiliser en fonction de la future forme juridique, du niveau d’innovation, de la dimension européenne ou d’un besoin de financement structuré.
+
+La dette SNCI/Microlux et les investisseurs ne doivent pas être confondus avec des subventions :
+
+- **subvention** = financement non remboursable sous conditions ;
+- **dette** = capital à rembourser ;
+- **equity** = financement contre participation au capital ;
+- **crowdfunding** = mécanisme dont la nature juridique dépend du modèle choisi.
+
+## Programmes de priorité D / futur lointain
+
+Les mécanismes tels que jeune entreprise innovante, EIC Accelerator, business angels ou equity crowdfunding ne sont pas retenus comme financement de démarrage du POC.
+
+Ils peuvent être réévalués uniquement si E360 atteint une maturité entrepreneuriale, technologique et financière qui les rend réellement pertinents.
+
+La primo-création ne doit pas être utilisée comme fondement de la stratégie actuelle, compte tenu de ses conditions spécifiques.
+
+## Stratégie par maturité
+
+### POC actuel
+
+Priorité :
+
+- ressources propres déjà engagées ;
+- crowdfunding optionnel et ciblé ;
+- préanalyse du développement rural.
+
+Le projet ne doit pas créer une structure juridique uniquement pour débloquer une aide.
+
+### Pilote territorial
+
+Priorité :
+
+- développement rural ;
+- LEADER ;
+- aide touristique nationale via un porteur éligible si cette solution correspond naturellement au projet ;
+- crowdfunding complémentaire.
+
+Avant tout budget de financement, il faut prévalider le porteur, les dépenses et le taux applicable.
+
+### Première exploitation réelle
+
+Peuvent devenir pertinents :
+
+- LEADER ;
+- aide touristique nationale ;
+- futur FEDER ;
+- aides innovation / PME si une structure entrepreneuriale est retenue.
+
+L’objectif n’est plus seulement de financer une construction initiale, mais une opération reproductible et maintenable.
+
+### Extension territoriale
+
+Peuvent devenir pertinents :
+
+- futurs appels FEDER ;
+- Interreg si une dimension transfrontalière réelle apparaît ;
+- programmes européens ciblés.
+
+Le financement doit accélérer une capacité déjà démontrée plutôt que masquer une viabilité insuffisante.
+
+### Trajectoire startup technologique — uniquement si la réalité du projet la justifie
+
+Peuvent être réévalués :
+
+- Fit 4 Start ;
+- innovation / R&D ;
+- SNCI ;
+- investisseurs ;
+- instruments européens de scale-up.
+
+Cette trajectoire n’est pas une destination obligatoire d’E360.
+
+## Le porteur comme variable d’accès
+
+### Projet individuel
+
+Accès potentiel notamment :
+
+- développement rural, sous réserve de l’éligibilité du projet/dépenses ;
+- crowdfunding ;
+- préanalyse LEADER ;
+- autres dispositifs acceptant explicitement un porteur individuel.
+
+### PME / société
+
+Peut ouvrir l’accès notamment à :
+
+- Fit 4 Start selon la phase et les conditions ;
+- aides innovation PME ;
+- aides à l’investissement ;
+- R&D ;
+- dette et capital ;
+- FEDER selon les appels.
+
+Une société commerciale ne donne pas automatiquement accès aux aides réservées aux organismes touristiques, communes ou structures non lucratives.
+
+### ASBL / porteur institutionnel
+
+Peut ouvrir l’accès, selon conditions, à :
+
+- aide touristique nationale ;
+- LEADER selon le montage ;
+- Œuvre Nationale ;
+- FEDER / Interreg selon les appels.
+
+Aucune structure ne doit être créée artificiellement uniquement pour contourner les règles d’éligibilité.
+
+## Règles de décision
+
+1. Chercher d’abord les instruments compatibles avec la phase réelle du projet.
+2. Ne jamais confondre compatibilité thématique et éligibilité juridique.
+3. Ne pas appliquer automatiquement à E360 un taux observé sur un autre projet.
+4. Vérifier les règles avant toute dépense : une facture trop précoce peut rendre une dépense inéligible.
+5. Distinguer subvention, besoin de trésorerie, dette, capital et crowdfunding.
+6. Ne pas créer une entreprise, une ASBL ou une dimension transfrontalière uniquement pour accéder à une aide.
+7. Utiliser les financements publics comme accélérateurs d’un modèle démontré, et non comme substituts à la viabilité.
+
+> **Le financement doit s’adapter au projet. Explore Luxembourg 360 ne doit pas être déformé pour devenir éligible à un financement.**
+
+## Suivi décidé hors exécution du Volume III
+
+Deux actions ont été explicitement mises de côté pour être traitées dans une conversation dédiée :
+
+1. **Service du Développement rural** — demander une prévalidation de l’éligibilité d’un pilote E360 et des catégories de dépenses, notamment plateforme digitale, capture 360, équipement, stockage et production de contenu.
+2. **LEADER Zentrum Westen** — présenter le concept comme potentiel pilote territorial et demander une pré-analyse du mode de portage, des dépenses éligibles, du cofinancement et des partenaires pertinents.
+
+Ces démarches ne constituent pas encore des demandes de financement ni une décision sur le futur porteur juridique.
+
+## Frontières du Point 7
+
+Le Point 7 :
+
+- identifie et hiérarchise les sources de financement externe ;
+- distingue les opportunités disponibles, conditionnelles et futures ;
+- ne transforme aucune aide potentielle en recette acquise ;
+- ne choisit pas encore la structure juridique ;
+- ne définit pas de modèle de revenus commerciaux.
+
+La structure juridique relève du Point 8 et le modèle économique / revenus du Point 9.
+
+---
+
 ## État d’exécution après validation
 
 - **Point 1 — Objet et rôle du volume:** CLOSED / APPROVED
@@ -625,4 +970,5 @@ Ces questions relèvent respectivement des Points 7, 8, 9, 13 et 11 selon leur n
 - **Point 4 — Structure des coûts:** CLOSED / APPROVED
 - **Point 5 — Budget minimal de fonctionnement:** CLOSED / APPROVED
 - **Point 6 — Scénarios financiers:** CLOSED / APPROVED
-- **Next:** Point 7 — Stratégie de financement public
+- **Point 7 — Stratégie de financement public:** CLOSED / APPROVED
+- **Next:** Point 8 — Structure juridique et porteur du projet
