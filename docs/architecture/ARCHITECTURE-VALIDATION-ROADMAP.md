@@ -132,6 +132,8 @@ Provider-independent mapping remains mandatory. **Géoportail / ACT is the curre
 
 The 2026-09-02 ACT response closed the previously pending provider-strategy validation at the architectural level. Dataset-level licensing, attribution, caching and special conditions remain to be checked before concrete production reuse. No partnership, endorsement or blanket licensing approval is assumed.
 
+On 2026-09-11, the project sent a structured four-page requirements brief to Géoportail / ACT covering geographic objects, official and project-owned data boundaries, mapping services, search/navigation, interoperability, licensing, volumes and scalability. Service-level technical guidance is pending and is tracked in [`G-03-GEOPORTAIL-REQUIREMENTS-FOLLOW-UP.md`](./G-03-GEOPORTAIL-REQUIREMENTS-FOLLOW-UP.md). This follow-up does not block development behind the approved provider abstraction.
+
 The final audit confirmed the free-first/cost-controlled rule, provider abstraction, explicit MUST HAVE versus SHOULD/FUTURE boundary, and separation between geospatial infrastructure and the 360° Experience layer.
 
 **Final audit: PASS / CLOSED / APPROVED.**
