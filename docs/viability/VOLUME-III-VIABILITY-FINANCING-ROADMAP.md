@@ -177,4 +177,5 @@ Provide a concise institutional conclusion showing how the proposed financial, o
 **Point 7:** CLOSED / APPROVED  
 **Point 8:** CLOSED / APPROVED  
 **Point 9:** CLOSED / APPROVED  
-**Next point:** 10 — Partenariats et contributions non financières
+**Point 10:** CLOSED / APPROVED  
+**Next point:** 11 — Pérennité et coûts de maintenance
