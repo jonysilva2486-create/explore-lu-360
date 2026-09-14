@@ -1151,6 +1151,333 @@ Ces sujets dépendent notamment du modèle économique du Point 9 et, pour certa
 
 ---
 
+# 9. Modèle économique et sources de revenus
+
+**Status:** CLOSED / APPROVED
+
+## Principe directeur
+
+> Le modèle économique d’Explore Luxembourg 360 ne repose pas sur la vente de l’accès au territoire, mais sur la création, la production, l’intégration, la visibilité et la maintenance de valeur autour d’une bibliothèque multimédia publique et gratuite.
+
+L’utilisateur final n’est pas nécessairement le payeur.
+
+Le rôle économique d’E360 consiste à permettre à des acteurs territoriaux, institutionnels et commerciaux de financer des services ou une visibilité utiles, tout en conservant pour le public un accès gratuit à la découverte du territoire.
+
+## Actif central
+
+Le véritable actif croissant du projet est une **bibliothèque multimédia touristique géoréférencée et structurée du territoire luxembourgeois** :
+
+- trails ;
+- lieux ;
+- paysages ;
+- patrimoine ;
+- photographies ;
+- panoramas 360° ;
+- POIs ;
+- histoires ;
+- informations territoriales ;
+- métadonnées et relations entre contenus.
+
+Google Street View reste un canal de distribution important pour certains contenus 360°, mais ne constitue ni le modèle économique ni l’actif central d’E360.
+
+## Noyau public protégé
+
+Restent gratuits pour l’utilisateur final :
+
+- consultation du territoire et du map experience ;
+- trails et lieux publics ;
+- contenus patrimoniaux et territoriaux ;
+- photographies et panoramas publics ;
+- consultation des POIs ;
+- My Explore 360 ;
+- planification et exploration normales de la bibliothèque publique.
+
+Le projet ne doit pas créer de paywall sur ce noyau public.
+
+## Trois moteurs économiques
+
+### 1. Revenus du travail
+
+Constituent le moteur le plus réaliste dans les premières phases d’exploitation.
+
+Ils peuvent comprendre :
+
+- services territoriaux pour communes, ORTs, parcs, acteurs patrimoniaux ou touristiques ;
+- capture et production 360° ;
+- photographie et documentation territoriale ;
+- structuration, intégration et publication de contenus ;
+- campagnes territoriales ;
+- maintenance et actualisation de contenus.
+
+Le client paie une prestation réelle. Le résultat peut ensuite enrichir la bibliothèque publique selon les droits contractuels convenus.
+
+> Un client institutionnel finance une prestation ou un projet défini ; il n’acquiert pas automatiquement le contrôle de la plateforme ni de la bibliothèque E360.
+
+### 2. Revenus de l’audience
+
+Deviennent pertinents lorsque l’usage et la confiance dans la plateforme sont démontrés.
+
+Ils peuvent comprendre :
+
+- POIs enrichis ;
+- production multimédia liée à une présence commerciale ;
+- mise en avant contextuelle ;
+- sponsoring de collections ou campagnes ;
+- autres formes de visibilité commerciale clairement identifiées.
+
+Ces revenus ne doivent pas être projetés comme acquis avant que l’audience et l’intérêt professionnel aient été observés.
+
+### 3. Revenus futurs des actifs / services professionnels
+
+Restent des hypothèses de maturité supérieure :
+
+- intégrations professionnelles ;
+- outils ou fonctionnalités B2B ;
+- APIs ou accès technique spécifique ;
+- licences ciblées sur certains contenus ou actifs propres ;
+- autres services professionnels basés sur la valeur accumulée de la bibliothèque.
+
+Ces futurs produits ne doivent jamais retirer au public un accès déjà approuvé comme gratuit.
+
+## Écosystème des POIs commerciaux
+
+### POI standard — gratuit
+
+Le référencement de base d’un établissement commercial pertinent est gratuit.
+
+La gratuité ne constitue toutefois pas un droit automatique à l’inclusion. Le POI doit présenter une **pertinence réelle pour l’expérience territoriale ou touristique** couverte par E360.
+
+Peuvent notamment être pertinents selon le contexte :
+
+- hôtels et autres hébergements ;
+- restaurants ;
+- boulangeries ;
+- activités touristiques ;
+- location ou services vélo ;
+- commerces ou services directement utiles à l’expérience de découverte.
+
+Le map experience ne doit pas devenir un annuaire général d’entreprises.
+
+### POI enrichi — payant
+
+Un établissement peut acheter une présence plus riche :
+
+- galerie ou contenu visuel enrichi ;
+- description et storytelling ;
+- présentation plus détaillée des services ;
+- informations pratiques avancées ;
+- intégration territoriale plus riche ;
+- autres éléments professionnels pertinents à définir.
+
+Le produit payant doit apporter un **véritable enrichissement**. L’offre gratuite ne doit pas être artificiellement dégradée pour créer le besoin de payer.
+
+### Production 360° — produit séparé
+
+La production 360° constitue une prestation modulaire distincte.
+
+Un client peut acheter une capture 360° sans acheter nécessairement une mise en avant, et inversement.
+
+Des combinaisons commerciales pourront exister ultérieurement, mais les produits doivent rester séparables afin de s’adapter à des clients et budgets différents.
+
+### Mise en avant contextuelle — payante
+
+Un établissement peut acheter une visibilité supplémentaire dans un contexte pertinent :
+
+- proximité d’un trail ;
+- proximité d’un monument ou lieu ;
+- recherche de restauration ou hébergement ;
+- autre moment de planification ou découverte pertinent.
+
+Cette visibilité doit être explicitement identifiable comme **Sponsorisé / Mis en avant / Partenaire** selon la nature réelle de la relation.
+
+> Un paiement crée une visibilité sponsorisée identifiable ; il ne modifie pas secrètement le classement territorial ou éditorial.
+
+Un client ne peut pas acheter :
+
+- l’exclusion de concurrents légitimes ;
+- la suppression d’un POI gratuit pertinent ;
+- une fausse recommandation ;
+- le contrôle du classement territorial organique ;
+- le contrôle de la représentation du territoire.
+
+## Indépendance éditoriale
+
+Les notions suivantes doivent rester distinctes :
+
+- **Référencé sur Explore Luxembourg 360** — présence sur la plateforme ;
+- **Partenaire Explore Luxembourg 360** — existence d’une relation de partenariat définie ;
+- **Sponsorisé / Mis en avant** — visibilité commerciale payante ;
+- **Recommandé / Sélection Explore Luxembourg 360** — ne peut exister que si une future politique éditoriale indépendante, transparente et non achetable est définie.
+
+> **La visibilité commerciale peut être achetée. La confiance éditoriale ne peut pas l’être.**
+
+## Visibilité réciproque et QR Codes
+
+Le référencement gratuit peut être accompagné d’un mécanisme volontaire de visibilité réciproque.
+
+E360 peut proposer aux établissements référencés :
+
+- un support « Référencé sur Explore Luxembourg 360 » ;
+- un QR Code dédié ouvrant directement le POI concerné ;
+- des éléments numériques utilisables sur site, site web ou réseaux sociaux.
+
+L’établissement peut ainsi devenir un **point physique d’entrée** vers la plateforme.
+
+La participation à ce mécanisme reste volontaire et ne conditionne jamais le maintien du POI gratuit.
+
+Le QR Code peut permettre une mesure agrégée de la performance — par exemple le nombre d’entrées provenant d’un établissement — sans transformer le dispositif en système de profilage du visiteur.
+
+> **Mesurer la performance ne justifie pas de profiler le visiteur.**
+
+Les conditions RGPD, cookies, journaux et durée de conservation devront être vérifiées lors de l’implémentation technique.
+
+Le développement pratique de cette visibilité réciproque relève également du **Point 10 — Partenariats et contributions non financières**.
+
+## POI gratuit comme canal d’acquisition B2B
+
+Le modèle gratuit crée aussi une relation progressive avec les professionnels :
+
+> POI gratuit → découverte d’E360 → QR / utilisation → valeur observée → enrichissement optionnel → production 360° optionnelle → visibilité optionnelle → actualisation future.
+
+L’objectif n’est pas de forcer la conversion commerciale mais de démontrer d’abord une utilité réelle.
+
+## Maintenance et actualisation comme revenu structurel
+
+La maintenance est considérée comme une composante économique importante, et non comme une simple prestation accessoire.
+
+Des contrats ou prestations peuvent couvrir :
+
+- mise à jour de POIs ;
+- remplacement de contenus obsolètes ;
+- nouvelle capture après transformation d’un lieu ;
+- révision périodique de parcours ou collections ;
+- continuité éditoriale ou multimédia convenue avec un partenaire.
+
+Cette source de revenu aligne directement la rémunération sur un des principaux besoins de pérennité de la bibliothèque : rester exacte et actuelle.
+
+## Sponsoring de collections et campagnes
+
+Une collection ou campagne territoriale peut être financée ou cofinancée par un partenaire, sous une mention transparente du soutien.
+
+Le sponsor finance une capacité de production ou de diffusion ; il n’achète pas l’indépendance éditoriale.
+
+Lorsqu’un même projet bénéficie d’un financement public, la compatibilité du sponsoring commercial et l’absence de double financement doivent être vérifiées selon les règles applicables.
+
+## Referral / affiliation
+
+Les commissions de réservation, liens affiliés ou modèles similaires restent une **hypothèse future non approuvée comme moteur principal**.
+
+Avant toute mise en œuvre, ils devront être audités au minimum sous l’angle :
+
+- indépendance éditoriale ;
+- transparence ;
+- influence sur le classement ;
+- tracking / cookies / RGPD ;
+- dépendance à des plateformes tierces.
+
+## Revenus et pratiques incompatibles avec la mission
+
+Sont considérés comme incompatibles avec le modèle approuvé :
+
+- paywall sur le noyau public ;
+- paiement obligatoire pour exister sur le map experience ;
+- ranking éditorial acheté et dissimulé ;
+- fausse recommandation ou faux label E360 ;
+- vente de données personnelles des utilisateurs ;
+- publicité intrusive dégradant l’exploration territoriale ;
+- suppression ou occultation d’un concurrent légitime parce qu’un autre acteur paie.
+
+Le modèle économique est également défini par ce qu’E360 refuse de monétiser.
+
+## Diversification et risque de dépendance
+
+Aucune source de revenu propre ne doit devenir une dépendance unique susceptible de fragiliser la mission ou l’exploitation.
+
+Le risque de concentration doit être suivi :
+
+- dépendance à une commune ;
+- dépendance à un ORT ;
+- dépendance à un seul grand partenaire ;
+- dépendance excessive à une seule catégorie commerciale.
+
+Des indicateurs de concentration des revenus pourront être définis au Point 14.
+
+## Maturité économique
+
+### POC
+
+Aucun objectif commercial n’est nécessaire pour démontrer la preuve de concept.
+
+### Pilote territorial
+
+Priorité à la démonstration de la valeur territoriale, à la production et à la construction de la bibliothèque. Les POIs standard gratuits peuvent commencer à être intégrés.
+
+### Première exploitation réelle
+
+Les premiers revenus propres peuvent être testés prioritairement via :
+
+- services territoriaux ;
+- production multimédia ;
+- maintenance / actualisation ;
+- premiers POIs enrichis si la valeur et la demande sont démontrées.
+
+### Croissance
+
+Lorsque l’audience est suffisamment démontrée, la mise en avant contextuelle et certains mécanismes de sponsoring peuvent prendre davantage de valeur.
+
+Les produits basés sur les actifs, données ou outils professionnels restent liés à une maturité supérieure.
+
+> **Créer d’abord de la valeur, démontrer ensuite l’usage, puis monétiser la valeur démontrée.**
+
+## Relation avec le financement public
+
+Les subventions publiques ne sont pas des revenus commerciaux.
+
+Le modèle global peut combiner :
+
+- financement public / institutionnel ;
+- revenus du travail ;
+- revenus de l’audience ;
+- futurs revenus d’actifs / services professionnels ;
+- partenariats et contributions non financières.
+
+Ces ressources peuvent financer ensemble :
+
+- production ;
+- technologie ;
+- maintenance ;
+- actualisation ;
+- expansion territoriale ;
+- continuité opérationnelle.
+
+Le Point 9 ne prétend pas que les sources identifiées couvrent déjà l’ensemble des coûts. Le modèle est **plausible et testable**, mais doit être validé par la demande, les prix acceptables, les coûts réels et l’usage observé.
+
+## Règles fondatrices du Point 9
+
+> **L’utilisateur final n’est pas nécessairement le payeur.**
+
+> **Le référencement de base d’un POI pertinent est gratuit.**
+
+> **La visibilité commerciale peut être achetée. La confiance éditoriale ne peut pas l’être.**
+
+> **Un client peut financer une partie de la bibliothèque ; il ne peut pas acheter le contrôle de la bibliothèque.**
+
+## Frontières du Point 9
+
+Le Point 9 :
+
+- définit la logique de création de revenus propres ;
+- ne fixe pas encore de tarifs ;
+- ne garantit aucun niveau futur de chiffre d’affaires ;
+- ne décide pas encore une structure juridique définitive ;
+- ne décide pas une rémunération du fondateur ;
+- ne met pas en œuvre les mécanismes techniques de tracking ou de QR ;
+- ne transforme pas les hypothèses futures en produits approuvés.
+
+Le Point 10 développera les partenariats et contributions non financières, notamment les mécanismes de visibilité réciproque.
+
+---
+
 ## État d’exécution après validation
 
 - **Point 1 — Objet et rôle du volume:** CLOSED / APPROVED
@@ -1161,4 +1488,5 @@ Ces sujets dépendent notamment du modèle économique du Point 9 et, pour certa
 - **Point 6 — Scénarios financiers:** CLOSED / APPROVED
 - **Point 7 — Stratégie de financement public:** CLOSED / APPROVED
 - **Point 8 — Structure juridique et porteur du projet:** CLOSED / APPROVED
-- **Next:** Point 9 — Modèle économique et sources de revenus
+- **Point 9 — Modèle économique et sources de revenus:** CLOSED / APPROVED
+- **Next:** Point 10 — Partenariats et contributions non financières
