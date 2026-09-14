@@ -176,4 +176,5 @@ Provide a concise institutional conclusion showing how the proposed financial, o
 **Point 6:** CLOSED / APPROVED  
 **Point 7:** CLOSED / APPROVED  
 **Point 8:** CLOSED / APPROVED  
-**Next point:** 9 — Modèle économique et sources de revenus
+**Point 9:** CLOSED / APPROVED  
+**Next point:** 10 — Partenariats et contributions non financières
