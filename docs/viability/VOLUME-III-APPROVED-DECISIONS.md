@@ -1478,6 +1478,177 @@ Le Point 10 développera les partenariats et contributions non financières, not
 
 ---
 
+# 10. Partenariats et contributions non financières
+
+**Status:** CLOSED / APPROVED
+
+## Principe directeur
+
+> Une contribution non financière est une ressource réelle lorsqu'elle apporte à E360 une valeur opérationnelle, territoriale, technique ou de diffusion supérieure aux coûts, obligations et dépendances qu'elle génère.
+
+Le Point 10 identifie les ressources non monétaires capables de réduire les coûts, d'améliorer la qualité, d'accélérer la production ou d'élargir la diffusion d'Explore Luxembourg 360. Il complète le financement public et les revenus propres sans considérer que toute aide gratuite est automatiquement avantageuse.
+
+## Sept familles de contributions
+
+1. **Données et information territoriale** — Open Data, GPX, POIs, patrimoine, horaires, informations locales et corrections. Ces contributions réduisent la recherche, améliorent la précision et facilitent les mises à jour.
+2. **Appui technique et infrastructure** — APIs, documentation, support, datasets, services gratuits ou à coût réduit. Ils peuvent réduire les coûts de développement et éviter de reconstruire des capacités déjà disponibles.
+3. **Autorisations et accès territorial** — autorisations de capture, accès à des lieux, contacts propriétaires et coordination terrain. Ils réduisent les blocages opérationnels et sécurisent la préparation des missions.
+4. **Connaissance et validation locale** — relecture, signalement d'erreurs, histoire locale, lieux méconnus et changements de parcours. Ces contributions augmentent la qualité éditoriale et peuvent constituer un réseau de vigilance territoriale.
+5. **Communication et distribution** — newsletters, sites communaux, réseaux sociaux, affichage, QR et points touristiques. Elles peuvent réduire le coût d'acquisition et construire une distribution territoriale décentralisée.
+6. **Contenus et ressources matérielles** — archives, photos, documents, salles, impression, matériel ou logistique. Ils enrichissent la bibliothèque ou évitent une dépense ponctuelle, sous réserve des droits applicables.
+7. **Temps et capacité humaine** — experts locaux, associations, techniciens, traducteurs ou bénévoles. Ils peuvent accélérer des tâches ciblées sans masquer les besoins humains structurels.
+
+## Règle de valeur nette
+
+- Le prix zéro ne suffit pas : une contribution doit être évaluée après prise en compte de son coût de gestion, des obligations qu'elle crée et de sa dépendance future.
+- Le coût évité n'est chiffré que lorsqu'une base raisonnable existe ; sinon la valeur reste qualitative ou opérationnelle.
+- Une contribution ponctuelle peut réduire une charge, mais ne doit pas masquer un besoin permanent de capacité professionnelle.
+
+> **La valeur d'une contribution s'apprécie après déduction des coûts, obligations et dépendances qu'elle crée.**
+
+## Matrice de gestion des contributions
+
+Pour chaque relation pertinente, E360 peut utiliser une grille proportionnée. Tous les champs ne doivent pas être remplis pour une relation simple, mais la structure permet d'éviter les zones grises.
+
+La grille couvre notamment :
+
+- **Partenaire / contact** — qui contribue et qui est responsable de la relation de chaque côté ?
+- **Contribution / ressource** — que reçoit concrètement E360 ?
+- **Valeur / coût de gestion** — quel bénéfice opérationnel et quel effort E360 doit-il fournir pour entretenir la relation ?
+- **Contrepartie E360** — que reçoit le partenaire : visibilité, contenu, accès public, support, statistiques agrégées ou autre ?
+- **Droits / licences** — quelle est la provenance, qui détient les droits, que peut publier, modifier ou redistribuer E360 ?
+- **Actualisation** — qui signale ou traite les changements futurs ? La contribution est-elle ponctuelle ou continue ?
+- **Durée / sortie** — quand la relation commence-t-elle, comment peut-elle se terminer, que deviennent les ressources déjà intégrées ?
+- **Criticité / substituabilité** — que se passe-t-il si cette contribution disparaît ? Existe-t-il une alternative réaliste ?
+- **Exclusivité éventuelle** — aucune exclusivité n'est présumée ; toute exception exige une justification et un périmètre explicites.
+
+## Provenance, droits et contenus fournis
+
+- Le fait qu'un partenaire fournisse un texte, une photographie, une carte ou une archive ne prouve pas qu'il détient tous les droits nécessaires.
+- E360 enregistre autant que nécessaire : **source → titulaire déclaré → base de l'autorisation → périmètre → attribution → durée → modifications autorisées**.
+- Lorsque les droits restent incertains, E360 peut demander une clarification ou ne pas publier le contenu.
+- Les données publiques et Open Data restent soumises aux licences, conditions de réutilisation et obligations d'attribution applicables.
+
+## Trois niveaux de formalisation
+
+### Relation simple
+
+Exemple : un hôtel affiche un QR E360.
+
+Une information écrite simple et des conditions d'usage du support peuvent suffire.
+
+### Collaboration intermédiaire
+
+Exemple : une association ou une commune fournit régulièrement information, contenu ou diffusion.
+
+Un échange ou une convention claire doit préciser les droits, responsabilités, durée et communication.
+
+### Partenariat structurel
+
+Exemple : infrastructure critique, grande production commune, financement ou dépendance opérationnelle.
+
+Un accord formel proportionné doit couvrir les droits, la continuité, les responsabilités et la sortie.
+
+> **Le niveau de formalisation d'une collaboration doit être proportionnel à sa valeur, sa durée, ses droits et ses risques.**
+
+## Statuts de relation — ne pas confondre
+
+- **Référencé sur E360** — présence sur le map experience ; ne constitue pas un partenariat.
+- **Contributeur** — a fourni une ressource identifiable : données, contenu, validation, accès, diffusion ou autre.
+- **Partenaire E360** — collaboration réelle, définie et active, avec responsabilités ou objectifs communs.
+- **Partenaire institutionnel** — relation institutionnelle formalisée selon sa portée réelle.
+- **Sponsor** — soutien financier ou commercial clairement identifié ; relève aussi du modèle économique du Point 9.
+
+La nature de la relation doit toujours être décrite selon ce qui existe réellement. Contribution, collaboration, partenariat, financement et sponsoring ne sont pas des synonymes.
+
+## Deux kits distincts
+
+### Kit Référencé E360
+
+Destiné à un établissement avec POI pertinent, y compris gratuit.
+
+Il peut comprendre :
+
+- la mention « Référencé sur Explore Luxembourg 360 » ;
+- un QR dédié ;
+- un visuel numérique ;
+- un fichier imprimable.
+
+### Kit Partenaire E360
+
+Destiné à un acteur engagé dans une collaboration réelle.
+
+Il peut comprendre une identité de partenariat adaptée, des supports spécifiques à la relation et éventuellement une co-communication.
+
+Les supports E360 restent soumis à des règles d'utilisation. Ils ne peuvent pas être transformés en label, certification ou recommandation qu'E360 n'a pas accordé. Le droit d'utiliser un support peut être retiré si le statut réel change ou si le matériel est utilisé de manière trompeuse.
+
+## QR Codes et visibilité réciproque
+
+Trois usages sont distingués :
+
+- **QR POI** — ouvre la page de l'hôtel, restaurant, activité ou autre POI et transforme l'établissement en point physique d'entrée vers E360.
+- **QR Territoire** — ouvre une commune, région, collection ou expérience depuis un office touristique, musée, monument, point de départ ou autre lieu territorial.
+- **QR Campagne** — ouvre une page ou expérience liée à une action spécifique et permet de mesurer la diffusion d'une campagne ou d'une collaboration définie.
+
+Règles :
+
+- la visibilité réciproque est volontaire et ne conditionne jamais le référencement gratuit d'un POI pertinent ;
+- les accès peuvent être mesurés de façon agrégée par source sans transformer le mécanisme en profilage du visiteur ;
+- le Point 10 définit l'objectif de distribution ; les modalités techniques, logs, cookies et conservation relèvent de la mise en œuvre et des règles de protection des données.
+
+> **Le réseau de partenaires peut devenir une infrastructure de distribution territoriale d'E360 : des points physiques et numériques situés exactement là où l'utilisateur découvre déjà le Luxembourg.**
+
+## Partenaire actif vs partenaire nominal
+
+Le nombre de logos ou de partenaires déclarés n'est pas une mesure suffisante. E360 doit distinguer les relations nominales des contributions réellement actives : QR installés, trafic généré, contenus fournis, données actualisées, validations effectuées ou actions de communication effectivement réalisées.
+
+## Risques et règles de résilience
+
+- Les contributions sont **non exclusives par défaut**. Toute exclusivité future doit être justifiée, limitée et ne peut empêcher une représentation correcte du territoire.
+- Une contribution technique gratuite doit être évaluée aussi selon sa **portabilité, réversibilité et substituabilité**, pas seulement selon son prix actuel.
+- Une collaboration significative doit prévoir, proportionnellement au risque, les conditions de fin de relation et le traitement des contenus, données, logos, QR, accès ou matériels déjà intégrés.
+- La responsabilité d'actualisation doit être clarifiée : fourniture ponctuelle, source régulière de mise à jour ou maintenance reprise par E360.
+- Une contribution bénévole ou ponctuelle ne doit jamais devenir silencieusement une dépendance structurelle.
+
+> **Une collaboration doit pouvoir se terminer sans compromettre la continuité d'E360.**
+
+## Pratiques à éviter
+
+E360 évite notamment de :
+
+- utiliser le logo d'une entité ou parler de « soutien officiel » sans autorisation ou base réelle ;
+- présenter comme partenaire une organisation avec laquelle il n'existe qu'un contact ponctuel ;
+- accepter du contenu dont les droits de publication sont indéterminés ;
+- accorder à un contributeur un contrôle éditorial, l'exclusion de concurrents ou une exclusivité territoriale automatique ;
+- adopter gratuitement une infrastructure critique sans possibilité réaliste de sortie ou de migration ;
+- entretenir une relation dont le coût de gestion dépasse durablement la valeur reçue.
+
+## Articulation avec le modèle économique et la pérennité
+
+- **Valeur sans paiement** — données, accès, support, diffusion, temps, contenu et infrastructures complètent le financement public et les revenus propres du Point 9.
+- **QR / distribution** — crée une acquisition territoriale peu coûteuse et contextuelle ; ses indicateurs d'activité et de distribution relèvent du Point 14.
+- **Mise à jour** — clarifie qui contribue aux corrections et changements ; la pérennité et la maintenance sont approfondies au Point 11.
+- **Dépendance** — mesure criticité, substituabilité et sortie ; ces risques sont approfondis au Point 12.
+
+## Décision approuvée au stade actuel
+
+> **Explore Luxembourg 360 développera un réseau de contributions non financières fondé sur la valeur réelle, la réciprocité volontaire, la traçabilité des droits, la proportionnalité des engagements et l'indépendance éditoriale. Les partenaires peuvent améliorer la qualité, la faisabilité et la diffusion du projet, mais aucune contribution ne leur donne le contrôle de la représentation du territoire.**
+
+Règles fondatrices :
+
+- la visibilité réciproque est encouragée mais ne conditionne jamais le référencement gratuit d'un POI pertinent ;
+- les contributions sont non exclusives par défaut ;
+- un partenariat n'est réellement utile que si sa contribution est active, utilisable et soutenable dans le temps ;
+- le niveau de formalisation dépend de la valeur, de la durée, des droits et des risques.
+
+## Frontières du Point 10
+
+Le Point 10 identifie et gouverne les contributions non financières. Il ne chiffre pas encore leur impact économique global, ne fixe pas les coûts de maintenance futurs et ne définit pas les KPI définitifs.
+
+Les coûts de maintenance et la continuité opérationnelle seront approfondis au **Point 11**, les risques au **Point 12** et les indicateurs de performance au **Point 14**.
+
+---
+
 ## État d’exécution après validation
 
 - **Point 1 — Objet et rôle du volume:** CLOSED / APPROVED
@@ -1489,4 +1660,5 @@ Le Point 10 développera les partenariats et contributions non financières, not
 - **Point 7 — Stratégie de financement public:** CLOSED / APPROVED
 - **Point 8 — Structure juridique et porteur du projet:** CLOSED / APPROVED
 - **Point 9 — Modèle économique et sources de revenus:** CLOSED / APPROVED
-- **Next:** Point 10 — Partenariats et contributions non financières
+- **Point 10 — Partenariats et contributions non financières:** CLOSED / APPROVED
+- **Next:** Point 11 — Pérennité et coûts de maintenance
