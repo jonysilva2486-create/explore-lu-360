@@ -8,9 +8,10 @@ const sdk = vi.hoisted(() => ({
   Popup: vi.fn(),
   AttributionControl: vi.fn(),
   NavigationControl: vi.fn(),
+  setWorkerUrl: vi.fn(),
 }));
 
-vi.mock("maplibre-gl", () => ({ default: sdk }));
+vi.mock("maplibre-gl", () => sdk);
 
 import { MapLibreDevProvider } from "./maplibre-dev-provider";
 
@@ -35,6 +36,16 @@ beforeEach(() => {
 });
 
 describe("temporary map adapter", () => {
+  it("configures the same-origin worker before creating the map", () => {
+    new MapLibreDevProvider().mount({} as HTMLElement, []);
+
+    expect(sdk.setWorkerUrl).toHaveBeenCalledOnce();
+    expect(sdk.setWorkerUrl).toHaveBeenCalledWith("/maplibre/maplibre-gl-worker.mjs");
+    expect(sdk.setWorkerUrl.mock.invocationCallOrder[0]).toBeLessThan(
+      sdk.Map.mock.invocationCallOrder[0],
+    );
+  });
+
   it("mounts the supplied container with attribution and navigation controls", () => {
     const container = {} as HTMLElement;
     new MapLibreDevProvider().mount(container, []);

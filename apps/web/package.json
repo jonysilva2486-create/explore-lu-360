@@ -2,8 +2,8 @@
   "name": "@explore-lu/web",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "node scripts/copy-maplibre-worker.mjs && next dev",
+    "build": "node scripts/copy-maplibre-worker.mjs && next build",
     "start": "next start",
     "test": "vitest run",
     "test:smoke": "vitest run --config vitest.smoke.config.mjs",
@@ -11,7 +11,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "maplibre-gl": "5.7.0",
+    "maplibre-gl": "6.4.1",
     "next": "16.3.3",
     "react": "19.2.0",
     "react-dom": "19.2.0",

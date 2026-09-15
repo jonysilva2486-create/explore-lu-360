@@ -1,9 +1,10 @@
-import maplibregl from "maplibre-gl";
+import * as maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import type { MapPlace, MapProvider } from "./map-provider";
 
 export class MapLibreDevProvider implements MapProvider {
   mount(container: HTMLElement, places: MapPlace[]) {
+    maplibregl.setWorkerUrl("/maplibre/maplibre-gl-worker.mjs");
     const map = new maplibregl.Map({
       container,
       center: [6.13, 49.78],

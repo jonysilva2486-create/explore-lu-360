@@ -1,6 +1,11 @@
 import { readFileSync } from "node:fs";
+import { createRequire } from "node:module";
+import { dirname, join } from "node:path";
 import { URL } from "node:url";
 import { beforeAll, describe, expect, it } from "vitest";
+
+const require = createRequire(import.meta.url);
+const maplibreDist = join(dirname(require.resolve("maplibre-gl/package.json")), "dist");
 
 describe("compiled web foundation", () => {
   let html;
@@ -33,4 +38,14 @@ describe("compiled web foundation", () => {
     expect(/--space-4:\s*16px/.test(css)).toBe(true);
     expect(css.includes(".maplibregl-map")).toBe(true);
   });
+
+  it.each(["maplibre-gl-worker.mjs", "maplibre-gl-shared.mjs"])(
+    "publishes %s from the installed MapLibre version",
+    (file) => {
+      const published = readFileSync(new URL(`../public/maplibre/${file}`, import.meta.url));
+      const installed = readFileSync(join(maplibreDist, file));
+      expect(published.length).toBeGreaterThan(0);
+      expect(published.equals(installed)).toBe(true);
+    },
+  );
 });
