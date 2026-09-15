@@ -1,7 +1,8 @@
 # G-03 — Géoportail / ACT Requirements Follow-up
 
-**Status:** SENT — awaiting external technical guidance  
+**Status:** CLOSED — conceptual compatibility confirmed; concrete service/dataset validation moves to implementation  
 **Date sent:** 2026-09-11  
+**Response received:** 2026-09-15  
 **External contact:** ACT — Service ILDG et Géoportail
 
 ## Purpose
@@ -53,24 +54,41 @@ The following decisions remain unchanged:
 - **External 360° experience direction:** Google Street View, kept separate from the geospatial-provider boundary.
 - **Temporary development provider:** permitted behind the approved adapter until the production integration is validated.
 
-## Open external dependency
+## Response received on 2026-09-15
 
-The project is now awaiting Géoportail / ACT guidance on the service combination, datasets, integration mode, interoperability rules and usage conditions described above.
+Géoportail / ACT confirmed that:
 
-Until that response is assessed and recorded:
+- the described needs are globally coherent with combining multiple Géoportail services and project-owned business data;
+- no element identified at this stage appears incompatible with using Géoportail services;
+- the exact choice between Vector Tiles, WMTS Open Data, OGC API Features, public layers and other services depends on the concrete functionality implemented;
+- official-layer metadata in the Géocatalogue must be consulted for licence, producer and dataset-specific reuse conditions;
+- the project may return with exact dataset, layer or API references when implementation raises a concrete question.
+
+The response validates the conceptual direction but deliberately does not select services, datasets, identifiers, quotas, caching rules or production conditions on the project's behalf.
+
+## Closed broad dependency / open implementation gates
+
+The broad external consultation is now closed. It is replaced by concrete implementation and production gates:
+
+- identify the exact service, layer, dataset or API required by a user-facing capability;
+- consult its Géocatalogue metadata and official documentation;
+- record licence, producer, attribution, caching, authentication, quota and reuse conditions;
+- test technical compatibility through the provider adapter;
+- return to Géoportail / ACT only when a precise reference requires clarification.
+
+Until each concrete item passes those checks:
 
 - no dataset-specific production reuse is approved;
 - no blanket licensing, caching or attribution assumption may be made;
 - no Géoportail-specific identifier may leak into the core domain model;
-- implementation may continue behind the provider abstraction using the temporary development adapter;
-- decisions that depend on the response must remain explicit and replaceable.
+- development may continue behind the provider abstraction using the temporary development adapter.
 
-## Next action after response
+## Next decision sequence
 
-When Géoportail / ACT replies, the project must:
+The first service-level choice should be driven by the first vertical slice:
 
-1. evaluate the response against R4.1 and G-01;
-2. record confirmed services, layers, identifiers and conditions;
-3. identify any dataset-level legal or technical validation still required;
-4. update the production-provider adapter plan without changing provider-neutral domain contracts;
-5. close or narrow this external dependency only to the extent supported by the response.
+1. define the minimum basemap and official-layer capability required by the slice;
+2. compare the relevant Géoportail service options against that capability;
+3. validate metadata, licence and technical integration for the exact references;
+4. implement the selected option behind the existing MapLibre/provider boundary;
+5. repeat the process only when another concrete capability requires an additional service or dataset.
