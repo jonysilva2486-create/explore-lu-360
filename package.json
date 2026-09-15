@@ -1,0 +1,14 @@
+{
+  "name": "explore-lu-360",
+  "private": true,
+  "packageManager": "pnpm@10.15.0",
+  "engines": { "node": ">=24 <25" },
+  "scripts": {
+    "dev": "pnpm --filter @explore-lu/web dev",
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "test:smoke": "pnpm -r --if-present test:smoke",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck"
+  }
+}

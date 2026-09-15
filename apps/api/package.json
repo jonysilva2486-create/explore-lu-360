@@ -1,0 +1,29 @@
+{
+  "name": "@explore-lu/api",
+  "private": true,
+  "scripts": {
+    "dev": "nest start --watch",
+    "build": "nest build",
+    "test": "vitest run",
+    "test:smoke": "vitest run --config vitest.smoke.config.mjs",
+    "lint": "eslint . --max-warnings 0",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@nestjs/common": "11.1.6",
+    "@nestjs/core": "11.1.6",
+    "@nestjs/platform-express": "11.1.6",
+    "reflect-metadata": "0.2.2",
+    "rxjs": "7.8.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.35.0",
+    "@nestjs/cli": "11.0.10",
+    "@types/express": "5.0.3",
+    "@types/node": "24.3.0",
+    "eslint": "9.35.0",
+    "typescript": "5.9.2",
+    "typescript-eslint": "8.70.0",
+    "vitest": "3.2.4"
+  }
+}

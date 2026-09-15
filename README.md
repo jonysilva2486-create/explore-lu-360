@@ -4,9 +4,15 @@
 
 ## Project status
 
-**Phase:** Final Pre-Codex audit / infrastructure preparation
+**Phase:** Application foundation — validation and closure in progress
 
-The repository is intentionally documentation-first at this stage. Application code has not yet been introduced.
+Application code exists on `feature/foundation` in [PR #1](https://github.com/jonysilva2486-create/explore-lu-360/pull/1). It has not been merged into `main`. The initial Tailwind build failure was fixed; passing CI is not, by itself, full foundation or production approval.
+
+Implemented: pnpm workspace, Next.js/React web shell, initial design tokens, a replaceable MapLibre/OSM development map, and a NestJS API exposing `GET /api/v1/health`.
+
+The map's three hard-coded prototype locations are not a production catalogue. PostgreSQL/PostGIS, OpenAPI, Auth0 and the R3 Place/Story/Media/Experience/Save journey are **not implemented and are outside the current foundation-closure task**.
+
+See the [Foundation validation record](docs/architecture/FOUNDATION-VALIDATION-RECORD.md) for test evidence, missing assets, GitHub governance and remaining manual gates. Do not start R3 or merge without the required project approval.
 
 ## Source of truth
 
@@ -51,11 +57,38 @@ explore-lu-360/
 │   ├── architecture/
 │   ├── decisions/
 │   ├── design/
-│   └── product/
+│   ├── product/
+│   └── viability/
+├── apps/
+│   ├── web/
+│   └── api/
+├── .github/workflows/ci.yml
+├── package.json
+├── pnpm-workspace.yaml
+├── pnpm-lock.yaml
 └── README.md
 ```
 
-The application foundation (`apps/web`, `apps/api`, shared packages and CI workflows) will be introduced only after the final readiness gate is closed.
+Shared packages are created only when actual reuse justifies them. Volume III viability work has its [own roadmap](docs/viability/VOLUME-III-VIABILITY-FINANCING-ROADMAP.md); foundation maintenance does not change its approved decisions.
+
+## Local foundation validation
+
+Use Node.js 24 and **pnpm 10.15.0**, as pinned by `packageManager` and CI. Run from the repository root:
+
+```sh
+pnpm install --frozen-lockfile
+pnpm lint
+pnpm typecheck
+pnpm test
+pnpm build
+pnpm test:smoke
+```
+
+Smoke tests require the preceding build: API tests use only loopback HTTP, and web tests inspect the generated shell and its linked CSS, including actual Tailwind utility generation. They require no database, credentials or external providers. Unit tests mock the map SDK; these checks do not prove real cartographic rendering, visual sign-off or WCAG conformance.
+
+For local development, `pnpm dev` starts the web shell; `pnpm --filter @explore-lu/api dev` starts the API. Never use production credentials.
+
+Official branding and font binaries are still absent. Consult the [brand inventory](apps/web/public/brand/README.md) and [font inventory](apps/web/public/fonts/README.md); no substitutes are authorised.
 
 ## Codex rule
 
