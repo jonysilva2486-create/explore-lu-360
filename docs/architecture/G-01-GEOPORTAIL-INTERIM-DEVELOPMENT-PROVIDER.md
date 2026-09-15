@@ -1,13 +1,15 @@
 # G-01 — Géoportail / ACT: Interim Development Provider
 
-**Status:** CLOSED — external dependency remains open for production provider validation
+**Status:** CLOSED — broad ACT consultation complete; concrete production validations remain implementation gates
 **Phase:** Final Pre-Codex Gate
+
+**Follow-up:** Géoportail / ACT reviewed the structured requirements on 2026-09-15 and confirmed conceptual compatibility. Exact services and datasets must now be selected and validated against concrete implementation needs. See [`G-03-GEOPORTAIL-REQUIREMENTS-FOLLOW-UP.md`](./G-03-GEOPORTAIL-REQUIREMENTS-FOLLOW-UP.md).
 
 ## Decision
 
 Explore Luxembourg 360 will **not wait for the Géoportail / ACT response to begin application development or UI testing**.
 
-The project is awaiting ACT/Géoportail feedback specifically on the most appropriate map type/style/service for the intended production experience. That external validation remains open.
+ACT/Géoportail has confirmed that the described architecture is compatible in principle with its services. The broad external dependency is closed; exact map services, datasets, integration modes and usage conditions remain concrete implementation and production-validation gates.
 
 For development and testing, the application must therefore use a **temporary provider implementation behind the approved map-provider abstraction**.
 
