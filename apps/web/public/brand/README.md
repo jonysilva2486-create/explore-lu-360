@@ -10,7 +10,7 @@ The owner confirmed the existing logo as the official approved Explore Luxembour
 
 The existing logo explicitly approved by the project owner is authorised as the official production identity, including its documented AI-assisted origin. This approval applies only to that existing asset. It does not authorise Codex or developers to generate, redraw, vectorise, recolour, replace or create variants of the official logo without explicit project-owner approval.
 
-The currently available master is a PNG, 1536 × 1536 pixels, held by the owner; its filename is not documented here and the file has not been integrated into the repository. See [D-03 §§2, 4 and 8](../../../../docs/design/D-03-brand-asset-implementation-contract.md) for the reconciled contract and provenance. No specific licence, legal exclusivity or additional rights are inferred from this declaration.
+The official raster master is now present as `explore-luxembourg-360-logo-primary.png`, a PNG verified as 1254 × 1254 pixels. The owner approved this supplied file and corrected the earlier 1536 × 1536 description; the file was not resized. See [D-03 §§2, 4 and 8](../../../../docs/design/D-03-brand-asset-implementation-contract.md) for the reconciled contract and provenance. No specific licence, legal exclusivity or additional rights are inferred from this declaration.
 
 ## Rules
 
@@ -20,15 +20,22 @@ The currently available master is a PNG, 1536 × 1536 pixels, held by the owner;
 - Record provenance and usage rights for non-trivial assets.
 - Sanitise and validate SVG files before production use when they originate from an external source.
 
-The official logo files are not included yet because the approved project-owned asset package has not been supplied to the repository.
+The supplied official PNG has been added byte-for-byte, without resizing, recompression, optimisation, conversion, metadata removal or colour changes.
 
 ## Inventory — 2026-09-17
 
-Only this README is present. No production brand binary/vector is supplied here.
+This directory contains this README and the official raster master:
+
+- File: [`explore-luxembourg-360-logo-primary.png`](explore-luxembourg-360-logo-primary.png)
+- Dimensions: 1254 × 1254 px
+- Size: 1,100,049 bytes
+- SHA-256: `54dd2bc6837655e7bfedd0aee2001905362e5b1a72e6edd0eba3908f862dd9f8`
+
+The SHA-256 matches the original supplied file. No vector asset or additional variant has been added.
 
 | Required input under D-03 | Current state |
 |---|---|
-| Official primary logo | Existing asset approved by the owner; PNG master 1536 × 1536 available with the owner, not yet in this repository; filename not documented |
+| Official primary logo | Present: `explore-luxembourg-360-logo-primary.png`, 1254 × 1254 px; original bytes preserved, SHA-256 recorded above |
 | SVG master, where available | No official SVG master currently exists; conditional asset, not permission to vectorise the PNG |
 | Approved monochrome/light/dark variants | No official approved variants currently exist; conditional assets, not permission to create them |
 | Responsive wordmarks/lockups, where supplied | No approval or delivery documented; do not invent variants |
@@ -37,6 +44,6 @@ Only this README is present. No production brand binary/vector is supplied here.
 | Provenance | Owner-confirmed creation history and approval recorded above and in D-03 §8 |
 | Usage-rights documentation and usage/clear-space guidance | No specific licence, legal exclusivity, additional rights or usage/clear-space guidance documented by this decision; applicable documentation remains required |
 
-These are asset roles from `docs/design/D-03-brand-asset-implementation-contract.md`, not invented filenames or permission to generate variants. The owner must provide the authoritative package and identify the approved files. Then validate geometry, colours, safe SVG content, responsive use and accessibility before sign-off.
+These are asset roles from `docs/design/D-03-brand-asset-implementation-contract.md`, not invented filenames or permission to generate variants. The supplied PNG is the identified approved master; additional files require explicit owner approval. Applicable geometry, colour, responsive-use and accessibility validation remains required before sign-off; SVG checks apply only if an SVG is supplied later.
 
-This update records the owner-approved identity and its declared provenance. No asset has been integrated, generated, vectorised, recoloured or substituted. D-03 is not declared implemented or complete; its remaining acceptance criteria still apply.
+This update adds only the supplied official PNG and records its verified dimensions and hash. No asset was generated, vectorised, recoloured or substituted. The application does not yet reference the asset. D-03 is not declared implemented or complete; application integration and the remaining validation and acceptance criteria are still pending.

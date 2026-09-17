@@ -22,7 +22,7 @@ The final asset files must be copied from the approved project-owned source mate
 
 ### Project-owner decision — 2026-09-17
 
-The project owner confirmed the existing logo as the official approved identity on 17 September 2026. The currently available master is a PNG, 1536 × 1536 pixels. No official SVG master or approved light/dark/monochrome variants currently exist.
+The project owner confirmed the existing logo as the official approved identity on 17 September 2026. The currently available master is a PNG, 1254 × 1254 pixels. No official SVG master or approved light/dark/monochrome variants currently exist.
 
 The existing logo explicitly approved by the project owner is authorised as the official production identity, including its documented AI-assisted origin. This approval applies only to that existing asset. It does not authorise Codex or developers to generate, redraw, vectorise, recolour, replace or create variants of the official logo without explicit project-owner approval.
 
