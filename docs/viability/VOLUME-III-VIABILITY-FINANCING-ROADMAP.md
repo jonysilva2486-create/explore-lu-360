@@ -178,4 +178,5 @@ Provide a concise institutional conclusion showing how the proposed financial, o
 **Point 8:** CLOSED / APPROVED  
 **Point 9:** CLOSED / APPROVED  
 **Point 10:** CLOSED / APPROVED  
-**Next point:** 11 — Pérennité et coûts de maintenance
+**Point 11:** CLOSED / APPROVED  
+**Next point:** 12 — Analyse des risques financiers et opérationnels
