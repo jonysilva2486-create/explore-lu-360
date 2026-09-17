@@ -1649,6 +1649,246 @@ Les coûts de maintenance et la continuité opérationnelle seront approfondis a
 
 ---
 
+# 11. Pérennité et coûts de maintenance
+
+**Status:** CLOSED / APPROVED
+
+## Principe directeur
+
+> **Explore Luxembourg 360 ne doit pas publier plus de territoire qu'il ne peut raisonnablement maintenir.**
+
+Publier un contenu crée une responsabilité dans le temps. La pérennité d'E360 ne se mesure donc pas seulement à sa capacité de produire de nouveaux trails, POIs, photographies ou panoramas 360°, mais à sa capacité de conserver fiables, utilisables, sûrs et techniquement accessibles les contenus déjà publiés.
+
+> **La couverture territoriale est un actif seulement si E360 est capable de la maintenir ; sinon elle devient progressivement une dette opérationnelle.**
+
+## Cinq familles de maintenance
+
+1. **Maintenance territoriale et factuelle** — trails, accès, POIs, horaires, services, fermetures, travaux, déviations, information pratique et changements du monde réel.
+2. **Maintenance multimédia** — représentativité des photographies et panoramas 360°, nouvelle capture lorsqu'un lieu a matériellement changé, remplacement des médias obsolètes et conservation des sources nécessaires.
+3. **Maintenance technique** — code, dépendances, sécurité, infrastructure, base de données, authentification, cartographie, APIs, intégrations, domaine, certificats, monitoring, compatibilité et fournisseurs externes.
+4. **Maintenance des actifs** — caméra, batteries, cartes mémoire, stockage, ordinateur et accessoires : entretien, remplacement et renouvellement progressif.
+5. **Maintenance organisationnelle** — documentation, droits/licences, contrats, partenaires, inventaire des services, accès critiques, procédures de récupération et continuité opérationnelle.
+
+## Âge, vérification et validité
+
+E360 distingue :
+
+- **ancienneté** — depuis quand le contenu existe ;
+- **dernière vérification** — date du dernier contrôle raisonnable ;
+- **validité actuelle** — niveau de confiance raisonnable dans sa représentativité ou exactitude présente.
+
+> **Un contenu récent n'est pas nécessairement fiable, et un contenu ancien n'est pas nécessairement obsolète.**
+
+Une photographie ancienne d'un patrimoine stable peut rester représentative ; un horaire vérifié récemment peut déjà avoir changé. La maintenance doit donc prioriser le risque réel plutôt que l'âge seul.
+
+## Priorisation par volatilité, impact et utilisation
+
+Le besoin de contrôle combine trois dimensions :
+
+- **volatilité** — probabilité que l'information change ;
+- **impact** — conséquence d'une information incorrecte ;
+- **utilisation** — importance pratique ou fréquence d'usage du contenu.
+
+Les seuils chiffrés et fréquences concrètes seront définis au Point 14 plutôt que fixés artificiellement au Point 11.
+
+Les informations relatives à la **sécurité, accessibilité, cybersécurité ou risque de perte de données** reçoivent la priorité la plus élevée.
+
+> **En cas de doute sérieux concernant la sécurité ou l'accessibilité, la prudence prévaut sur la continuité d'affichage.**
+
+## Révision planifiée et maintenance déclenchée par signal
+
+La maintenance combine :
+
+- **révision planifiée** — contrôle périodique adapté au type de contenu ;
+- **maintenance déclenchée par signal** — modification potentielle signalée par un utilisateur, partenaire, source officielle, contrôle terrain, changement technique ou outil automatisé.
+
+Un signal n'est jamais automatiquement traité comme un fait établi. Le flux approuvé est :
+
+> **Signal → triage → vérification proportionnée au risque → décision → publication → traçabilité.**
+
+Lorsqu'un signal de sécurité est suffisamment crédible, une mesure conservatoire peut être prise avant la confirmation complète.
+
+## Cycle de vie des contenus
+
+Le cycle de vie approuvé est :
+
+> **Créer → vérifier → publier → surveiller → actualiser → archiver / retirer.**
+
+Des états opérationnels peuvent notamment distinguer :
+
+- **Actif / Vérifié** ;
+- **À vérifier** ;
+- **Temporairement indisponible** ;
+- **Archivé** ;
+- **Retiré**.
+
+**Archivé ≠ supprimé**, mais un contenu archivé ne doit pas continuer à être présenté comme une information actuelle.
+
+Pour les contenus importants, E360 maintient un historique éditorial proportionné permettant de retracer au minimum la date, la source ou origine et la raison d'une modification significative.
+
+## Minimum éditorial commun
+
+Un client payant peut acheter un service plus fréquent ou plus riche : actualisation contractuelle, nouvelle capture, suivi renforcé ou production multimédia.
+
+Cela ne permet pas de conserver volontairement une information gratuite dont E360 sait qu'elle est matériellement incorrecte.
+
+> **Le niveau de service commercial peut varier ; le minimum de fiabilité éditoriale ne dépend pas du paiement.**
+
+La vérité territoriale et le processus éditorial priment sur la relation commerciale.
+
+## Recapture multimédia
+
+La nouvelle capture n'est pas déclenchée par l'âge seul du fichier.
+
+> **La recapture est déclenchée par la perte de représentativité du contenu, et non par son âge seul.**
+
+La décision prend notamment en compte :
+
+- changement réel du lieu ;
+- importance de la divergence ;
+- usage du contenu ;
+- éventuel engagement contractuel ;
+- coût humain de la recapture et du retraitement.
+
+## Stockage, archive et sauvegarde
+
+E360 distingue :
+
+- **master / source** — fichier original ou version de référence conservée ;
+- **dérivés de production** — fichiers traités utiles au workflow ;
+- **dérivés de diffusion** — versions optimisées pour la plateforme ;
+- **temporaires** — intermédiaires supprimables lorsqu'ils ne sont plus nécessaires ;
+- **archive** — conservation à long terme pour re-traitement, preuve ou valeur patrimoniale ;
+- **backup** — copie destinée à la récupération après incident.
+
+Un backup n'est pas un archive, et sa présence ne suffit pas si sa restauration n'est jamais raisonnablement vérifiée.
+
+> **Une sauvegarde n'apporte de continuité que si sa restauration peut être raisonnablement vérifiée.**
+
+La stratégie de sauvegarde doit éviter, lorsque cela est raisonnablement possible, qu'un même incident rende indisponibles à la fois la production et la capacité de récupération.
+
+## Politique de rétention
+
+La conservation n'est pas illimitée par principe.
+
+Une future politique de rétention prend en compte :
+
+- valeur opérationnelle ou historique ;
+- possibilité de recréer un dérivé depuis le master ;
+- coût de stockage ;
+- droits et licences ;
+- accords de partenaires ;
+- obligations juridiques ou de retrait applicables.
+
+Le Point 11 approuve le principe sans fixer arbitrairement tous les délais de conservation.
+
+## Maintenance technique et dépendances externes
+
+**Zéro croissance ne signifie pas zéro maintenance.**
+
+Même sans nouvelle couverture, E360 doit maintenir le code, les dépendances et services externes. La maintenance comprend une veille proportionnée sur les fournisseurs critiques — notamment changements d'API, limites, tarifs, conditions, compatibilité ou arrêt de service.
+
+Les liens, embeds et intégrations vieillissent également. Lorsque cela est utile, E360 peut automatiser la **détection** de liens morts, erreurs techniques ou anomalies sans automatiser aveuglément la décision éditoriale.
+
+Une dépendance non essentielle ne devrait pas, lorsque cela est raisonnablement évitable, rendre indisponible l'ensemble du service : un fonctionnement dégradé mais utile est préférable à une panne totale évitable.
+
+## Maintenance normale et incidents
+
+E360 distingue :
+
+- **maintenance récurrente / préventive** — contrôles, mises à jour, nettoyage, vérifications et entretien ;
+- **actualisation variable** — travail lié au volume, à la volatilité et aux changements territoriaux ;
+- **renouvellement** — remplacement progressif d'équipement ou de capacités devenues insuffisantes ;
+- **incidents** — indisponibilité, corruption, compromission, erreur critique ou perte de données nécessitant une réponse non planifiée.
+
+La lecture financière peut donc suivre :
+
+> **socle récurrent + charge variable d'actualisation + renouvellement + capacité pour incidents.**
+
+Cette règle ne crée pas encore un fonds financier formel. Elle impose seulement que le modèle économique reconnaisse progressivement une **capacité/provision de renouvellement** et la réalité des incidents futurs.
+
+## Continuité opérationnelle et dépendance au fondateur
+
+La dépendance forte au fondateur est acceptable au POC mais doit diminuer avec la maturité.
+
+À partir de l'exploitation réelle, aucune fonction critique ne doit dépendre exclusivement de la présence immédiate du fondateur sans procédure de continuité proportionnée.
+
+Les fonctions critiques doivent progressivement être documentées avec :
+
+- inventaire des services et comptes ;
+- domaine et infrastructure ;
+- procédures de déploiement et récupération ;
+- mécanismes MFA/2FA et récupération sécurisée ;
+- dépendances et contacts essentiels ;
+- sauvegardes et procédures de restauration.
+
+La documentation ne doit jamais exposer les secrets eux-mêmes.
+
+## Dette de maintenance
+
+Chaque nouvel élément publié crée une obligation future de surveillance, vérification, actualisation ou archivage.
+
+La dette de maintenance ne doit pas être mesurée seulement par le nombre brut d'éléments en retard. Elle doit être pondérée par leur **criticité, impact et usage**.
+
+Le principal plafond de croissance peut devenir humain avant de devenir technique : vérifier les trails, POIs, droits, partenaires et changements territoriaux consomme du temps même lorsque l'infrastructure reste peu coûteuse.
+
+## Gate de croissance
+
+Une extension territoriale ne doit normalement pas être approuvée lorsque la dette de maintenance **critique ou structurelle** dépasse la capacité raisonnable du projet, sauf justification explicite accompagnée d'un plan crédible de résorption.
+
+La présence d'une petite dette de faible risque ne bloque pas mécaniquement toute opportunité d'expansion.
+
+Les seuils concrets de GO / HOLD / ADAPT / STOP seront définis au Point 14.
+
+## Priorités opérationnelles
+
+En cas de capacité limitée, l'ordre général est :
+
+1. sécurité utilisateur, cybersécurité et risque de perte de données ;
+2. indisponibilité du service ou information essentielle incorrecte ;
+3. trails, accès et information territoriale sensible ;
+4. POIs et informations de forte volatilité ;
+5. contenus fortement utilisés ;
+6. maintenance préventive normale ;
+7. améliorations esthétiques ou non critiques.
+
+## Responsabilité éditoriale
+
+Partenaires et utilisateurs peuvent contribuer aux corrections, mais la publication finale reste gouvernée par E360.
+
+> **E360 assume la responsabilité de son processus éditorial et de la décision de publication, en s'appuyant sur les sources disponibles et sur un niveau de vérification proportionné au risque.**
+
+Cette responsabilité éditoriale n'est pas une certification absolue de chaque fait du territoire ; elle impose un processus cohérent et proportionné.
+
+## Décision approuvée au stade actuel
+
+> **Publier crée une responsabilité dans le temps. La pérennité d'E360 ne se mesure pas seulement à sa capacité de créer de nouveaux contenus, mais à sa capacité de maintenir avec fiabilité ceux qui existent déjà.**
+
+Règles fondatrices :
+
+- E360 ne publie pas plus de territoire qu'il ne peut raisonnablement maintenir ;
+- chaque élément publié crée une obligation future de surveillance, vérification ou archivage ;
+- la maintenance combine révision planifiée et déclenchement par signal ;
+- zéro croissance ne signifie pas zéro coût de maintenance ;
+- le minimum de fiabilité éditoriale ne dépend pas du paiement ;
+- la dette critique et structurelle conditionne prioritairement la croissance.
+
+> **La croissance territoriale ne doit jamais transformer progressivement la bibliothèque E360 en un inventaire que le projet n'a plus la capacité de vérifier, sécuriser et maintenir.**
+
+## Frontières du Point 11
+
+Le Point 11 définit la logique de pérennité et de maintenance sans fixer encore :
+
+- les fréquences chiffrées de revue ;
+- les seuils précis de dette de maintenance ;
+- les objectifs de disponibilité ou délais de réponse aux incidents ;
+- les montants futurs de provision de renouvellement ;
+- les KPI définitifs de maintenance.
+
+Ces mesures relèvent principalement du **Point 14 — Indicateurs de viabilité et critères de décision**. Les risques de dépendance, d'incident, de capacité humaine et de coûts sont approfondis au **Point 12 — Analyse des risques financiers et opérationnels**.
+
+---
+
 ## État d’exécution après validation
 
 - **Point 1 — Objet et rôle du volume:** CLOSED / APPROVED
@@ -1661,4 +1901,5 @@ Les coûts de maintenance et la continuité opérationnelle seront approfondis a
 - **Point 8 — Structure juridique et porteur du projet:** CLOSED / APPROVED
 - **Point 9 — Modèle économique et sources de revenus:** CLOSED / APPROVED
 - **Point 10 — Partenariats et contributions non financières:** CLOSED / APPROVED
-- **Next:** Point 11 — Pérennité et coûts de maintenance
+- **Point 11 — Pérennité et coûts de maintenance:** CLOSED / APPROVED
+- **Next:** Point 12 — Analyse des risques financiers et opérationnels
