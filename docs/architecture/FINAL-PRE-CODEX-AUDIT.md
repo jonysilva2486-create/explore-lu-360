@@ -1,5 +1,7 @@
 # Explore Luxembourg 360 — Final Pre-Codex Audit
 
+> **Historical audit snapshot (2026-09-07).** Application code has since been introduced on `feature/foundation` / PR #1. Preserve the findings below as the original audit; consult [the reconciled closure record](FINAL-PRE-CODEX-CLOSURE-RECORD.md) and [foundation validation](FOUNDATION-VALIDATION-RECORD.md) for the current implementation and gate status. This note does not retroactively close the original gate.
+
 **Status:** IN PROGRESS — BLOCKERS / VERIFICATIONS IDENTIFIED
 **Phase:** Final Pre-Codex Gate
 **Date:** 2026-09-07

@@ -1,14 +1,18 @@
 # Explore Luxembourg 360 — Final Pre-Codex Closure Record
 
-**Status:** IN PROGRESS — active closure record
+**Status:** RECONCILED — Foundation technically prepared with bounded owner acceptance; human review and merge approval pending
 **Date:** 2026-09-07
+**Implementation reconciliation:** 2026-09-10
+**Current checkpoint reconciliation:** 2026-09-27, HEAD `500ed58b0576d039efe89f8175a11c72515d565d`; current evidence and owner acceptance are in `FOUNDATION-VALIDATION-RECORD.md`.
 **Authority:** Final Pre-Codex Audit + approved Product/Design/Architecture decisions
 
 ## Purpose
 
 This record closes, clarifies or reclassifies every finding identified in `FINAL-PRE-CODEX-AUDIT.md` without erasing the historical audit. It is the working checklist for the final gate.
 
-A finding is considered **CLOSED** when the project decision/documentation is now explicit. A finding marked **IMPLEMENTATION GATE** is intentionally deferred to the application foundation because there is no application code yet. A finding marked **PRODUCTION GATE** is not allowed to be forgotten and must be closed before public production.
+A finding is considered **CLOSED** when the project decision/documentation is explicit; this does not mean the corresponding feature has been implemented. An **IMPLEMENTATION GATE** belongs to the relevant implementation increment. A **PRODUCTION GATE** must be closed before public production.
+
+Application code now exists on `feature/foundation` / PR #1. The owner authorised foundation-only closure on 2026-09-10, not R3 implementation or merge. Current technical evidence, asset inventory and governance actions are recorded in [Foundation validation](FOUNDATION-VALIDATION-RECORD.md). Historical findings below retain their decision authority; this reconciliation does not claim retroactive approval of previously unverified gates.
 
 ---
 
@@ -45,7 +49,7 @@ Canonical production direction is frozen as:
 - **Cormorant Garamond** — editorial/display/place names/storytelling.
 - **Inter** — interface/metadata/navigation/controls/technical text.
 
-Fallback stacks, required weights, loading strategy, licensing/source verification, multilingual character coverage and performance/accessibility checks remain implementation/production validation items.
+Historical state on 2026-09-10: only fallback stacks existed; font assets/notices and loading integration were missing. Current state: seven official WOFF2 faces, notices and local loading are integrated. The owner accepts current Foundation typography with the four experimental limitations remaining INCONCLUSIVE, not PASS. Production validation criteria are not thereby demonstrated. See the font inventory and Foundation Validation Record; previous valid evidence remains preserved.
 
 Codex may not replace these families for convenience.
 
@@ -61,17 +65,17 @@ A canonical implementation contract now exists at `docs/design/PRE-CODEX-DESIGN-
 
 It defines the approved palette, semantic token requirement, typography, geometry/spacing/elevation principles, composition rules, responsive behaviour, accessibility and visual quality gate.
 
-During foundation work these rules must be materialised as the actual CSS/design-token source of truth. No component may introduce arbitrary project colours or framework-default visual styling.
+The initial CSS token layer in `apps/web/src/app/globals.css` was partial evidence at the 2026-09-10 checkpoint. Current Foundation acceptance covers the implemented theme and previously obtained contrast, responsive, keyboard, focus and accessibility evidence for existing surfaces. Dynamic-map contrast and absence of complete WCAG certification remain explicit limitations. No component may introduce arbitrary project colours or framework-default visual styling.
 
 ---
 
 ## D-03 — Brand asset package
 
-**Status: IMPLEMENTATION GATE**
+**Status: ACCEPTED FOR CURRENT FOUNDATION SURFACES; PRODUCTION / NEW-SURFACE VALIDATION REMAINS APPLICABLE**
 
-The official logo remains authoritative. During repository foundation, create a controlled brand-asset location and record source/licensing information. Codex must not generate a replacement logo.
+Historical state on 2026-09-10: `apps/web/public/brand/` contained only its README. Current state: the owner-approved PNG master and provenance are present and the application references it directly. Current desktop/mobile use is accepted for the Foundation. SVG, light/dark/monochrome variants and favicon do not exist and are not required for this bounded closure. Codex must not generate replacements or variants.
 
-This cannot be completed correctly until the project asset files are available.
+No new clear-space measurements or usage rights are invented; existing usage rules remain. This acceptance does not approve production or new surfaces.
 
 ---
 
@@ -79,7 +83,7 @@ This cannot be completed correctly until the project asset files are available.
 
 **Status: CLOSED**
 
-R3 now contains an explicit historical-deferral notice stating that its provider deferrals were intentional at that stage and were subsequently superseded by R4/R5 decisions.
+`A-02-HISTORICAL-DECISION-RECONCILIATION.md` records that R3 provider deferrals were historical and were subsequently superseded by R4/R5 decisions.
 
 Codex must use the later approved provider/runtime decisions rather than treating R3's historical deferral as an unresolved choice.
 
@@ -152,9 +156,7 @@ Codex must implement this model; it must not default to a public bucket.
 
 **Status: CLOSED AS A PRE-CODEX ACCOUNT-SETUP ISSUE**
 
-The current Render setup is explicitly not a deployed application. No Web Service is to be treated as production while the repository remains documentation-first.
-
-The actual services will be created during foundation work from the real application structure.
+Application code now exists, but this repository checkpoint provides no validated staging or production deployment. The historical draft account/service setup is not proof of deployment. Runtime provisioning and release validation remain separate approved tasks; this foundation pass creates no Render services.
 
 ---
 
@@ -196,9 +198,11 @@ Before public production, instantiate the minimum approved uptime/operational mo
 
 ## S-01 — GitHub main branch protection
 
-**Status: MANUAL VERIFICATION REQUIRED**
+**Status: CORRECTED AND VERIFIED AT CURRENT CHECKPOINT**
 
-The connected GitHub integration cannot currently read the branch-protection endpoint. The project owner must verify manually that `main` is protected and direct pushes are controlled, with required checks/reviews configured once CI exists.
+Historical evidence on 2026-09-10: `Protect principal` (22632366) had deletion, non-fast-forward and update restrictions, no bypass actors and no PR/required-check rules, preventing the intended integration flow. At the current checkpoint, PR and strict required `Quality gates` rules are verified; deletion/force-push protections remain and `Restrict updates` is removed. The owner confirmed no bypass actors. Zero required approvals does not waive the human-review process.
+
+The historical correction checklist and current evidence are in `FOUNDATION-VALIDATION-RECORD.md`. No administrative change or merge is performed by this reconciliation.
 
 This is a governance control and must be verified before the first real protected merge.
 
@@ -206,19 +210,11 @@ This is a governance control and must be verified before the first real protecte
 
 ## S-02 — CI/security workflow
 
-**Status: IMPLEMENTATION GATE**
+**Status: QUALITY GATES VERIFIED ON CURRENT REFERENCE HEAD**
 
-The repository has no application code yet, so the CI workflow cannot currently execute meaningful application checks.
+The original PR CI passed after the Tailwind fix. The closure pass adds explicit TypeScript linting for the API, regression coverage of that configuration, strict `--frozen-lockfile` installation, map-adapter tests and HTTP smoke tests of the compiled API. The workflow retains the stable `Quality gates` check name for branch protection.
 
-Foundation must create at minimum:
-
-- lint;
-- typecheck;
-- unit/integration tests;
-- build;
-- appropriate dependency/security/secret scanning.
-
-The final readiness gate after foundation must include a successful PR run.
+Both Quality gates passed on reference HEAD `500ed58b0576d039efe89f8175a11c72515d565d`; run links and approved local results are in `FOUNDATION-VALIDATION-RECORD.md`. A previous green run must not be presented as evidence for later changes. Administrative security controls are separately owner-confirmed there, not inferred from CI. CodeQL setup is enabled; application analysis on main remains post-merge, not yet proven.
 
 ---
 
@@ -295,14 +291,19 @@ The README now points directly to the Master Roadmap, R6 and the final audit/rec
 - Redis/OpenSearch day-one scope
 - Root README / implementation entry point
 
-### Still required before `READY FOR CODEX`
+### Current foundation closure / integration requirements
 
-- Manual verification of GitHub `main` protection.
-- Google Maps key restriction configuration sufficient for the first integration.
+- Governance and reference-head CI are verified; official assets are integrated and D-01/D-02/D-03 have bounded Foundation owner acceptance with documented limitations.
+- Approve and separately publish the documentary reconciliation, verify resulting CI, and explicitly authorise Ready for review; then obtain human PR review and explicit merge approval. No final sign-off or merge is granted here.
+- Verify CodeQL application analysis on main after an authorised merge. R3 remains separately authorised work.
+
+### Separate integration gate
+
+- Google Maps key restrictions remain required before actual Google integration. No Google integration or credential is introduced by the foundation pass.
 
 ### Required after Codex foundation but before public production
 
-- CI execution proven on a real PR.
+- CI execution on a real PR is already proven; future increments retain their own CI/release requirements.
 - R2 bucket/policy implementation.
 - EU Auth0 production tenant and privacy/contractual review.
 - Render Frankfurt production resources.
@@ -316,4 +317,4 @@ The README now points directly to the Master Roadmap, R6 and the final audit/rec
 
 ## Gate rule
 
-The project is **not** marked `READY FOR CODEX` until the two current pre-Codex security/governance gates above are explicitly verified and the final audit is re-run.
+The historical pre-Codex gate is not retrospectively declared passed. Current implementation status is foundation closure in progress; the live evidence and verdict are in `FOUNDATION-VALIDATION-RECORD.md`. Neither CI success nor this reconciliation grants R3 start, merge or production approval.
