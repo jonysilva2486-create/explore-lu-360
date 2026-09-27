@@ -12,7 +12,7 @@ Implemented: pnpm workspace, Next.js/React web shell, initial design tokens, a r
 
 The map's three hard-coded prototype locations are not a production catalogue. PostgreSQL/PostGIS, OpenAPI, Auth0 and the R3 Place/Story/Media/Experience/Save journey are **not implemented and are outside the current foundation-closure task**.
 
-See the [Foundation validation record](docs/architecture/FOUNDATION-VALIDATION-RECORD.md) for test evidence, missing assets, GitHub governance and remaining manual gates. Do not start R3 or merge without the required project approval.
+See the [Foundation validation record](docs/architecture/FOUNDATION-VALIDATION-RECORD.md) for checkpoint evidence, integrated assets, bounded owner acceptance, GitHub governance and remaining review/merge gates. Do not start R3 or merge without the required project approval.
 
 ## Source of truth
 
@@ -88,7 +88,7 @@ Smoke tests require the preceding build: API tests use only loopback HTTP, and w
 
 For local development, `pnpm dev` starts the web shell; `pnpm --filter @explore-lu/api dev` starts the API. Never use production credentials.
 
-Official branding and font binaries are still absent. Consult the [brand inventory](apps/web/public/brand/README.md) and [font inventory](apps/web/public/fonts/README.md); no substitutes are authorised.
+The official PNG master and seven WOFF2 faces are present and integrated, with bounded Foundation acceptance. Consult the [brand inventory](apps/web/public/brand/README.md), [font inventory](apps/web/public/fonts/README.md) and validation record for provenance and limits; no substitutes are authorised. Human PR review and merge approval remain pending.
 
 ## Codex rule
 

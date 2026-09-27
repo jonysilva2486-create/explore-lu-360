@@ -26,7 +26,7 @@ The project owner confirmed the existing logo as the official approved identity 
 
 The existing logo explicitly approved by the project owner is authorised as the official production identity, including its documented AI-assisted origin. This approval applies only to that existing asset. It does not authorise Codex or developers to generate, redraw, vectorise, recolour, replace or create variants of the official logo without explicit project-owner approval.
 
-The PNG has not yet been integrated into the repository. This decision reconciles the contract; it does not declare D-03 implemented or complete. All remaining acceptance criteria continue to apply.
+At the time of that decision, the PNG had not yet been integrated. It is now present in the controlled repository location and directly referenced by the application. The owner's bounded Foundation acceptance recorded on 2026-09-27 accepts its current validated desktop/mobile use, without declaring production acceptance or waiving validation for new surfaces. SVG, light/dark/monochrome variants, favicon and new assets are not required for this Foundation closure. No new clear-space rule or additional usage rights are inferred. See [Foundation Validation Record](../architecture/FOUNDATION-VALIDATION-RECORD.md) for the decision and limits; the production contract below remains applicable.
 
 ## 3. Required asset package
 

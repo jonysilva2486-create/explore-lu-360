@@ -34,8 +34,8 @@ Seven official static WOFF2 files are now present, copied byte-for-byte from the
 
 Read-only inspection of the WOFF2 name and OS/2 tables confirmed the canonical families and listed weights. Typographic family names (name ID 16), where present, are Cormorant Garamond and Inter; legacy family names may include Medium or SemiBold. All seven have zero italic angle, no italic style flag and no variable-font `fvar` table. Git blob hashes of all seven fonts and both notices match their official tag entries.
 
-## Integration and validation remain pending
+## Historical intake scope and current Foundation acceptance
 
-Asset presence does **not** mean D-01 is fully implemented or validated. This intake adds no `@font-face`, preload or loading configuration; the application does not yet load these files. No six-language validation was performed in this step.
+Asset presence alone did **not** mean D-01 was fully implemented or validated. The 2026-09-18 intake added no `@font-face`, preload or loading configuration and performed no six-language validation. This describes the historical intake, not the current application.
 
-Controlled local loading with a non-blocking strategy and validation of all six languages, layout shift, mobile/constrained-network behaviour and accessibility remain required under D-01. Do not invent additional styles or weights or treat the fallback stacks as replacement brand typography.
+At checkpoint `500ed58`, all seven local faces are declared with `font-display: swap`; the approved hierarchy is integrated and no font preload is added. The owner accepts the current Foundation implementation and previously validated visual behaviour. The four remaining experiments (WOFF2 failure, constrained network/cache, font-attributable CLS and per-glyph Rendered Fonts) remain INCONCLUSIVE, not PASS, as recorded in the [Foundation Validation Record](../../../../docs/architecture/FOUNDATION-VALIDATION-RECORD.md). They do not establish a known implementation defect or require changes for this bounded closure; corresponding production criteria are not demonstrated by that acceptance. Earlier valid evidence is preserved, and no new six-language result is claimed here. Do not invent additional styles or weights or treat fallbacks as replacement brand typography.

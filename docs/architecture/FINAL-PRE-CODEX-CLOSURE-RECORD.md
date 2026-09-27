@@ -1,8 +1,9 @@
 # Explore Luxembourg 360 — Final Pre-Codex Closure Record
 
-**Status:** RECONCILED — foundation closure in progress; external gates remain open
+**Status:** RECONCILED — Foundation technically prepared with bounded owner acceptance; human review and merge approval pending
 **Date:** 2026-09-07
 **Implementation reconciliation:** 2026-09-10
+**Current checkpoint reconciliation:** 2026-09-27, HEAD `500ed58b0576d039efe89f8175a11c72515d565d`; current evidence and owner acceptance are in `FOUNDATION-VALIDATION-RECORD.md`.
 **Authority:** Final Pre-Codex Audit + approved Product/Design/Architecture decisions
 
 ## Purpose
@@ -48,7 +49,7 @@ Canonical production direction is frozen as:
 - **Cormorant Garamond** — editorial/display/place names/storytelling.
 - **Inter** — interface/metadata/navigation/controls/technical text.
 
-Fallback stacks exist in CSS, but the canonical WOFF2 files, bundled licence notices and loading integration do not. See `apps/web/public/fonts/README.md` for the exact approved family/weight inventory. Multilingual, performance and accessibility acceptance remain unverified. No fonts are downloaded or substituted in this closure pass.
+Historical state on 2026-09-10: only fallback stacks existed; font assets/notices and loading integration were missing. Current state: seven official WOFF2 faces, notices and local loading are integrated. The owner accepts current Foundation typography with the four experimental limitations remaining INCONCLUSIVE, not PASS. Production validation criteria are not thereby demonstrated. See the font inventory and Foundation Validation Record; previous valid evidence remains preserved.
 
 Codex may not replace these families for convenience.
 
@@ -64,17 +65,17 @@ A canonical implementation contract now exists at `docs/design/PRE-CODEX-DESIGN-
 
 It defines the approved palette, semantic token requirement, typography, geometry/spacing/elevation principles, composition rules, responsive behaviour, accessibility and visual quality gate.
 
-The initial CSS token layer exists in `apps/web/src/app/globals.css`. This is partial implementation evidence, not complete D-02 acceptance: canonical font loading, theme/contrast and visual/accessibility validation remain outstanding. No component may introduce arbitrary project colours or framework-default visual styling.
+The initial CSS token layer in `apps/web/src/app/globals.css` was partial evidence at the 2026-09-10 checkpoint. Current Foundation acceptance covers the implemented theme and previously obtained contrast, responsive, keyboard, focus and accessibility evidence for existing surfaces. Dynamic-map contrast and absence of complete WCAG certification remain explicit limitations. No component may introduce arbitrary project colours or framework-default visual styling.
 
 ---
 
 ## D-03 — Brand asset package
 
-**Status: IMPLEMENTATION GATE**
+**Status: ACCEPTED FOR CURRENT FOUNDATION SURFACES; PRODUCTION / NEW-SURFACE VALIDATION REMAINS APPLICABLE**
 
-The controlled location `apps/web/public/brand/` exists, but contains only its README. The owner-supplied logo package, provenance and approved variants are absent; the exact inventory is recorded there. Codex must not generate a replacement logo.
+Historical state on 2026-09-10: `apps/web/public/brand/` contained only its README. Current state: the owner-approved PNG master and provenance are present and the application references it directly. Current desktop/mobile use is accepted for the Foundation. SVG, light/dark/monochrome variants and favicon do not exist and are not required for this bounded closure. Codex must not generate replacements or variants.
 
-This cannot be completed correctly until the project asset files are available.
+No new clear-space measurements or usage rights are invented; existing usage rules remain. This acceptance does not approve production or new surfaces.
 
 ---
 
@@ -197,11 +198,11 @@ Before public production, instantiate the minimum approved uptime/operational mo
 
 ## S-01 — GitHub main branch protection
 
-**Status: VERIFIED GAP — ADMINISTRATIVE CORRECTION / RE-VERIFICATION REQUIRED**
+**Status: CORRECTED AND VERIFIED AT CURRENT CHECKPOINT**
 
-On 2026-09-10 the readable active ruleset `Protect principal` (22632366) targeted the default branch with deletion, non-fast-forward and update restrictions, no bypass actors, and no PR/required-check rules. This prevents normal integration rather than implementing the approved R5.2 flow. The connected GitHub tools can inspect rulesets but cannot administer them.
+Historical evidence on 2026-09-10: `Protect principal` (22632366) had deletion, non-fast-forward and update restrictions, no bypass actors and no PR/required-check rules, preventing the intended integration flow. At the current checkpoint, PR and strict required `Quality gates` rules are verified; deletion/force-push protections remain and `Restrict updates` is removed. The owner confirmed no bypass actors. Zero required approvals does not waive the human-review process.
 
-The exact owner/admin correction checklist is in `FOUNDATION-VALIDATION-RECORD.md`. No protection is disabled, no bypass is added, and no merge is performed by this pass.
+The historical correction checklist and current evidence are in `FOUNDATION-VALIDATION-RECORD.md`. No administrative change or merge is performed by this reconciliation.
 
 This is a governance control and must be verified before the first real protected merge.
 
@@ -209,11 +210,11 @@ This is a governance control and must be verified before the first real protecte
 
 ## S-02 — CI/security workflow
 
-**Status: BASE CI IMPLEMENTED — FOUNDATION VALIDATION IN PROGRESS**
+**Status: QUALITY GATES VERIFIED ON CURRENT REFERENCE HEAD**
 
 The original PR CI passed after the Tailwind fix. The closure pass adds explicit TypeScript linting for the API, regression coverage of that configuration, strict `--frozen-lockfile` installation, map-adapter tests and HTTP smoke tests of the compiled API. The workflow retains the stable `Quality gates` check name for branch protection.
 
-Validation evidence for the updated code is tracked in `FOUNDATION-VALIDATION-RECORD.md` and the PR checks. A previous green run must not be presented as evidence for later changes. Repository dependency/security/secret-scanning settings are not verified by these functional gates and remain an explicit administrative verification item.
+Both Quality gates passed on reference HEAD `500ed58b0576d039efe89f8175a11c72515d565d`; run links and approved local results are in `FOUNDATION-VALIDATION-RECORD.md`. A previous green run must not be presented as evidence for later changes. Administrative security controls are separately owner-confirmed there, not inferred from CI. CodeQL setup is enabled; application analysis on main remains post-merge, not yet proven.
 
 ---
 
@@ -292,9 +293,9 @@ The README now points directly to the Master Roadmap, R6 and the final audit/rec
 
 ### Current foundation closure / integration requirements
 
-- Correct and verify GitHub `main` governance against R5.2.
-- Validate the foundation changes on the actual PR head, then obtain human review and explicit merge approval.
-- Supply the official branding/font assets and complete their applicable implementation/visual validation before full foundation sign-off. This pass only inventories missing assets.
+- Governance and reference-head CI are verified; official assets are integrated and D-01/D-02/D-03 have bounded Foundation owner acceptance with documented limitations.
+- Approve and separately publish the documentary reconciliation, verify resulting CI, and explicitly authorise Ready for review; then obtain human PR review and explicit merge approval. No final sign-off or merge is granted here.
+- Verify CodeQL application analysis on main after an authorised merge. R3 remains separately authorised work.
 
 ### Separate integration gate
 
@@ -302,7 +303,7 @@ The README now points directly to the Master Roadmap, R6 and the final audit/rec
 
 ### Required after Codex foundation but before public production
 
-- CI execution proven on a real PR.
+- CI execution on a real PR is already proven; future increments retain their own CI/release requirements.
 - R2 bucket/policy implementation.
 - EU Auth0 production tenant and privacy/contractual review.
 - Render Frankfurt production resources.
