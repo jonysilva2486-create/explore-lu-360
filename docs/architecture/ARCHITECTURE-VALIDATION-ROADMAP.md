@@ -233,19 +233,19 @@ Codex implements approved Product, Design and Architecture. It must not silently
 # 7. FINAL PRE-CODEX GATE
 
 ## Architecture + Product + Design + Operations + Implementation Readiness Audit
-**STATUS: RECONCILED — GOVERNANCE / INTEGRATION GATES STILL OPEN**
+**STATUS: RECONCILED — MAIN GOVERNANCE VERIFIED; INTEGRATION / MERGE APPROVAL REMAIN SEPARATE**
 
 Canonical first-pass audit: `docs/architecture/FINAL-PRE-CODEX-AUDIT.md`  
 Canonical closure record: `docs/architecture/FINAL-PRE-CODEX-CLOSURE-RECORD.md`
 
 The first final-gate audit pass was recorded on 2026-09-07. The closure pass has now resolved the documentation and decision ambiguities that could be resolved before code exists.
 
-### Current remaining gates before `READY FOR CODEX`
+### Originally pending gates before `READY FOR CODEX` — current status
 
-1. **GitHub governance:** manually verify `main` branch protection and direct-push controls.
+1. **GitHub governance — verified:** the originally pending correction and verification are complete. The confirmed `main` rules require a PR, mandatory `Quality gates` and an up-to-date branch, with force-push and branch-deletion protection. See `FOUNDATION-VALIDATION-RECORD.md` for the reconciled evidence.
 2. **Google security:** apply the dedicated key/application/API restriction policy before the first real Maps integration.
 
-These remain explicit security/governance gates. Google restrictions must be verified before actual Google integration; the current temporary MapLibre/OSM shell does not integrate Google. GitHub governance must be corrected and verified before protected integration. Current observations and the manual checklist are in `FOUNDATION-VALIDATION-RECORD.md`; neither gate is silently waived.
+The governance requirement is satisfied, not waived or still awaiting correction. Google restrictions remain required before actual Google integration; the current temporary MapLibre/OSM shell does not integrate Google. Human PR review and the explicit merge decision remain distinct stages; verified governance does not authorise merge. No Foundation merge or CodeQL application analysis on `main` is claimed here.
 
 ### Implementation/production gates tracked separately
 
