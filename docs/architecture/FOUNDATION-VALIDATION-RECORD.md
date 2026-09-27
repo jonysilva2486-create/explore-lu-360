@@ -45,6 +45,29 @@ Remote CI must be checked against the updated head using [PR #1 checks](https://
 
 The scope of evidence remains deliberately bounded: mocked map tests and generated-asset checks do not by themselves establish visual sign-off, accessibility, map-provider availability or production security. The real browser validation recorded above applies only to the temporary MapLibre/OSM foundation adapter and does not establish cross-browser/device coverage or production-provider validation. HTTP health tests do not validate any R3 journey. No production deployment is claimed.
 
+## D-01 — validação experimental complementar (2026-09-27)
+
+**Referência:** `feature/foundation`, HEAD `8bc743da8cd9e409b42351809b8a6dd7448a3614`. Este aditamento regista apenas as quatro experiências pendentes; preserva as evidências e os resultados válidos anteriormente documentados, sem os substituir ou rebaixar.
+
+1. **Falha/bloqueio dos WOFF2 — INCONCLUSIVO.** As sete faces e as stacks de fallback estão declaradas. O ambiente de validação não permitiu bloquear deliberadamente os pedidos WOFF2 e observar o comportamento real da interface em fallback.
+2. **Rede limitada + cache desativada — INCONCLUSIVO.** O ambiente não disponibilizou controlos adequados de throttling/cache. Não foi possível realizar um carregamento frio controlado nem observar experimentalmente a transição fallback → fonte self-hosted.
+3. **CLS atribuível às fontes — INCONCLUSIVO.** Não foi obtida medição fiável que permita estabelecer causalidade entre o carregamento das fontes e CLS. Não foi atribuído ou estimado qualquer valor.
+4. **Rendered Fonts / verificação por glifo — INCONCLUSIVO.** Foi possível observar `font-family` calculado, mas não determinar de forma fiável a fonte efetivamente utilizada por cada glifo. Esta ronda não constitui confirmação experimental da cobertura das seis línguas (FR, DE, EN, NL, PT e LB).
+
+### Evidência adicional observada — não substitui as experiências
+
+Na página inglesa aberta em `http://127.0.0.1:3003/`, foram observados os seguintes estilos calculados:
+
+- body/interface e Explore: stack CSS Inter;
+- Explore: peso calculado 500;
+- H1/H2/H3: stack CSS Cormorant Garamond e peso calculado 600.
+
+**Estilos calculados não comprovam por si só a fonte efetivamente renderizada.** Estas observações não substituem os quatro testes acima nem demonstram renderização por glifo.
+
+### Interpretação e limites
+
+**Nenhum novo bloqueador D-01 foi identificado.** Os quatro itens não estão aprovados como PASS: permanecem evidências experimentais inconclusivas/pendentes devido às limitações do ambiente utilizado. Não existe evidência nesta ronda de uma falha concreta da implementação; a impossibilidade de concluir os testes também não comprova o seu sucesso. Não devem ser inventados resultados para preencher estas lacunas. Este aditamento não declara D-01 concluído nem concede aprovação de fecho da Foundation.
+
 ## GitHub governance — verified gap / manual action
 
 Observed through GitHub on 2026-09-10:
