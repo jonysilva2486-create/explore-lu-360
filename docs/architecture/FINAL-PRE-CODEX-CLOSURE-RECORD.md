@@ -1,9 +1,10 @@
 # Explore Luxembourg 360 — Final Pre-Codex Closure Record
 
-**Status:** RECONCILED — Foundation technically prepared with bounded owner acceptance; human review and merge approval pending
+**Status:** FOUNDATION CLOSED — post-merge owner-confirmed acceptance; production gates remain separate
 **Date:** 2026-09-07
 **Implementation reconciliation:** 2026-09-10
-**Current checkpoint reconciliation:** 2026-09-27, HEAD `500ed58b0576d039efe89f8175a11c72515d565d`; current evidence and owner acceptance are in `FOUNDATION-VALIDATION-RECORD.md`.
+**Historical pre-merge reconciliation:** 2026-09-27, HEAD `500ed58b0576d039efe89f8175a11c72515d565d`.
+**Post-merge closure:** 2026-09-28, `main` merge commit `8d70da6e9ca251f5d39721e7a8926e5222f5e8a8`; canonical evidence and retained limitations are in `FOUNDATION-VALIDATION-RECORD.md`.
 **Authority:** Final Pre-Codex Audit + approved Product/Design/Architecture decisions
 
 ## Purpose
@@ -12,7 +13,7 @@ This record closes, clarifies or reclassifies every finding identified in `FINAL
 
 A finding is considered **CLOSED** when the project decision/documentation is explicit; this does not mean the corresponding feature has been implemented. An **IMPLEMENTATION GATE** belongs to the relevant implementation increment. A **PRODUCTION GATE** must be closed before public production.
 
-Application code now exists on `feature/foundation` / PR #1. The owner authorised foundation-only closure on 2026-09-10, not R3 implementation or merge. Current technical evidence, asset inventory and governance actions are recorded in [Foundation validation](FOUNDATION-VALIDATION-RECORD.md). Historical findings below retain their decision authority; this reconciliation does not claim retroactive approval of previously unverified gates.
+Historically, the owner authorised foundation-only closure on 2026-09-10, not R3 or merge. Following bounded acceptance, completed human review and separate explicit merge authorisation, PR #1 is now Merged / Closed and the application is in `main`. Owner-confirmed post-merge CI, CodeQL and security observations are recorded in [Foundation validation](FOUNDATION-VALIDATION-RECORD.md). Historical findings retain their decision authority; no retroactive validation or production approval is claimed.
 
 ---
 
@@ -214,7 +215,7 @@ This is a governance control and must be verified before the first real protecte
 
 The original PR CI passed after the Tailwind fix. The closure pass adds explicit TypeScript linting for the API, regression coverage of that configuration, strict `--frozen-lockfile` installation, map-adapter tests and HTTP smoke tests of the compiled API. The workflow retains the stable `Quality gates` check name for branch protection.
 
-Both Quality gates passed on reference HEAD `500ed58b0576d039efe89f8175a11c72515d565d`; run links and approved local results are in `FOUNDATION-VALIDATION-RECORD.md`. A previous green run must not be presented as evidence for later changes. Administrative security controls are separately owner-confirmed there, not inferred from CI. CodeQL setup is enabled; application analysis on main remains post-merge, not yet proven.
+Historical pre-merge evidence: both Quality gates passed on `500ed58b0576d039efe89f8175a11c72515d565d`. Post-merge, the owner confirmed CI Success and effective CodeQL JavaScript/TypeScript analysis Success on `main` at `8d70da6e9ca251f5d39721e7a8926e5222f5e8a8`, with no code scanning alerts. Security observations and earlier evidence are distinguished in `FOUNDATION-VALIDATION-RECORD.md`; they are not inferred from functional CI.
 
 ---
 
@@ -291,11 +292,11 @@ The README now points directly to the Master Roadmap, R6 and the final audit/rec
 - Redis/OpenSearch day-one scope
 - Root README / implementation entry point
 
-### Current foundation closure / integration requirements
+### Foundation closure / integration — completed within approved scope
 
 - Governance and reference-head CI are verified; official assets are integrated and D-01/D-02/D-03 have bounded Foundation owner acceptance with documented limitations.
-- Approve and separately publish the documentary reconciliation, verify resulting CI, and explicitly authorise Ready for review; then obtain human PR review and explicit merge approval. No final sign-off or merge is granted here.
-- Verify CodeQL application analysis on main after an authorised merge. R3 remains separately authorised work.
+- The previously required documentary reconciliation, Ready for review transition, human review and separate owner merge authorisation were completed; PR #1 was merged normally. The owner formally closed the Foundation after post-merge verification.
+- CodeQL application analysis on main completed successfully, as confirmed by the owner. R3 remains not started and subject to separate planning/authorisation.
 
 ### Separate integration gate
 
@@ -317,4 +318,4 @@ The README now points directly to the Master Roadmap, R6 and the final audit/rec
 
 ## Gate rule
 
-The historical pre-Codex gate is not retrospectively declared passed. Current implementation status is foundation closure in progress; the live evidence and verdict are in `FOUNDATION-VALIDATION-RECORD.md`. Neither CI success nor this reconciliation grants R3 start, merge or production approval.
+The historical pre-Codex gate is not retrospectively declared passed. The Foundation is now formally closed within its approved scope; the canonical evidence and limits are in `FOUNDATION-VALIDATION-RECORD.md`. This records the completed authorised merge, not production readiness or authorisation to start R3.
