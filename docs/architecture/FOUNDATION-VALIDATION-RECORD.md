@@ -24,8 +24,18 @@ These are owner-confirmed post-merge observations, not new scans or tests perfor
 - CodeQL automatically recognised JavaScript/TypeScript; `Analyze (javascript-typescript)` ran on `main` at that merge commit and completed with Success. This is effective analysis, not merely administrative setup.
 - Code scanning on `main`: 0 Open / 0 Closed; GitHub displayed `All tools are working as expected`; no code scanning alerts found.
 - Secret scanning: Enabled, 0 Open / 0 Closed, `No secrets found`.
-- Dependabot alerts: Enabled, 0 Open / 0 Closed, no open alerts.
+- Dependabot alerts: Enabled, 0 Open / 0 Closed, no open alerts — historical owner-confirmed checkpoint recorded in this 2026-09-28 section, not the current state; superseded by the reconciliation below.
 - Secret Protection and push protection: Enabled.
+
+### Later Dependabot reconciliation — 2026-09-30
+
+Verified GitHub evidence obtained after documentary closure commit `249ac585baa4c55f7c705e67439f740470689947` shows **24 Open / 0 Closed** Dependabot alerts on the default branch: **9 High / 12 Moderate / 3 Low / 0 Critical**. These represent **20 distinct GHSA advisories**, **10 affected packages** and **5 direct root dependency names**: `@nestjs/common`, `@nestjs/core`, `@nestjs/platform-express`, `@nestjs/cli` and `vitest`. Alert occurrences are not equivalent to independent application defects.
+
+GitHub associates the alerts with dependencies introduced by the Foundation merge into `main`, not the later documentary commit. The earlier zero-alert observation is retained only as a historical checkpoint. CodeQL's successful analysis with no alerts does not contradict Dependabot's dependency alerts; they are different forms of analysis.
+
+Current source inspection did not demonstrate that the advisory-specific exploit conditions are implemented or exposed by the present Foundation surface. This is neither a dismissal, a false-positive classification nor a claim of non-exploitability. No alert is marked resolved or downgraded. Remediation exists, but compatibility has not been validated; dependency remediation remains required security maintenance before production or before affected capabilities are introduced or exposed, and is separate technical work.
+
+**FOUNDATION — CLOSED** remains the bounded decision: this investigation identified no new implementation defect in the current Foundation surface requiring reopening its completed technical scope. Closure does not waive these alerts, establish a clean dependency graph or grant production approval. **R3 — NOT STARTED**; security maintenance is not R3 implementation. This documentary reconciliation performs no remediation or new tests.
 
 ### Final scope and retained limitations
 

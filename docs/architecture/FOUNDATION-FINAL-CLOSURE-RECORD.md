@@ -32,11 +32,15 @@ The owner confirmed the CI workflow on `main` at the merge commit above complete
 
 The following are manual GitHub observations confirmed by the owner, not new scans performed for this record.
 
-**Before merge:** Secret scanning showed **0 Open**, `No secrets found`; Dependabot alerts showed **0 Open**; Secret Protection and push protection were **Enabled**.
+**Historical pre-merge checkpoint:** Secret scanning showed **0 Open**, `No secrets found`; Dependabot alerts showed **0 Open**; Secret Protection and push protection were **Enabled**. The Dependabot zero-alert observation is historical, not the current state.
 
 **After merge, on `main` at the merge commit above:** GitHub automatically recognised JavaScript/TypeScript; CodeQL `Analyze (javascript-typescript)` executed with workflow result **Success**. Code scanning showed **0 Open / 0 Closed** and `All tools are working as expected`. No code scanning alert was recorded at verification. This is effective application analysis, not merely administrative setup.
 
 These observations are time-bounded evidence, not a claim of zero vulnerabilities or a waiver of future security review.
+
+**Later reconciliation — 2026-09-30, after documentary commit `249ac585baa4c55f7c705e67439f740470689947`:** verified GitHub evidence shows **24 Open / 0 Closed** Dependabot alerts on the default branch: **9 High / 12 Moderate / 3 Low / 0 Critical**. GitHub associates them with dependencies introduced by the Foundation merge, not the documentary commit. The [Foundation Validation Record](FOUNDATION-VALIDATION-RECORD.md#later-dependabot-reconciliation--2026-09-30) records the consolidated counts and scope. CodeQL having no alerts does not contradict these dependency alerts.
+
+Current source inspection demonstrated no advisory-specific exploit path in the present Foundation surface and identified no new implementation defect requiring reopening the completed scope. **FOUNDATION — CLOSED** remains valid within that boundary, but does not waive the alerts, establish non-exploitability or certify a clean dependency graph. No alert is dismissed, treated as a false positive, resolved or downgraded. Remediation is available, with compatibility not yet validated; it remains **post-Foundation security maintenance / a production gate**, required before production or before affected capabilities are introduced or exposed. This is separate technical work, not R3 implementation or authorisation.
 
 ## Accepted limitations
 
