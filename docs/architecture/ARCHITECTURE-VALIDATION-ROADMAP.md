@@ -1,10 +1,14 @@
 # Explore Luxembourg 360 — Pre-Codex Master Roadmap
 
 **Status:** ACTIVE MASTER ROADMAP  
-**Phase:** Application foundation — closure in progress (reconciled 2026-09-10)
+**Phase:** Foundation formally closed post-merge; R3 not started (reconciled 2026-09-28)
 **Purpose:** Canonical technical execution map from approved decisions through foundation closure to the first vertical slice.
 
-## Current implementation checkpoint — 2026-09-10
+## Current post-merge checkpoint — 2026-09-28
+
+PR #1 is Merged / Closed via normal merge commit `8d70da6e9ca251f5d39721e7a8926e5222f5e8a8` on `main`. Following human review, explicit merge authorisation and owner-confirmed post-merge CI/CodeQL/security checks, the Foundation is formally closed within its approved scope. See [the canonical closure record](FOUNDATION-VALIDATION-RECORD.md). Accepted limitations and production gates remain; R3 requires separate planning and authorisation and has not started.
+
+## Historical pre-merge implementation checkpoint — 2026-09-10
 
 Application code already exists on `feature/foundation` through PR #1. The original build issue is resolved. Product, design and R1–R6 approval means their **definitions** are closed, not that their implementation is complete.
 
@@ -233,7 +237,7 @@ Codex implements approved Product, Design and Architecture. It must not silently
 # 7. FINAL PRE-CODEX GATE
 
 ## Architecture + Product + Design + Operations + Implementation Readiness Audit
-**STATUS: RECONCILED — MAIN GOVERNANCE VERIFIED; INTEGRATION / MERGE APPROVAL REMAIN SEPARATE**
+**STATUS: FOUNDATION CLOSED POST-MERGE — MAIN GOVERNANCE VERIFIED; PRODUCTION GATES REMAIN SEPARATE**
 
 Canonical first-pass audit: `docs/architecture/FINAL-PRE-CODEX-AUDIT.md`  
 Canonical closure record: `docs/architecture/FINAL-PRE-CODEX-CLOSURE-RECORD.md`
@@ -245,7 +249,7 @@ The first final-gate audit pass was recorded on 2026-09-07. The closure pass has
 1. **GitHub governance — verified:** the originally pending correction and verification are complete. The confirmed `main` rules require a PR, mandatory `Quality gates` and an up-to-date branch, with force-push and branch-deletion protection. See `FOUNDATION-VALIDATION-RECORD.md` for the reconciled evidence.
 2. **Google security:** apply the dedicated key/application/API restriction policy before the first real Maps integration.
 
-The governance requirement is satisfied, not waived or still awaiting correction. Google restrictions remain required before actual Google integration; the current temporary MapLibre/OSM shell does not integrate Google. Human PR review and the explicit merge decision remain distinct stages; verified governance does not authorise merge. No Foundation merge or CodeQL application analysis on `main` is claimed here.
+The governance requirement is satisfied, not waived or still awaiting correction. Google restrictions remain required before actual Google integration; the temporary MapLibre/OSM shell does not integrate Google. Human PR review and explicit merge authorisation were completed as distinct stages. The normal Foundation merge and owner-confirmed successful CodeQL application analysis on `main` are now recorded in `FOUNDATION-VALIDATION-RECORD.md`; neither authorises R3 or production.
 
 ### Implementation/production gates tracked separately
 
@@ -269,8 +273,8 @@ The project must not claim production readiness until these gates are closed.
 
 Current state reconciles the original planned order with the code now present:
 
-1. Application foundation exists on the feature branch; closure and PR review remain in progress.
-2. Close the foundation's applicable technical, asset and governance findings before starting the first vertical slice.
+1. Application foundation is merged into `main` and formally closed within the approved scope and retained limitations.
+2. Plan and obtain separate authorisation before starting the first vertical slice; R3 is not started.
 3. Work remains constrained by approved Product, Design and Architecture decisions.
 4. New architectural decisions require explicit review rather than silent invention during coding.
 
@@ -317,11 +321,11 @@ R6 — Codex Readiness                 CLOSED / APPROVED
    ↓
 FINAL PRE-CODEX AUDIT                HISTORICAL AUDIT / LIVE GATES TRACKED
    ↓
-APPLICATION FOUNDATION              IMPLEMENTED / CLOSURE IN PROGRESS
+APPLICATION FOUNDATION              MERGED / FORMALLY CLOSED
    ↓
-FOUNDATION VALIDATION + GOVERNANCE   CURRENT WORK / NO MERGE APPROVAL
+FOUNDATION VALIDATION + GOVERNANCE   RECORDED / LIMITATIONS RETAINED
    ↓
-FOUNDATION REVIEW / APPROVAL        REQUIRED BEFORE R3
+FOUNDATION REVIEW / MERGE           COMPLETED / R3 AUTHORISATION SEPARATE
    ↓
 FIRST VERTICAL SLICE                NOT STARTED
 ```

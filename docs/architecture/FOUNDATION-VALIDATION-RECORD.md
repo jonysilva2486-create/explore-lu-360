@@ -4,9 +4,46 @@
 
 **Branch / PR:** `feature/foundation` / [PR #1](https://github.com/jonysilva2486-create/explore-lu-360/pull/1)
 
-**Status:** TECHNICALLY PREPARED — bounded Foundation acceptance recorded; human PR review and final sign-off pending
+**Status:** CLOSED — Foundation formally accepted within its approved scope and documented limitations
 
-## Current checkpoint — reconciliation 2026-09-27
+## Canonical post-merge closure — 2026-09-28
+
+The project owner, João Filipe Gaspar da Silva, confirms formal Foundation closure. This final state supersedes the pre-merge pending states preserved below.
+
+### Decision, review and merge
+
+- The bounded D-01/D-02/D-03 acceptance below remains valid. Human-assisted PR review concluded with 0 BLOCKER, 0 MAJOR and one documentary MINOR, corrected in `c88f0286e7fc33fa75ec438b3f8f9d721781a138`. The owner completed review and explicitly authorised merge separately.
+- PR #1, `feat: bootstrap web and api foundation`, is Merged / Closed. GitHub performed a normal merge commit, without squash, rebase or protection bypass.
+- Merge commit on `main`: `8d70da6e9ca251f5d39721e7a8926e5222f5e8a8`. `origin/main` was confirmed at that commit; `feature/foundation` was preserved at `c88f0286e7fc33fa75ec438b3f8f9d721781a138`.
+
+### Post-merge evidence confirmed by the owner
+
+These are owner-confirmed post-merge observations, not new scans or tests performed by this documentary update:
+
+- CI / Quality gates on `main`, merge commit `8d70da6e9ca251f5d39721e7a8926e5222f5e8a8`: Success.
+- CodeQL automatically recognised JavaScript/TypeScript; `Analyze (javascript-typescript)` ran on `main` at that merge commit and completed with Success. This is effective analysis, not merely administrative setup.
+- Code scanning on `main`: 0 Open / 0 Closed; GitHub displayed `All tools are working as expected`; no code scanning alerts found.
+- Secret scanning: Enabled, 0 Open / 0 Closed, `No secrets found`.
+- Dependabot alerts: Enabled, 0 Open / 0 Closed, no open alerts — historical owner-confirmed checkpoint recorded in this 2026-09-28 section, not the current state; superseded by the reconciliation below.
+- Secret Protection and push protection: Enabled.
+
+### Later Dependabot reconciliation — 2026-09-30
+
+Verified GitHub evidence obtained after documentary closure commit `249ac585baa4c55f7c705e67439f740470689947` shows **24 Open / 0 Closed** Dependabot alerts on the default branch: **9 High / 12 Moderate / 3 Low / 0 Critical**. These represent **20 distinct GHSA advisories**, **10 affected packages** and **5 direct root dependency names**: `@nestjs/common`, `@nestjs/core`, `@nestjs/platform-express`, `@nestjs/cli` and `vitest`. Alert occurrences are not equivalent to independent application defects.
+
+GitHub associates the alerts with dependencies introduced by the Foundation merge into `main`, not the later documentary commit. The earlier zero-alert observation is retained only as a historical checkpoint. CodeQL's successful analysis with no alerts does not contradict Dependabot's dependency alerts; they are different forms of analysis.
+
+Current source inspection did not demonstrate that the advisory-specific exploit conditions are implemented or exposed by the present Foundation surface. This is neither a dismissal, a false-positive classification nor a claim of non-exploitability. No alert is marked resolved or downgraded. Remediation exists, but compatibility has not been validated; dependency remediation remains required security maintenance before production or before affected capabilities are introduced or exposed, and is separate technical work.
+
+**FOUNDATION — CLOSED** remains the bounded decision: this investigation identified no new implementation defect in the current Foundation surface requiring reopening its completed technical scope. Closure does not waive these alerts, establish a clean dependency graph or grant production approval. **R3 — NOT STARTED**; security maintenance is not R3 implementation. This documentary reconciliation performs no remediation or new tests.
+
+### Final scope and retained limitations
+
+Foundation is formally closed within the approved scope. This is not production-ready status, WCAG certification, validation of a definitive production map provider or completion of E360. The D-01/D-02/D-03 limitations remain valid, including the four INCONCLUSIVE font experiments; none is converted to PASS. Historical evidence and production/new-surface requirements remain intact. Zero GitHub alerts is a checkpoint observation, not a guarantee of absence of vulnerabilities.
+
+R3 is not implemented or started and is not automatically authorised by this closure. Its planning and authorisation are separate. No new implementation, scan or validation is claimed by this record update.
+
+## Historical pre-merge checkpoint — reconciliation 2026-09-27
 
 Reference HEAD: `500ed58b0576d039efe89f8175a11c72515d565d`, branch `feature/foundation`. This section supersedes historical pending-state statements below, without erasing the evidence from those checkpoints.
 
@@ -27,13 +64,13 @@ Reference HEAD: `500ed58b0576d039efe89f8175a11c72515d565d`, branch `feature/foun
 
 This owner decision is limited to the current Foundation: it is not production approval, does not remove future validation for new surfaces and does not anticipate R3/R4.
 
-### Remaining process, not new implementation work
+### Historical remaining process at the pre-merge checkpoint — superseded by closure above
 
 Before Ready for review: approve this documentary reconciliation, authorise its separate commit/publication, verify the resulting required CI, then explicitly authorise the Draft transition. No further implementation change is identified by this acceptance.
 
 Human PR review follows Ready for review; explicit merge approval remains separate. Full Foundation sign-off is not declared while those process gates remain pending. After an authorised merge, verify CodeQL analysis of the application on `main`; R3 requires its own subsequent authorisation. Production/provider/privacy gates retain their existing scope.
 
-## Scope and authority
+## Historical scope and authority — pre-merge closure pass
 
 The owner approved the foundation review and this bounded closure pass. Implement only documentation reconciliation, API ESLint coverage, strict CI installation, governance verification, official-asset inventory and necessary foundation tests.
 
@@ -139,8 +176,8 @@ Dependency/security/secret-scanning settings also require administrative verific
 
 `.gitignore` excludes generated TypeScript incremental cache files; no generated build output is committed.
 
-**Historical recommendation: foundation not ready.** At that checkpoint, local technical validation passed but full sign-off still required updated-head CI, governance correction/verification, official asset intake, applicable visual validation and human PR review. The current checkpoint and bounded acceptance above supersede these historical pending states; human review and merge approval still remain pending.
+**Historical recommendation: foundation not ready.** At that checkpoint, local technical validation passed but full sign-off still required updated-head CI, governance correction/verification, official asset intake, applicable visual validation and human PR review. The pre-merge acceptance and final post-merge closure above supersede these historical pending states.
 
 Provider keys, ACT dataset rights, R2 policies, Auth0/Render production setup, privacy operations and recovery checks remain their separately tracked integration/production gates. They are not implemented here or silently declared complete.
 
-Once the applicable foundation findings are closed, obtain explicit approval before merge or starting R3. This record grants neither approval.
+Historically, separate approval was required before merge or starting R3. The authorised Foundation merge is now recorded above; R3 still requires separate planning and authorisation.
